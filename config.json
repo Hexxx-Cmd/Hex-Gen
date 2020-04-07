@@ -1,6 +1,6 @@
 {
   "token":"TOKEN_HERE",
   "prefix":".",
-  "":"",
-  "":""
+  "selectedTheme":"1", 
+  "ThemesFolder":"./themes/"
 }
