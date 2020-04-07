@@ -8,8 +8,12 @@ const themedir = config.ThemesFolder
 const theme = config.selectedTheme
 client.login(token)
 
-if(theme == "trash")
-    const alts = [];
+if(theme == "trash"){
+  alts[Math.floor(Math.random()*alts.length)];
+  const alts = [];
+  
+  
+  
 client.on("message", msg =>{
   const devs = ["",
                 ""]
@@ -47,6 +51,7 @@ client.on("message", msg =>{
   .setTitle("Successfully added!")
   .setTimestamp()
   .setFooter(client.user.username,client.user.displayAvatarURL);
-  msg.author.send(embed2);
+  msg.channel.send(embed2);
 };
 });
+}
