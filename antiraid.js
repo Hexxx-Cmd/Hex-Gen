@@ -6,7 +6,7 @@ RealShadow__#2020 + DarkBoy#6171
 2020-2025 CopyRight
 Don't steal the Credit's.
 ree it's already stolen also this is a bot we wont give to anyone hehe
- HAhahahahahaa ah ah ah we are lazy to give it ot anyone BUZ THIS WE CALLED ALAZY DEV'S come discord haha
+ HAhahahahahaa ah ah ah we are lazy to give it ot anyone BUZ THIS WE CALLED ALAZY DEV'S come discord haha2
 */
   // Packages \\ 
 const Discord = require("discord.js")
@@ -70,43 +70,50 @@ client.on("message", message => {
         roleDelLimit: 3,
         kickLimits: 3,
         roleCrLimits: 3,
+        ChannelCrLimits: 10,
         time: 30
     }
     if (message.content.startsWith(prefix + "config ")) {
 
 
         if (!message.member.hasPermission('MANAGE_GUILD')) return;
-        if (message.content.startsWith(prefix + "config banlimit")) {
+        if (message.content.startsWith(prefix + "config BanMembers")) {
             if (!num) return message.channel.send("**Send a number! **");
             if (isNaN(num)) return message.channel.send("**Numbers only! **");
             reconfig[message.guild.id].banLimit = num;
             message.channel.send(`**Changed to: ${reconfig[message.guild.id].banLimit} **`)
         }
-        if (message.content.startsWith(prefix + "config kicklimit")) {
+        if (message.content.startsWith(prefix + "config KickMembers")) {
             if (!num) return message.channel.send("**Send a number! **");
             if (isNaN(num)) return message.channel.send("**Numbers only! **");
             reconfig[message.guild.id].kickLimits = num;
             message.channel.send(`**Changed to: ${reconfig[message.guild.id].kickLimits}**`)
         }
-        if (message.content.startsWith(prefix + "config Droleslimit")) {
+        if (message.content.startsWith(prefix + "config DeleteRoles")) {
             if (!num) return message.channel.send("**Send a number! **");
             if (isNaN(num)) return message.channel.send("**Numbers only! **");
             reconfig[message.guild.id].roleDelLimit = num;
             message.channel.send(`**Changed to: ${reconfig[message.guild.id].roleDelLimit}**`)
         }
-        if (message.content.startsWith(prefix + "config Croleslimit")) {
+        if (message.content.startsWith(prefix + "config CreateRoles")) {
             if (!num) return message.channel.send("**Send a number! **");
             if (isNaN(num)) return message.channel.send("**Numbers only! **");
             reconfig[message.guild.id].roleCrLimits = num;
             message.channel.send(`**Changed to: ${reconfig[message.guild.id].roleCrLimits}**`)
         }
-        if (message.content.startsWith(prefix + "config Dchannelslimit")) {
+        if (message.content.startsWith(prefix + "config DeleteChannel")) {
             if (!num) return message.channel.send("**Send a number! **");
             if (isNaN(num)) return message.channel.send("**Numbers only! **");
             reconfig[message.guild.id].chaDelLimit = num;
             message.channel.send(`**Changed to: ${reconfig[message.guild.id].chaDelLimit}**`)
         }
-        if (message.content.startsWith(prefix + "config limitstime")) {
+        if (message.content.startsWith(prefix + "config CreateChannel")) {
+            if (!num) return message.channel.send("**Send a number! **");
+            if (isNaN(num)) return message.channel.send("**Numbers only! **");
+            reconfig[message.guild.id].chaDelLimit = num;
+            message.channel.send(`**Changed to: ${reconfig[message.guild.id].chaDelLimit}**`)
+        }
+        if (message.content.startsWith(prefix + "config LimitsTime")) {
             if (!num) return message.channel.send("**Send a number! **");
             if (isNaN(num)) return message.channel.send("**Numbers only! **");
             reconfig[message.guild.id].time = num;
