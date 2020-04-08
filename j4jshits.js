@@ -20,7 +20,7 @@ const shit = new j4jshit.Client(); //DARKBOY#6171
 const Fuck = require("fs"); //DARKBOY#6171
 //REALSHADOW__#2020
 const request = require("request");
-const token = ""; // we need to get random math e soz wait ok i'll write it
+const token = "Njk3NDA5NjAzOTk0MTI0MzQw.Xo23lw.p9a7KPaDWtrh6W6mfi97a95Sjuk"; // ur alt token
 const usernames = [
   "DarkMishel",
   "Shadow_",
@@ -62,21 +62,19 @@ const avatars = [
   "https://media.discordapp.net/attachments/697285758121279508/697396313037471794/unknown.png",
   "https://media.discordapp.net/attachments/697285758121279508/697397834357669898/unknown.png",
   "https://media.discordapp.net/attachments/697285758121279508/697398348243533864/unknown.png",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
+  "https://media.discordapp.net/attachments/631918703222587422/696800655813378190/c7f675bd3bea7e19975953de01fcf00e.jpg",
+  "https://media.discordapp.net/attachments/631918700546621440/697324652271370321/6c64ca5e53910c2924dbd01366891f29.jpg",
+  "https://media.discordapp.net/attachments/631918700546621440/697324652065980506/4a08b7176437805cd412ac5bd88b9bef.jpg",
+  "https://media.discordapp.net/attachments/631918700546621440/697324650249584681/1.png",
+  "https://media.discordapp.net/attachments/631918700546621440/697324649754787901/2eb57c0ce0f4d6ee0b842a01447c1421.jpg",
+  "https://media.discordapp.net/attachments/631918700546621440/697324643802939443/0e247946dae459ac21f8ed24273bd185.jpg",
+  "https://media.discordapp.net/attachments/631918700546621440/697324645275140126/1.jpg",
+  "https://media.discordapp.net/attachments/631918700546621440/697324640913326152/-.jpg?",
+  "https://media.discordapp.net/attachments/631918700546621440/697263488942342144/ian-matining-asta-black-clover_1.jpg",
+  "https://media.discordapp.net/attachments/631918696712896542/692347451931230248/51af7649f840dc744e232dd8c3b6f82c.jpg",
+  "https://media.discordapp.net/attachments/631918696712896542/692285464870256650/image0.jpg",
+  "https://media.discordapp.net/attachments/631918696712896542/691626510892662794/da8d410c8d6790e41cf194dc4e957bbf.jpg",
+  "https://media.discordapp.net/attachments/631918700546621440/696801020705112094/a52959331adbfbf99a805b087f046c8c.jpg"
 ]; //Okay avatar's Let's still gooddes ones feom google
 //REALSHADOW__#2020
 const username = usernames[Math.floor(Math.random() * usernames.length)]; //DARKBOY#6171
@@ -86,6 +84,14 @@ const avatarlink = avatars[Math.floor(Math.random() * avatars.length)]; //DARKBO
 const PerTime = "100000"; // Message CloowDown (10s)
 // Auto Name's + Avatar's. \\
 shit.on("ready", function() {
+  console.log(`
+-- Real Shadow - DarkBoy -- 
+
+    < J4J BOT ON >
+
+-- Real Shadow - DarkBoy -- 
+
+`)
   shit.user.setUsername(username);
   shit.user.setAvatar(avatarlink);
   //REALSHADOW__#2020
@@ -134,7 +140,7 @@ function JoinShit(invite_code) {
         //REALSHADOW__#2020
       } //DARKBOY#6171
       //REALSHADOW__#2020
-
+console.log(response)
       console.log(body, response.statusMessage, response.statusCode); //DARKBOY#6171
       //REALSHADOW__#2020
     } //DARKBOY#6171
