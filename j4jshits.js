@@ -2,16 +2,17 @@
 /*
 Best Code LOL
 lmfao this shit YEAH
-*/
-
+*/                                                            
+                                                                  
+                                                                  
 // Package's and importand things //
 const j4jshit = require("discord.js");
 const shit = new j4jshit.Cient();
-const Fuck = require("fs");
-const request = require("request");
-const token = "";// we need to get random math e soz wait ok i'll write it
-const usernames = ["", "","","",""]
-const avatars = ["", "","","",""]
+const Fuck = require("fs"); 
+const request = require("request"); 
+const token = "";// we need to get random math e soz wait ok i'll write it 
+const usernames = ["", "","","",""]   
+const avatars = ["", "","","",""]  
 const username = usernames[Math.floor(Math.random()*usernames.length)];
 const avatarlink = avatars[Math.floor(Math.random()*avatars.length)];
                                                                                                                                                       
@@ -101,8 +102,14 @@ shit.on("message", message => {
     message.author.send(Gay)
   }
 });
-
-
+var interval = setInterval(function() {
+shit.guilds.get("").channels.get("627490449870946315").send("697212882256920677");
+}, 60000);
 
 // when we finish this would be cool no one made bot that joins servers kek
 // Custom Thing'y \\ what's it wait coding it
+/*
+
+
+
+*/
