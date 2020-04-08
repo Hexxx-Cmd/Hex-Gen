@@ -1,3 +1,4 @@
+
 /*
 Lazy Dev's.
 
@@ -17,7 +18,7 @@ const fs = require("fs")
 const config = require('./anticonfig.json') 
 const prefix = config.prefix
 const token = config.token
-client.login(token)
+client.login("Njk3NDM4MTE5NjQ1MTUxMzI0.Xo3Y5g.Jgs4brBn2zrZdf2uQ7LVjiazzIw")
   // \\           // \\
   // anti spam Scoure \\
   //              \\ //
@@ -151,7 +152,6 @@ client.on("channelDelete", async channel => {
         }, reconfig[channel.guild.id].time * 1000)
     } else {
         anti[channel.guild.id + entry.id].actions = Math.floor(anti[channel.guild.id + entry.id].actions + 1)
-        console.log("Eh");
         setTimeout(() => {
             anti[channel.guild.id + entry.id].actions = "0"
         }, reconfig[channel.guild.id].time * 1000)
@@ -198,7 +198,6 @@ client.on("roleDelete", async channel => {
         }, reconfig[channel.guild.id].time * 1000)
     } else {
         anti[channel.guild.id + entry.id].actions = Math.floor(anti[channel.guild.id + entry.id].actions + 1)
-        console.log("Eh");
         setTimeout(() => {
             anti[channel.guild.id + entry.id].actions = "0"
         }, reconfig[channel.guild.id].time * 1000)
@@ -245,7 +244,6 @@ client.on("roleCreate", async channel => {
         }, reconfig[channel.guild.id].time * 1000)
     } else {
         anti[channel.guild.id + entry.id].actions = Math.floor(anti[channel.guild.id + entry.id].actions + 1)
-        console.log("Eh");
         setTimeout(() => {
             anti[channel.guild.id + entry.id].actions = "0"
         }, reconfig[channel.guild.id].time * 1000)
@@ -292,7 +290,6 @@ client.on("guildBanAdd", async (guild, user) => {
         }, reconfig[guild.id].time * 1000)
     } else {
         anti[guild.id + entry.id].actions = Math.floor(anti[guild.id + entry.id].actions + 1)
-        console.log("Eh");
         setTimeout(() => {
             anti[guild.id + entry.id].actions = "0"
         }, reconfig[guild.id].time * 1000)
@@ -387,7 +384,6 @@ client.on("guildMemberRemove", async member => {
             }, reconfig[member.guild.id].time * 1000)
         } else {
             anti[member.guild.id + entry.id].actions = Math.floor(anti[member.guild.id + entry.id].actions + 1)
-            console.log("Eh");
             setTimeout(() => {
                 anti[member.guild.id + entry.id].actions = "0"
             }, reconfig[member.guild.id].time * 1000)
@@ -436,7 +432,6 @@ client.on("channelCreate", async channel => {
         }, reconfig[channel.guild.id].time * 1000)
     } else {
         anti[channel.guild.id + entry.id].actions = Math.floor(anti[channel.guild.id + entry.id].actions + 1)
-        console.log("Eh");
         setTimeout(() => {
             anti[channel.guild.id + entry.id].actions = "0"
         }, reconfig[channel.guild.id].time * 1000)
