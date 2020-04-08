@@ -102,4 +102,7 @@ dark.on("ready", () => {
   dark.user.setActivity("#help | cgen.xyz");
 });
 
-dark.on("message", re => {});
+dark.on("message", re => {
+  
+  
+});
