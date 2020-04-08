@@ -1,3 +1,2 @@
-//ok so yeah
-//start now
-// @darkboy
+// let's goo0
+const shit = require("discord.js")

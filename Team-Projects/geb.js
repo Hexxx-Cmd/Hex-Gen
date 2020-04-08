@@ -5,12 +5,13 @@ Generator Bot.
 Developer's: RealShadow__#2020 + DarkBoy#6171
 - Please Don't Steal Credit's.
 Today Date: Wednesday 8 Apr 2020
+
 */
       // Packages \\
 const Discord = require("discord.js")
 const j4jshittys = require("./j4jshits.js")
 const client = new Discord.Client()
-const config = require("./config.json")
+const config = require("./Team-Projects/json-files/Gen-Config.json.json")
      // Config \\
 const prefix = config.perfix
 const token = config.token

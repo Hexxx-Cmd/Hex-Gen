@@ -11,7 +11,7 @@ YOU ARENT ALLOW TO SELL CODE WITHOUT PEMISSIONS FROM DEV's.
 3z credits
 Today Date: Wednesday 8 Apr 2020
 */
-
+const j4jconfig = require("./Team-Projects/json-files/J4j-config.json")
 // Package's and importand things //
 const j4jshit = require("discord.js"); //DARKBOY#6171
 //REALSHADOW__#2020
@@ -20,7 +20,7 @@ const shit = new j4jshit.Client(); //DARKBOY#6171
 const Fuck = require("fs"); //DARKBOY#6171
 //REALSHADOW__#2020
 const request = require("request");
-const token = "Njk3NDEyNTE1NTU0MDAwOTQ3.Xo27Ug.3292tMTE-FlkCfz4oj50cigtRSI"; // ur alt token
+const token = j4jconfig.token; // ur alt token
 shit.login(token);
 const usernames = [
   "DarkMishel",
@@ -101,7 +101,7 @@ shit.on("ready", function() {
 
 //  \\
 // Config \\
-const Gay = " https://discord.gg/ANmWD4t"; // Ur gay Invite Link
+const Gay = j4jconfig.InviteCode
 function JoinShit(invite_code) {
   //DARKBOY#6171
   //REALSHADOW__#2020
