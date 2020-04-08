@@ -1,14 +1,8 @@
 # DarkDevs
 
-<title>Who are we??</title>
-<div>
-  <p>
-    Dark Dev's.
-<smap>Lazy Dev's</smap>
-  </p>
-</div>
-  
-- `if(message.content == "who's darkdevs??") { console.log(devs)`
+- Who are we??
+- const DarkDevs = "DarkDevs:" + devs;`
+
 
 # DarkDevs 
 
@@ -19,7 +13,7 @@
 - All Codes in this project are coded by `${devs}`
 
 
-- Project's Developer's (Lazy Dev's)
+- Project's Developer's (DarkDevs)
 
 > ` const devs = "RealShadow__#2020 + DarkBoy#6171"`
 
