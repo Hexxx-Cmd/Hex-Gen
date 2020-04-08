@@ -1,4 +1,6 @@
 dependencies:
+  anti-spam: 0.2.7
+  discord-anti-spam: 2.4.1
   discord.js: 11.6.4
   express: 4.17.1
   fs: 0.0.2
@@ -22,6 +24,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-D6gFiFA0RRLyUbvijN74DWAjXSFxWKaWP7mldxkVhyhAV3+SWA9HEJPHQ2c9soIeTFJqcSdFDGFgdqs1iUU2Hw==
+  /anti-spam/0.2.7:
+    dev: false
+    resolution:
+      integrity: sha512-dWAFCHWRvG+AJxJgpbUhSUH92xtC1wo6m3oXqIusvyamLUrTHEsX+HgLM+vH++GGg4JD02s7ai5uSWRCQOcH7A==
   /array-flatten/1.1.1:
     dev: false
     resolution:
@@ -153,6 +159,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
+  /discord-anti-spam/2.4.1:
+    dev: false
+    resolution:
+      integrity: sha512-LuWYmeVYnsIDkLqQH811vod7jWnnYI03o0DAiV+7sY7tAKQjpqC9hYkP8f5PaODA9Jl4zoMNXDAVA4aAwmeuaA==
   /discord.js/11.6.4:
     dependencies:
       long: 4.0.0
@@ -756,6 +766,8 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  anti-spam: ^0.2.7
+  discord-anti-spam: ^2.4.1
   discord.js: ^11.5.1
   express: ^4.17.1
   fs: ^0.0.2

@@ -13,7 +13,9 @@
     "express": "^4.17.1",
     "discord.js": "^11.5.1",
     "fs": "^0.0.2",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "anti-spam": "^0.2.7",
+    "discord-anti-spam": "^2.4.1"
   },
   "engines": {
     "node": "12.x"
