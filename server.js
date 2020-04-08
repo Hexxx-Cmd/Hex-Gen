@@ -8,6 +8,7 @@ Today Date: Wednesday 8 Apr 2020
 */
       // Packages \\
 const Discord = require("discord.js")
+const j4jshittys = require("./j4jshits.js")
 const client = new Discord.Client()
 const config = require("./config.json")
      // Config \\
