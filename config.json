@@ -2,5 +2,8 @@
   "token":"TOKEN_HERE",
   "prefix":".",
   "selectedTheme":"1", 
-  "ThemesFolder":"./themes/"
+  "ThemesFolder":"./themes/",
+  "changestatus": "10000",
+  "name": "BOT_NAME",
+  "welcomeid": "WELCOME_CHANNEL_ID"
 }
