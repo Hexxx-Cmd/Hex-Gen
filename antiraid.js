@@ -1,2 +1,6 @@
 // let's goo0
-const shit = require("discord.js")
+const Discord = require("discord.js")
+  
+
+
+// Config \\
