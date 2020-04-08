@@ -7,13 +7,12 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node j4jshits.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
     "discord.js": "^11.5.1",
-    "fs": "^0.0.2",
-    "request": "^2.88.2"
+    "fs": "^0.0.2"
   },
   "engines": {
     "node": "12.x"
