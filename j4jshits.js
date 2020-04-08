@@ -21,6 +21,7 @@ const Fuck = require("fs"); //DARKBOY#6171
 //REALSHADOW__#2020
 const request = require("request");
 const token = "Njk3NDA5NjAzOTk0MTI0MzQw.Xo23lw.p9a7KPaDWtrh6W6mfi97a95Sjuk"; // ur alt token
+shit.login(token)
 const usernames = [
   "DarkMishel",
   "Shadow_",
@@ -92,8 +93,6 @@ shit.on("ready", function() {
 -- Real Shadow - DarkBoy -- 
 
 `)
-  shit.user.setUsername(username);
-  shit.user.setAvatar(avatarlink);
   //REALSHADOW__#2020
   // Auto-Join \\
   JoinShit("j4j"); //DARKBOY#6171
@@ -108,7 +107,7 @@ shit.on("ready", function() {
 
 //  \\
 // Config \\
-const Gay = ""; // Ur gay Invite Link
+const Gay = "discord.gg/Gay"; // Ur gay Invite Link
 function JoinShit(invite_code) {
   //DARKBOY#6171
   //REALSHADOW__#2020
@@ -134,14 +133,11 @@ function JoinShit(invite_code) {
       if (error) {
         //DARKBOY#6171
         //REALSHADOW__#2020
-        console.log(error); //DARKBOY#6171
         //REALSHADOW__#2020
         return; //DARKBOY#6171
         //REALSHADOW__#2020
       } //DARKBOY#6171
       //REALSHADOW__#2020
-console.log(response)
-      console.log(body, response.statusMessage, response.statusCode); //DARKBOY#6171
       //REALSHADOW__#2020
     } //DARKBOY#6171
     //REALSHADOW__#2020
@@ -169,7 +165,7 @@ How message links?
 */
 shit.on("message", message => {
   // is this right?  yeah i guess okay lemme        add it to all
-  if (message.content.toLowerCase().content.Includes("j4j")) {
+  if (message.content.includes("j4j")) {
     //DARKBOY#6171
     //REALSHADOW__#2020
     message.author.send("j4j"); //DARKBOY#6171
@@ -183,7 +179,7 @@ shit.on("message", message => {
 shit.on("message", message => {
   //DARKBOY#6171
   //REALSHADOW__#2020
-  if (message.content.toLowerCase().content.Includes("discord.gg")) {
+  if (message.content.includes("discord.gg")) {
     //DARKBOY#6171
     //REALSHADOW__#2020
     message.author.send("Done join" + Gay); //DARKBOY#6171
@@ -196,7 +192,7 @@ shit.on("message", message => {
 shit.on("message", message => {
   //DARKBOY#6171
   //REALSHADOW__#2020
-  if (message.content.toLowerCase().content.Includes("bot")) {
+  if (message.content.includes("bot")) {
     //DARKBOY#6171
     //REALSHADOW__#2020
     message.channel.send("no shut up i'm not a bot"); //DARKBOY#6171
@@ -210,7 +206,7 @@ shit.on("message", message => {
 shit.on("message", message => {
   //DARKBOY#6171
   //REALSHADOW__#2020
-  if (message.content.toLowerCase().content.Includes("done")) {
+  if (message.content.includes("done")) {
     //DARKBOY#6171
     //REALSHADOW__#2020
     message.channel.send("Done I joined"); //DARKBOY#6171
@@ -222,7 +218,7 @@ shit.on("message", message => {
 shit.on("message", message => {
   //DARKBOY#6171
   //REALSHADOW__#2020
-  if (message.content.toLowerCase().content.Includes("join4join")) {
+  if (message.content.includes("join4join")) {
     //DARKBOY#6171
     //REALSHADOW__#2020
     message.author.send(`j4j`); //DARKBOY#6171
