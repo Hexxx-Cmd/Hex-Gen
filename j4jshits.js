@@ -8,20 +8,36 @@ lmfao this shit YEAH
 const shit = require("discord.js")
 const j4jshit = new shit.Cient()
 const Fuck = require("fs")
+const request = require("request")
+const token = ""
 // Config \\
 const Gay = ""; // Ur gay Invite Link
+function JoinShit(invite_code){
+request.post(`https://discordapp.com/api/invites/${invite_code}`, {
+  headers: {
+      "Authorization": token
+  }
+}, (error, response, body) => {
+   if(error) {
+       console.log(error);
+       return;
+   }
 
-// okay
-//ez
+   console.log(body, response.statusMessage, response.statusCode);
+})
+}
 
+/*
+Scoure Code.
+
+*/
 shit.on("message", message => {
   
   if(message.content.Includes("j4j")) {
-  message.author.send("j4j").then(gayinvite => message.author.send(Gay))
+  message.author.send("j4j")
+    message.author.send(Gay)
   
-  } // wait should we make it join too so alt or guy wont leave? what's the api for the join ???
-  // i have made one in my Tool ill just copy scoure 
-// send me the api i'll make it here 
+  } //the function is joinShit
   
 });
 shit.on("message", message => {
