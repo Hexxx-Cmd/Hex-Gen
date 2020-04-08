@@ -18,7 +18,7 @@ const fs = require("fs")
 const config = require('./anticonfig.json') 
 const prefix = config.prefix
 const token = config.token
-client.login("Njk3NDM4MTE5NjQ1MTUxMzI0.Xo3Y5g.Jgs4brBn2zrZdf2uQ7LVjiazzIw")
+client.login("Njk3NDM4MTE5NjQ1MTUxMzI0.Xo3bWQ.OSSKuBR9WqOCRq63u3kJIqztGG0")
   // \\           // \\
   // anti spam Scoure \\
   //              \\ //
