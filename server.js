@@ -39,17 +39,13 @@ console.log('Bot is on')
 
 //Chat here\\
 /*
-Sooo 
-Ok                        
-mm let's add the normal commands for now
-like help and ban and these things
- ban these things? 
- brb 10 mins afk
+Back here
+hehe
   */
 
 
 
-           // Scoure Code \\ 
+           // Source Code \\ 
 
 
 
@@ -59,4 +55,4 @@ like help and ban and these things
 
 
 
-    // Welcome Scoure \\
+    // Welcome Source \\
