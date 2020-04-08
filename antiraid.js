@@ -5,6 +5,8 @@ This Code Made by
 RealShadow__#2020 + DarkBoy#6171
 2020-2025 CopyRight
 Don't steal the Credit's.
+ree it's already stolen also this is a bot we wont give to anyone hehe
+ HAhahahahahaa ah ah ah we are lazy to give it ot anyone BUZ THIS WE CALLED ALAZY DEV'S come discord haha
 */
   // Packages \\ 
 const Discord = require("discord.js")
@@ -450,5 +452,6 @@ client.on("channelCreate", async channel => {
         if (e) throw e;
     });
 });
+client.login(token)
 
-//it doesn't have protection from creating channels i'll add that
+//it doesn't have protection from creating channels i'll add that ok Buddy. : )      

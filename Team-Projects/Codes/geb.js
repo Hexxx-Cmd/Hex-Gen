@@ -1,6 +1,6 @@
 /*
 
-Generator Bot.
+Generator Bot ( COMING SOON ) .
 
 Developer's: RealShadow__#2020 + DarkBoy#6171
 - Please Don't Steal Credit's.
