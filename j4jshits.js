@@ -4,22 +4,26 @@ Best Code LOL
 lmfao this shit YEAH
 */
 
-// Package's //
+// Package's and importand things //
 const shit = require("discord.js");
 const j4jshit = new shit.Cient();
 const Fuck = require("fs");
 const request = require("request");
-const token = "";// we need to get random math e soz wait oki'll write it
-const username = ["", "","","",""]
+const token = "";// we need to get random math e soz wait ok i'll write it
+const usernames = ["", "","","",""]
 const avatars = ["", "","","",""]
+const username = usernames[Math.floor(Math.random()*usernames.length)];
+const avatarlink = avatars[Math.floor(Math.random()*avatars.length)];
+
 // Auto Name's + Avatar's. \\
 shit.on('ready', function() {
-    shit.user.setUsername(); // give me some j4j servers (active ones)
-    shit.user.setAvatar();
-  // Auto-Join \\ EZ
+    shit.user.setUsername(username); // give me some j4j servers (active ones)
+    shit.user.setAvatar(avatarlink);
+  // Auto-Join \\
   JoinShit("j4j");
   JoinShit("FP5Ttsa");
 });
+ //  \\
 // Config \\
 const Gay = ""; // Ur gay Invite Link
 function JoinShit(invite_code) {
