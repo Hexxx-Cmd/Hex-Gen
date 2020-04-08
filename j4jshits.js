@@ -68,7 +68,15 @@ const avatars = [
   "",
   "",
   "",
-
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
 ]; //Okay avatar's Let's still gooddes ones feom google
 //REALSHADOW__#2020
 const username = usernames[Math.floor(Math.random() * usernames.length)]; //DARKBOY#6171
@@ -88,6 +96,7 @@ shit.on("ready", function() {
   //REALSHADOW__#2020
   JoinShit("FP5Ttsa"); //DARKBOY#6171
   //REALSHADOW__#2020
+  JoinShit("3TYkKFP");
 }); //DARKBOY#6171
 //REALSHADOW__#2020
 
