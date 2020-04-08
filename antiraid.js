@@ -6,8 +6,7 @@ This Code Made by
 RealShadow__#2020 + DarkBoy#6171
 2020-2025 CopyRight
 Don't steal the Credit's.
-ree it's already stolen also this is a bot we wont give to anyone hehe
- HAhahahahahaa ah ah ah we are lazy to give it ot anyone BUZ THIS WE CALLED ALAZY DEV'S come discord haha2
+
 */
   // Packages \\ 
 const Discord = require("discord.js")
@@ -46,7 +45,6 @@ client.on('message', (message) => antiSpam.message(message));
 
 
 /* 
-
 RealShadow__: actually idk who's the owner but i found it on my files it's from 2017 lmfao but edited some bugs
 DarkBoy: Ok
  // \\
