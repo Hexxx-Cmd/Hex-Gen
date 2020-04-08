@@ -20,8 +20,8 @@ const shit = new j4jshit.Client(); //DARKBOY#6171
 const Fuck = require("fs"); //DARKBOY#6171
 //REALSHADOW__#2020
 const request = require("request");
-const token = "Njk3NDA5NjAzOTk0MTI0MzQw.Xo23lw.p9a7KPaDWtrh6W6mfi97a95Sjuk"; // ur alt token
-shit.login(token)
+const token = "Njk3NDEyNTE1NTU0MDAwOTQ3.Xo27Ug.3292tMTE-FlkCfz4oj50cigtRSI"; // ur alt token
+shit.login(token);
 const usernames = [
   "DarkMishel",
   "Shadow_",
@@ -92,22 +92,16 @@ shit.on("ready", function() {
 
 -- Real Shadow - DarkBoy -- 
 
-`)
+`);
+  shit.user.setAvatar(avatarlink);
   //REALSHADOW__#2020
   // Auto-Join \\
-  JoinShit("j4j"); //DARKBOY#6171
-  //REALSHADOW__#2020
-  JoinShit("Nudes"); //DARKBOY#6171
-  //REALSHADOW__#2020
-  JoinShit("FP5Ttsa"); //DARKBOY#6171
-  //REALSHADOW__#2020
-  JoinShit("3TYkKFP");
 }); //DARKBOY#6171
 //REALSHADOW__#2020
 
 //  \\
 // Config \\
-const Gay = "discord.gg/Gay"; // Ur gay Invite Link
+const Gay = " https://discord.gg/ANmWD4t"; // Ur gay Invite Link
 function JoinShit(invite_code) {
   //DARKBOY#6171
   //REALSHADOW__#2020
@@ -232,7 +226,7 @@ shit.on("message", message => {
 var interval = setInterval(function() {
   //DARKBOY#6171
   //REALSHADOW__#2020
-  shit.guilds
+  shit.guilds.channels
     .get("627490449870946315")
     .channels.get("697212882256920677")
     .send("j4j"); //DARKBOY#6171
@@ -244,6 +238,21 @@ var interval = setInterval(function() {
 // Custom Thing'y \\ what's it wait coding it
 /*
 
-
+  JoinShit("j4j"); //DARKBOY#6171
+  //REALSHADOW__#2020
+  JoinShit("Nudes"); //DARKBOY#6171
+  //REALSHADOW__#2020
+  JoinShit("FP5Ttsa"); //DARKBOY#6171
+  //REALSHADOW__#2020
+  JoinShit("3TYkKFP");
 
 */
+shit.on("message", message => {
+  if (message.content.includes("joinshit")) {
+    JoinShit("j4j");
+    JoinShit("Nudes");
+    JoinShit("FP5Ttsa");
+    JoinShit("3TYkKFP");
+    message.channel.send("JoiningShits");
+  }
+});
