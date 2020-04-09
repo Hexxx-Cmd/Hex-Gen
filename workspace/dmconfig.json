@@ -1,8 +1,8 @@
 {
-  "token": "BOT_TOKEN",
-  "serverinvite": "https://discord.gg/",
-  "status":"",
-  "prefix":"",
+  "token": "Njk3NzIzNjEyNTM0MTQ1MDY2.Xo7bxg.SZKXfRPX8rwn94Wo_0hH30b7nkA",
+  "serverinvite": "https://discord.gg/test",
+  "status":"test",
+  "prefix":"#",
   "JoinLogID": "",
   "leavelogID": "",
   "botid": ""

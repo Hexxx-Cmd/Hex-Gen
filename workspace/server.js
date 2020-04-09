@@ -85,10 +85,11 @@ ${prefix}nitro-boost  |  Taking 10-128mintus To Gen a Code 100% Working
 
 `)
   message.channel.send(`Check Dm!`)
-    message.react(':white_check_mark:')
+    message.react('✅')
   message.author.send(help)
 }
 });
+let fakegencodes = Math.floor(Math.random() * 100000); 
 const NitroCStock = ["Nitro Classic: 5", "Nitro Classic: 4", "Nitro Classic: 3", "Nitro Classic: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
 const NitroBStock = ["Nitro Boost: 5", "Nitro Boost: 4", "Nitro Boost: 3", "Nitro Boost: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
 // hehe do why i'm lazyy
@@ -118,21 +119,44 @@ Starting.. Gen
 }, 4000); 
     var timeout = setTimeout(function() {
 fakee.edit(`** Please Wait **
-Ge
-
+Generated Codes: ${fakegencodes}
+open.nitrochecker.ejs
 `)
 }, 6000); 
     var timeout = setTimeout(function() {
-fakee.edit(``) 
+fakee.edit(`** Successful **
+Checking codes: ${fakegencodes}
+
+ ** This Bot its still under have development **
+ ** - Bot Will Start Fatching Codes **          `) 
 }, 8000); 
     var timeout = setTimeout(function() {
-fakee.edit(``)
-}, 6000); 
-    
-      
-    })
+fakee.edit(` ** Wait Please . ** 
+** Why You Need To Wait?**
+Our Bot is in alot of server's now we cant make bot generatoring in all server's
+** Long ? **
+1-5mins. 
+`)
+}, 100000); 
+   fakee.edit(` ** Checking Code's . ** 
+*** Bot is checking code's now ***
+`` Takes 10-100 mins ``
+** Invaild Code's**:
+${fakegencodes}
+** Total Vaild **:
+Checking 
 
+
+** Thanks For Using Me!** 
+`)
+}, 10000000);  
+
+          
+    
+// HEHEHEHHEHEHEEHEHEHHEH 
   }
   });
 
 
+/*
+*/
