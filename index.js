@@ -8,7 +8,6 @@ const got = require("got")
 client.on("ready", () => {
   console.log("Ready !");
   client.user.setActivity(`#help | #invite`, { type: "Streaming" });
-  client.user.setAvatar('https://media.discordapp.net/attachments/697864380120825957/697872132759355442/Hex_Gen.png')
 });
 client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
