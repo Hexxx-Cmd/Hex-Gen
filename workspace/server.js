@@ -92,28 +92,47 @@ ${prefix}nitro-boost  |  Taking 10-128mintus To Gen a Code 100% Working
 const NitroCStock = ["Nitro Classic: 5", "Nitro Classic: 4", "Nitro Classic: 3", "Nitro Classic: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
 const NitroBStock = ["Nitro Boost: 5", "Nitro Boost: 4", "Nitro Boost: 3", "Nitro Boost: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
 // hehe do why i'm lazyy
-
-DarkDevs.on("message", message => {
+const edittime = "3000";
+DarkDevs.on("message", async message => {
+  if (!message.channel.type == "dm") return;
   if (message.content.includes(prefix + "nitro-classic")) {
     let fakenitro = new dmall.richembed()
-    .setDescription(``)//send message THEN edit
-    message.channel.send(fakenitro).then(m)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
-    fakenitro.edit(``)
+    .setDescription(`Starting Generatoring....
+> Connecting: ....
+> Requesting Acces: ....`)//send message THEN edit how to make Like wait 2 sec then edit idk timeout
+  message = await message.channel.send(fakenitro).then(fakee => {
+var timeout = setTimeout(function() {
+fakee.edit(`
+**
+Connected To NitroGEN.ejs
+Connecting To NitroChecker.ejs
+**
+`)
+}, 2000); 
+    var timeout = setTimeout(function() {
+fakee.edit(` ** Thanks For Using Nitro-GEN** 
+open.NitroGEN.ejs
+open.NitroChecker.ejs
+Starting.. Gen
+`)
+}, 4000); 
+    var timeout = setTimeout(function() {
+fakee.edit(`** Please Wait **
+Ge
+
+`)
+}, 6000); 
+    var timeout = setTimeout(function() {
+fakee.edit(``) 
+}, 8000); 
+    var timeout = setTimeout(function() {
+fakee.edit(``)
+}, 6000); 
+    
+      
+    })
 
   }
-});
+  });
 
 
