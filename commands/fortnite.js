@@ -5,7 +5,6 @@ module.exports.run = (bot, message, args, gen) => {
             message.channel.send({embed:{title:`Please wait 15 minutes!`, color:bot.color}})
     } else {
     let type = "fortnite"
-    const site = `https://zzhhzz.xyz`
     let alt = gen.getAlt(type)
     if(!alt || alt === '' || alt === ',') return message.channel.send({embed:{title:`We don't have those accounts in stock!`, color:bot.color}})
     let embed = new Discord.RichEmbed()
@@ -19,9 +18,10 @@ module.exports.run = (bot, message, args, gen) => {
     message.author.send(embed)
       let ree = new Discord.RichEmbed()
     .setColor(bot.color)
-    .setTitle(`[named links](https://discordapp.com)`)
+    .setTitle(`C-Gen`)
     .addField('You Have Generated a Fortnite Account Check Your DM.', `Wanna See The C-Gen Features ? try our Command \`\`#premium\`\``)
     .setFooter("C-Gen © 2017-2020, Simple Generator Bot - All Rights Reserved")
+    .setURL("https")
     message.channel.send(ree)
     bot.cooldown.add(message.author.id);
         setTimeout(() => {
