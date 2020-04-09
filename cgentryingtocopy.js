@@ -15,8 +15,22 @@ const prefix = genconfig.prefix
 const name = genconfig.name
 const devid = genconfig.devid
 const ChangeStatusTime = genconfig.ChangeStatusTime
-const CloowDown = genconfig.cloowdown
-const premium = true;
+const CloowDown = genconfig.cloowdown     
+ // Premium Config \\
+const premiumusers = require('./premiumusers.json')
+const PremiumList = [
+                     premiumusers.premium,
+                     premiumusers.premium1,
+                     premiumusers.premium2,
+                     premiumusers.premium3,
+                     premiumusers.premium4,
+                     premiumusers.premium5,
+                     premiumusers.premium6,
+                     premiumusers.premium7,
+                     premiumusers.premium8,
+                     premiumusers.premium9,
+                     premiumusers.premium10 ]
+const premium = true;                            
   // Scoure Code \\
 const page = 1;
 const pages = [
