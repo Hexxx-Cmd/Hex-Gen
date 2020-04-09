@@ -9,7 +9,7 @@ client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
  // Config \\
 client.prefix = config.prefix
-// Premium Config \\
+// Premium Config \\ //dms i mean check server what?? //dms asap -__-
 
 const premiumusers = require("./premiumusers.json");
 const PremiumList = [
@@ -290,17 +290,14 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`You d
 });
 const prefix = "#"
 
-client.on("message", async message => {
+client.on("message", async message => { //by shadow
  const msg = message
-  if (message.content == "<@685058075861975041>") {
+  if (message.content == "<@"+client.user.id+">") {
     message.channel.send(`Hello! My command prefix is ` + `**${prefix}**\nFor Further Help/Commands list type ${prefix}help`)
   }
  
  
  
-  if (message.content == "prefix") {
-    message.channel.send(`Hello! My command prefix is ` + `**${prefix}**\nFor Further Help/Commands list type ${prefix}help`)
-  }
  
   if (message.author.bot) return;
  
