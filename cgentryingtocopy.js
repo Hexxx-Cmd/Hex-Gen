@@ -1,48 +1,61 @@
+/*
+Lazy Dev's.
+Code Made By:
+DarkBoy#6171
+RealShadow__#2020
+- (CopyRight) 2020-2025
+*/
+   // Packages \\
 const darkdevs = require("discord.js");
 const dark = darkdevs.Client();
-const prefix = "!";
-const name = "";
+const DarkFS = require('fs')
+   // Config \\
+const genconfig = require('./genconfig.json')
+const prefix = genconfig.prefix
+const name = genconfig.name
+const devid = genconfig.devid
+const ChangeStatusTime = genconfig.ChangeStatusTime
+const CloowDown = genconfig.cloowdown
 const premium = true;
-const ChangeStatusTime = "50000";
-const CloowDown = "100000";
+  // Scoure Code \\
 const page = 1;
 const pages = [
   `
 Donors Commands
 
-#lolgame - League of Legends account | #premium
-#Disney - Disney+ Account | #premium
-#Steam - Steam Account | #premium
+${prefix}lolgame - League of Legends account | #premium
+${prefix}Disney - Disney+ Account | #premium
+${prefix}Steam - Steam Account | #premium
 
 Generator Commands
 
-#Fortnite - Sends You a Free Fortnite Account
-#Spotify - Sends You a Free Spotify Account
-#Uplay - Sends You a free Uplay Account
-#Hulu - Sends You a Hulu Account
-#Minecraft - Sends You a Free Minecraft Account
-#Nordvpn - Sends You a Free Norvpn Account
-#crunchyroll - Sends You a Free crunchyroll Account
-#Steamkey - Sends You a Free Steam Key
-#pornhub - Sends You a Free pornhub account
-#origin - Sends You a Free Origing account
+${prefix}Fortnite - Sends You a Free Fortnite Account
+${prefix}Spotify - Sends You a Free Spotify Account
+${prefix}Uplay - Sends You a free Uplay Account
+${prefix}Hulu - Sends You a Hulu Account
+${prefix}Minecraft - Sends You a Free Minecraft Account
+${prefix}Nordvpn - Sends You a Free Norvpn Account
+${prefix}crunchyroll - Sends You a Free crunchyroll Account
+${prefix}Steamkey - Sends You a Free Steam Key
+${prefix}pornhub - Sends You a Free pornhub account
+${prefix}origin - Sends You a Free Origing account
 
-#stock - bot stock
-#Invite - Invites The Bot To Your Server
+${prefix}stock - bot stock
+${prefix}Invite - Invites The Bot To Your Server
 
 Check out https://zzhhzz.xyz/ for more infromation about this amazing bot!
 `,
   `Other Commands:
 
-#server - to see your server status
-#bans - to see how many members got banned in your server
-#kick - To Kick a Member From the server
-#ban - to ban member
-#unban all - To unban all
-#unban + ID - To unban User
-#lock - Locks the channel in which this command is used. People will be able to see the message but not send a message
-#unlock - to unlock the channel
-#unlock - Unlocks the channel in which this command is used.
+${prefix}server - to see your server status
+${prefix}bans - to see how many members got banned in your server
+${prefix}kick - To Kick a Member From the server
+${prefix}ban - to ban member
+${prefix}unban all - To unban all
+${prefix}unban + ID - To unban User
+${prefix}lock - Locks the channel in which this command is used. People will be able to see the message but not send a message
+${prefix}unlock - to unlock the channel
+${prefix}unlock - Unlocks the channel in which this command is used.
 `,
   `C-Gen Premium Bot
 
@@ -86,8 +99,10 @@ https://www.cgen.xyz/
 `
 ];
 
+// Emojis \\
 
 
+// Gen Scoure \\
 dark.on("ready", function() {
   console.log(
     "This bot is for daddy Hexxx🌙#2020 \n         Logged in as" +

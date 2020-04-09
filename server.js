@@ -1,4 +1,0 @@
-/*
-New Code ayyyyy.
-RealShadow Give some Ideas
-*/
