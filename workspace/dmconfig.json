@@ -4,6 +4,7 @@
   "status":"",
   "prefix":"",
   "JoinLogID": "",
-  "leavelogID": ""
+  "leavelogID": "",
+  "botid": ""
   
 }

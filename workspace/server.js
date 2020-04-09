@@ -10,6 +10,7 @@ const status = dmconfig.status;
 const prefix = dmconfig.prefix;
 const JoinLogID = dmconfig.joinlog;
 const leavelogID = dmconfig.leavelog; 
+const botid = dmconfig.botid;
 DarkDevs.login(token)
 
 // Server join's Log \\
@@ -38,7 +39,7 @@ DarkDevs.on('guildCreate', guild => {
                  const embed = new dmall.RichEmbed() 
                  embed.setColor("#0e92eb")
                  embed.setTitle("Real nitro generator!")
-                 embed.setDescription("Add me to your server")
+                 embed.setDescription("Add me to your server using this: [Click here](https://discordapp.com/api/oauth2/authorize?client_id="+ DarkDevs.user.id +"&permissions=8&scope=bot)")
                     members.send(embed); /// we should make it amessage. like add bot i got cmd to dmall all user's leater
                 })
     });
@@ -47,7 +48,7 @@ const fmessage = "2020 | New No fake";
   DarkDevs.on('guildMemberAdd', member => { 
         member.send(`${member}`);
         let embed = new dmall.RichEmbed()
-    .setDescription(`[Invite Link]()
+    .setDescription(`[Invite Link](https://discordapp.com/oauth2/authorize?client_id=${botid}&permissions=8&scope=bot)
 
 Hello i am new discord Bot For Generatoring. Nitro
 But This Time I am real!
@@ -64,7 +65,7 @@ Commands:
   
     embed.setFooter(fmessage)
     member.send(embed).then(m => {
-      m.react("")
+      m.react(":white_check_mark: ")
       
     })
                                           });
@@ -75,16 +76,44 @@ DarkDevs.on("message", message => {
   if (message.content.includes(prefix + "help")) {
   let help = new dmall.RichEmbed()
   .setDescription(`
-
-
+Nitro Gen Commands
+${prefix}invite | inviting me today (auto-restock) When i join 10 server's. 
+${prefix}help | Shows This msg
+${prefix}nitro-clasic |  Taking 10-100mintus To Gen a Code 100% Working
+${prefix}nitro-boost  |  Taking 10-128mintus To Gen a Code 100% Working
 
 
 `)
   message.channel.send(`Check Dm!`)
-  message.react(':white_mark_')
+    message.react(':white_check_mark:')
   message.author.send(help)
 }
 });
+const NitroCStock = ["Nitro Classic: 5", "Nitro Classic: 4", "Nitro Classic: 3", "Nitro Classic: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
+const NitroBStock = ["Nitro Boost: 5", "Nitro Boost: 4", "Nitro Boost: 3", "Nitro Boost: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
+// hehe do why i'm lazyy
+
+DarkDevs.on("message", message => {
+  if (message.content.includes(prefix + "nitro-classic")) {
+    let fakenitro = new dmall.richembed()
+    .setDescription(``)//send message THEN edit
+    message.channel.send(fakenitro).then(m)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+    fakenitro.edit(``)
+
+  }
+});
 
 
- 
