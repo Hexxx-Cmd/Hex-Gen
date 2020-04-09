@@ -21,7 +21,7 @@ module.exports.run = (bot, message, args, gen) => {
     .setTitle(`C-Gen`)
     .addField('You Have Generated a Fortnite Account Check Your DM.', `Wanna See The C-Gen Features ? try our Command \`\`#premium\`\``)
     .setFooter("C-Gen © 2017-2020, Simple Generator Bot - All Rights Reserved")
-    .setURL("https")
+    .setURL("https://zzhhzz.xyz")
     message.channel.send(ree)
     bot.cooldown.add(message.author.id);
         setTimeout(() => {
