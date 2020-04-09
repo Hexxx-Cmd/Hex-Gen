@@ -157,9 +157,8 @@ Check out https://zzhhzz.xyz/ for more infromation about this amazing bot!
 
  
 `,`
-**__C-GEN Premium Bot__**
-
-1 - Prime Features
+**__H3x-Gen Premium Bot__**
+**1 - Prime Features
 2 - Set a Channel For The Gen bot
 3 - Working only in Your Server
 4 - Change The Name and Picture
@@ -171,7 +170,7 @@ Check out https://zzhhzz.xyz/ for more infromation about this amazing bot!
 
 => 7.99 £ (1 Month)
 => 14.99 £ (3 Months) Save 1 month
-=> 31.99 £ (1 Year) Save 8 months ! & earn money from Selling Premium User , earn 1000/100
+=> 31.99 £ (1 Year) Save 8 months ! & earn money from Selling Premium User , earn 1000/100**
 `,`
 
 **__C-GEN Prime Bot__**
