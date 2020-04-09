@@ -341,12 +341,10 @@ Reason: ${reason}`)
   if (command === "unban") {
     if (!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("You don't have permissions to use this command")
 
-
+    if(args[0] == "all") return;
     if (isNaN(args[0])) return message.channel.send(`**Usage:** \n ${prefix}unban [memberID] [reason]`)
     let bannedMember = await client.fetchUser(args[0])
-    if (!bannedMember) return 
-    if(bannedMember == "all") return
-    
+    if (!bannedMember) return message.channel.send(`**Usage:** \n ${prefix}unban [memberID] [reason]`)
 
 
     let reason = args.slice(1).join(" ")
