@@ -1,8 +1,10 @@
 {
-  "prefix": "Njk3NjUzOTIxNTcyOTc4NzE5.Xo6a3Q.5yCruaq2yln5U-UQ8Spqh6GZjX8",
-  "cloowdown": "",
-  "token": "",
-  "DEVID": "",
-  "ChangeStatusTime": "",
-  "name": ""
+  "prefix": "#",
+  "cloowdown": "5000",
+  "token": "Njk3NjUzOTIxNTcyOTc4NzE5.Xo6a3Q.5yCruaq2yln5U-UQ8Spqh6GZjX8",
+  "DEVID": "comingsoon",
+  "ChangeStatusTime": "5000",
+  "name": "Blah-Hexxx",
+  "projectname": "Lazy-developer",
+  "port": "3333"
 }

@@ -9,6 +9,10 @@ RealShadow__#2020
 const darkdevs = require("discord.js");
 const dark = new darkdevs.Client();
 const DarkFS = require('fs')
+const Host = require('express')
+const DarkDevsReq = require('request')
+
+
    // Config \\
 const genconfig = require('./genconfig.json')
 const token = genconfig.token
@@ -16,9 +20,25 @@ const prefix = genconfig.prefix
 const name = genconfig.name
 const devid = genconfig.devid
 const ChangeStatusTime = genconfig.ChangeStatusTime
-const CloowDown = genconfig.cloowdown     
+const CloowDown = genconfig.cloowdown   
+const projectname = genconfig.projectname // Only For Glitch.me
+const port = genconfig.port // Only For Glitch.ne 
 dark.login(token)
+// 24/7 Hosting (Only For Glitch) \\
+const app = Host ();
+app.get ('/', (req, res) => {
+  res.sendStatus (200);
+});
+app.listen (port);
+function t_c() {
+  DarkDevsReq.get(`https://${projectname}.glitch.me/`, (error, response, body) => {
+    let DarkDevs = body;
+    return DarkDevs;
+  });
+}
+setInterval(t_c, 60000);
  // Premium Config \\
+
 const premiumusers = require('./premiumusers.json')
 const PremiumList = [
   
