@@ -47,7 +47,10 @@ More Things Coming soon
 
 `);
 });
-const premium = true;
+
+
+
+const premium2 = true;
 client.color = 0xff0000
 client.cooldown = new Set()
 fs.readdir('./commands', (err,files) => {
@@ -258,7 +261,7 @@ message.guild.fetchBans()
 })
 }
 });
-
+// Testing AddPremium \\
 client.on('message', message => {
   
     if (message.content.toLowerCase() === "#lock") {
@@ -403,8 +406,7 @@ Reason: ${reason}`)
 });
 
 
-
-/*/*
+/*
 Lazy Dev's.
 Code Made By:
 DarkBoy#6171
@@ -501,3 +503,14 @@ dark.on("ready", function() {
   dark.user.setActivity("#help | cgen.xyz");
 });
 */
+let premium = JSON.parse(fs.readFileSync("./premium.json", "utf8"));
+client.on('message', message => {
+if(message.content.toLowerCase() === '#addpremium') {
+
+    premium++;
+
+    fs.writeFile("./premium.json", JSON.stringify(premiumusers), (err) => {
+        if (err) console.error(err)
+    });
+}
+});
