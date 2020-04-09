@@ -1,3 +1,4 @@
+// Packages \\
 const Discord = require('discord.js')
 const fs = require('fs')
 const config = require('./genconfig.json')
@@ -6,7 +7,47 @@ const gen = require('./gen.js')
 const got = require("got")
 client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
+ // Config \\
 client.prefix = config.prefix
+// Premium Config \\
+
+const premiumusers = require("./premiumusers.json");
+const PremiumList = [
+  premiumusers.premium,
+
+  premiumusers.premium1,
+
+  premiumusers.premium2,
+
+  premiumusers.premium3,
+
+  premiumusers.premium4,
+
+  premiumusers.premium5,
+
+  premiumusers.premium6,
+
+  premiumusers.premium7,
+
+  premiumusers.premium8,
+
+  premiumusers.premium9,
+
+  premiumusers.premium10 //                     DarkBoy#6171 + RealShadow__#2020 Credit's,.
+];
+
+client.on("ready", function() {
+  console.log(`-- Premium User's List --
+
+${PremiumList}                    - Ids
+(usernames)                       - coming soon
+
+
+More Things Coming soon
+
+`);
+});
+const premium = true;
 client.color = 0xff0000
 client.cooldown = new Set()
 fs.readdir('./commands', (err,files) => {

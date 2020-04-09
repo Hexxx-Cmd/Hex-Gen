@@ -10,9 +10,11 @@ module.exports.run = (bot, message, args, gen) => {
     let embed = new Discord.RichEmbed()
     .setColor(bot.color)
     .setTitle('You have Generated Fortnite Account')
-    .addField('Type', type)
-    .addField('Email',alt.split(':')[0],true)// remove this
-    .addField('Password',alt.split(':')[1],true)
+    .addField('~~Your account~~', alt)
+    .addField('~~Remind:~~',"Remember that you are using the free generator, this account may not work !",true)// remove this
+    .addField('C-Gen Premium',"You Have to Buy The Premium Version to get The Bot s Features, For You and Your Server",true)
+    .addField('Is C-Gen completely legal ?',"Yes it is! So many people are falsely claiming that our service is illegal or against some type of EULA or TOS, which is simply not true All of our accounts are provided by the specified accounts owners, bought at the original game site or bought from resellers. Dont believe what people falsely claim to make C-Gen look bad.")
+    .setFooter("C-Gen © 2017-2020, Simple Generator Bot - All Rights Reserved")
     message.author.send(embed)
     message.channel.send({embed:{title:`Account has been sent successfully!`, color:bot.color}})
     bot.cooldown.add(message.author.id);
