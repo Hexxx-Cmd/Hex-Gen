@@ -343,13 +343,13 @@ Reason: ${reason}`)
  
     if (isNaN(args[0])) return message.channel.send(`**Usage:** \n ${prefix}unban [memberID] [reason]`)
     let bannedMember = await client.fetchUser(args[0])
-    if (!bannedMember) return message.channel.send(`**Usage:** ${prefix}unban [memberID] [reason]`)
+    if (!bannedMember) return message.channel.send(`**Usage:** \n ${prefix}unban [memberID] [reason]`)
  
  
     let reason = args.slice(1).join(" ")
-    if (!reason) return message.channel.send(`Error: Missing Arguments, define reason\nUsage: ${prefix}unban [memberID] [reason]`)
+    if (!reason) return message.channel.send(`**Usage:** \n ${prefix}unban [memberID] [reason]`)
  
-    if (!message.guild.me.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(`Error: I have Insufficient Permissions to unban members`)
+    if (!message.guild.me.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(`I don't have permissions`)
     message.delete()
     try {
       message.guild.unban(bannedMember, reason)
