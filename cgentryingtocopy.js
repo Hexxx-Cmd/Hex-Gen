@@ -5,80 +5,80 @@ DarkBoy#6171
 RealShadow__#2020
 - (CopyRight) 2020-2025
 */
-   // Packages \\
+// Packages \\
 const darkdevs = require("discord.js");
 const dark = new darkdevs.Client();
-const DarkFS = require('fs')
-const Host = require('express')
-const DarkDevsReq = require('request')
+const DarkFS = require("fs");
+const Host = require("express");
+const DarkDevsReq = require("request");
 
-
-   // Config \\
-const genconfig = require('./genconfig.json')
-const token = genconfig.token
-const prefix = genconfig.prefix
-const name = genconfig.name
-const devid = genconfig.devid
-const ChangeStatusTime = genconfig.ChangeStatusTime
-const CloowDown = genconfig.cloowdown   
-const projectname = genconfig.projectname // Only For Glitch.me
-const port = genconfig.port // Only For Glitch.ne 
-dark.login(token)
+// Config \\
+const genconfig = require("./genconfig.json");
+const token = genconfig.token;
+const prefix = genconfig.prefix;
+const name = genconfig.name;
+const devid = genconfig.devid;
+const ChangeStatusTime = genconfig.ChangeStatusTime;
+const CloowDown = genconfig.cloowdown;
+const projectname = genconfig.projectname; // Only For Glitch.me
+const port = genconfig.port; // Only For Glitch.ne
+dark.login(token);
 // 24/7 Hosting (Only For Glitch) \\
-const app = Host ();
-app.get ('/', (req, res) => {
-  res.sendStatus (200);
+const app = Host();
+app.get("/", (req, res) => {
+  res.sendStatus(200);
 });
-app.listen (port);
+app.listen(port);
 function t_c() {
-  DarkDevsReq.get(`https://${projectname}.glitch.me/`, (error, response, body) => {
-    let DarkDevs = body;
-    return DarkDevs;
-  });
+  DarkDevsReq.get(
+    `https://${projectname}.glitch.me/`,
+    (error, response, body) => {
+      let DarkDevs = body;
+      return DarkDevs;
+    }
+  );
 }
 setInterval(t_c, 60000);
- // Premium Config \\
+// Premium Config \\
 
-const premiumusers = require('./premiumusers.json')
+const premiumusers = require("./premiumusers.json");
 const PremiumList = [
-  
-                     premiumusers.premium,
-  
-                     premiumusers.premium1,
-  
-                     premiumusers.premium2,
-  
-                     premiumusers.premium3,
-  
-                     premiumusers.premium4,
-  
-                     premiumusers.premium5,
-  
-                     premiumusers.premium6,
-  
-                     premiumusers.premium7,
-  
-                     premiumusers.premium8,
-  
-                     premiumusers.premium9,
-  
-                     premiumusers.premium10 //                     DarkBoy#6171 + RealShadow__#2020 Credit's,.
-  
-]
+  premiumusers.premium,
+
+  premiumusers.premium1,
+
+  premiumusers.premium2,
+
+  premiumusers.premium3,
+
+  premiumusers.premium4,
+
+  premiumusers.premium5,
+
+  premiumusers.premium6,
+
+  premiumusers.premium7,
+
+  premiumusers.premium8,
+
+  premiumusers.premium9,
+
+  premiumusers.premium10 //                     DarkBoy#6171 + RealShadow__#2020 Credit's,.
+];
 
 dark.on("ready", function() {
-console.log(`-- Premium User's List --
+  console.log(`-- Premium User's List --
 
 ${PremiumList}                    - Ids
 (usernames)                       - coming soon
 
 
-More Thing's Coming soon
+More Things Coming soon
 
-`)
+`);
 });
-const premium = true;                            
-  // Scoure Code \\
+const premium = true;
+// Scoure Code \\
 const page = 1;
 const pages = [
   `
@@ -162,8 +162,7 @@ https://www.cgen.xyz/
 
 // Emojis \\
 
-
-// Gen Scoure \\
+// Gen Source \\
 dark.on("ready", function() {
   console.log(
     "This bot is for daddy Hexxx🌙#2020 \n         Logged in as" +
@@ -178,7 +177,4 @@ dark.on("ready", () => {
   dark.user.setActivity("#help | cgen.xyz");
 });
 
-dark.on("message", re => {
-  
-  
-});
+dark.on("message", re => {});
