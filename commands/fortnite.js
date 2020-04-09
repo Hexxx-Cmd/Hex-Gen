@@ -19,7 +19,7 @@ module.exports.run = (bot, message, args, gen) => {
     message.author.send(embed)
       let ree = new Discord.RichEmbed()
     .setColor(bot.color)
-    .setTitle(`[C-Gen](${site})`)
+    .setTitle(`[named links](https://discordapp.com)`)
     .addField('You Have Generated a Fortnite Account Check Your DM.', `Wanna See The C-Gen Features ? try our Command \`\`#premium\`\``)
     .setFooter("C-Gen © 2017-2020, Simple Generator Bot - All Rights Reserved")
     message.channel.send(ree)
