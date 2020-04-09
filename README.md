@@ -1,7 +1,7 @@
 # DarkDevs
 
 - Who are we??
-- const DarkDevs = "DarkDevs:" + devs;`
+
 
 
 # DarkDevs 
@@ -22,7 +22,7 @@
 
 
 
-
+    
                (Be Lazy Forover)
                Lazy Dev's
                1 - 2020 

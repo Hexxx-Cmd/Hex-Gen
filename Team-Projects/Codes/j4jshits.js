@@ -42,6 +42,7 @@ const usernames = [
   "minecraft world",
   "shit",
   "oops forgot",
+  "Hexx",
   "OWNER | BUERE",
   "PotatoKing",
   "Ahmead",
