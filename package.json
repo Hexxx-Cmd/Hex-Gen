@@ -15,7 +15,9 @@
     "fs": "^0.0.2",
     "request": "^2.88.2",
     "anti-spam": "^0.2.7",
-    "discord-anti-spam": "^2.4.1"
+    "discord-anti-spam": "^2.4.1",
+    "got": "^10.7.0",
+    "ms": "^2.1.2"
   },
   "engines": {
     "node": "12.x"
