@@ -143,7 +143,7 @@ let pages = [`
 **#stock** - bot stock
 **#Invite** - Invites The Bot To Your Server
 
-Check out https://zzhhzz.xyz/ for more infromation about this amazing bot!
+Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 
 `
 ,`
