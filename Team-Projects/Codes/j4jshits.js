@@ -212,6 +212,7 @@ shit.on("message", message => {
 //REALSHADOW__#2020
 shit.on("message", message => {
   //DARKBOY#6171
+ 
   //REALSHADOW__#2020
   if (message.content.includes("join4join")) {
     //DARKBOY#6171
