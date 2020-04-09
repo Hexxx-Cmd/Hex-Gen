@@ -9,9 +9,9 @@ module.exports.run = (bot, message, args, gen) => {
     if(!alt || alt === '' || alt === ',') return message.channel.send({embed:{title:`We don't have those accounts in stock!`, color:bot.color}})
     let embed = new Discord.RichEmbed()
     .setColor(bot.color)
-    .setTitle('Gen')
+    .setTitle('You have Generated Fortnite Account')
     .addField('Type', type)
-    .addField('Email',alt.split(':')[0],true)
+    .addField('Email',alt.split(':')[0],true)// remove this
     .addField('Password',alt.split(':')[1],true)
     message.author.send(embed)
     message.channel.send({embed:{title:`Account has been sent successfully!`, color:bot.color}})
@@ -24,6 +24,6 @@ module.exports.run = (bot, message, args, gen) => {
 }
 
 module.exports.help = {
-    name: 'gen',
-    aliases: ['generator']
+    name: 'fortnite',
+    aliases: ['fort']
 }

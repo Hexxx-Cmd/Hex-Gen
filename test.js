@@ -24,7 +24,7 @@ fs.readdir('./commands', (err,files) => {
             }
             console.log(`${i+1}: Loaded command '${props.help.name}'`)
         } else {
-            console.log(`Something is missing for file '${file}'!`)
+            console.log(`Something is missing for file '${file}'!`)// wut this is test ignore hehe
         }
     })
 })
