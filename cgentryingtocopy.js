@@ -24,6 +24,8 @@ const projectname = genconfig.projectname; // Only For Glitch.me
 const port = genconfig.port; // Only For Glitch.ne
 dark.login(token);
 dark.cooldown = new Set()
+dark.commands = new darkdevs.Collection()
+dark.aliases = new darkdevs.Collection()
 // 24/7 Hosting (Only For Glitch) \\
 const app = Host();
 app.get("/", (req, res) => {
