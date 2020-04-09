@@ -18,14 +18,11 @@ module.exports.run = (bot, message, args, gen) => {
     message.author.send(embed)
       let ree = new Discord.RichEmbed()
     .setColor(bot.color)
-    .setThumbail('https://media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
-    .setAuthor(`Hex-gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
-    .setTitle(`Hex-Gen`) //yo the name is Hex-Gen not HexGenOkay
-    .setDescription("**You Have Generated a Fortnite Account Check Your DM.**")
-    .addDescription(`Wanna See The Hex-gen Features ? try our Command \`\`#premium\`\``) //ok now time to change everything too Hex gen ok?OK
+    .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
+    .setDescription("**You Have Generated a Fortnite Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`\nhttps://www.cgen.xyz/Premium")
+    .setThumbnail('https://images-ext-1.discordapp.net/external/8tXbmE1FKl-ELZM2h2iR38UKJ4eKrbkgZEq1tJWjqaE/https/media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
     .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved")
-    .setURL("https://zzhhzz.xyz")  
-    message.channel.send(ree) //lol shushNOU
+    message.channel.send(ree) //lol NOU
     bot.cooldown.add(message.author.id);
         setTimeout(() => {
           bot.cooldown.delete(message.author.id);

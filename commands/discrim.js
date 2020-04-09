@@ -15,9 +15,9 @@ exports.run = (bot, message, args, ops, PREFIX) => {
     if (isNaN(args[0]) || args[0] > 9999 || args[0] < 1) { // Run if out of parameters
          ///huh
         
-        embed.setAuthor(`Hex-gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
+        embed.setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
         embed.setThumbnail('https://media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
-        embed.setDescription(`**Sorry, please enter a valid discrim. Usage: #discrim [#????]**\nWanna See The Hex-gen Features ? [Try this](https://zzhhzz.xyz)`);
+        embed.setDescription(`**Sorry, please enter a valid discrim. Usage: #discrim [#????]**\nWanna See The Hex-Gen Features ? [Try this](https://zzhhzz.xyz)`);
         embed.setURL("https://zzhhzz.xyz/")
         //did i ask for any other details? hehe
         return message.channel.send(embed);
