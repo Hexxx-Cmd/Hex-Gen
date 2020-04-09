@@ -203,6 +203,468 @@ let embed = new Discord.RichEmbed()
 }
 });
 
+client.on('message',async message => {
+    if (message.content.toLowerCase() === "#bans") {
+if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("BAN_MEMBERS")) return;
+message.guild.fetchBans()
+  .then(banned => {
+    let list = banned.map(user => user.tag).join('\n');
+
+    // Make sure if the list is too long to fit in one message, you cut it off appropriately.
+    if (list.length >= 1950) list = `${list.slice(0, 1948)}...`;
+  message.channel.send("Number of banned persons **" + banned.size + "**");
+})
+}
+});
+
+client.on('message', message => {
+  
+    if (message.content.toLowerCase() === "#lock") {
+    if(!message.channel.type == "dm") return;
+ 
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`You don't have permissions to use this command!`);
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: false
+ 
+           }).then(() => {
+
+   message.reply("**:white_check_mark: Channel has been locked.**")
+           });
+             }
+    if (message.content.toLowerCase() === "#unlock") {
+    if(!message.channel.type == "dm") return;
+ 
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`You don't have permissions to use this command!`);
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: true
+ 
+           }).then(() => {
+   message.reply("**:white_check_mark: Channel has been Opened.**")
+           }); 
+}
+});
+const prefix = "#"
+
+client.on("message", async message => {
+ 
+  if (message.content == "<@685058075861975041>") {
+    message.channel.send(`Hello! My command prefix is ` + `**${prefix}**\nFor Further Help/Commands list type ${prefix}help`)
+  }
+ 
+ 
+ 
+  if (message.content == "prefix") {
+    message.channel.send(`Hello! My command prefix is ` + `**${prefix}**\nFor Further Help/Commands list type ${prefix}help`)
+  }
+ 
+  if (message.author.bot) return;
+ 
+  if (message.channel.type === 'dm') return;
+
+ 
+  if (message.content.indexOf(prefix) !== 0) return;
+ 
+ 
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+ 
+ 
+  if (command === "ban") {
+    const YDHP = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:: You have missing permissions: **BAN_MEMBERS**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const NPerms = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Missing Permissions for the bot: **BAN_MEMBERS**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const invalidusage = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Invalid usage! \nUsage: \`\`!ban [Member] [Reason]\`\``)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const cantbekicked = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(':x: This user is a mod, I can\'t do that.')
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const cantforunknown = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error :x:")
+    .setDescription(`I can't ban someone who has a higher roles than me,`)
+    .setFooter(`Requested by | ${msg.author.tag}`);    
+    const success = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle("Successful :white_check_mark:")
+    .setDescription(`${member.user.tag} has been successfully banned`)
+    .setFooter(`Requested by | ${msg.author.tag}`);    
+    
+    
+    
+    if (!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(YDHP)
+ 
+    if (!message.guild.me.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(NPerms)
+ 
+    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+    if (!member) return message.channel.send(invalidusage)
+ 
+    if (member.hasPermission("BAN_MEMBERS", "KICK_MEMBERS", "MANAGE_SERVER", "ADMINISTRATOR", "MANAGE_MESSAGES", "MANAGE_ROLES")) return message.channel.send(`Error: That user is a mod/admin, I can't do that.`)
+ 
+ 
+    if (!member.bannable)
+      return message.channel.send(cantforunknown)
+ 
+    let reason = args.slice(1).join(" ");
+    if (!reason) return message.channel.send(invalidusage)
+ 
+    let log = db.fetch(`channel_${message.guild.id}`)
+ 
+    if (log === null) return
+ 
+    let logged = message.guild.channels.get(log)
+ 
+    member.ban(reason)
+    message.channel.send()
+  }
+ 
+
+
+
+
+
+
+
+
+
+//#ff69fc
+if (command === "say") {
+    message.delete();
+      const embedcolor = message.content.split(" ").slice(2).join(" ");
+      if(!embedcolor) return message.channel.send("Error: Missing Arguments, \n ``Usage: !say [message] [color]`` \n **use RANDOM for random color or use hex color**");
+      if(!args) return message.channel.send(`Error: Missing Arguments, \n ``Usage: !say [message] [color]`` \n **use RANDOM for random color or use hex color**`);
+      let embed = new Discord.RichEmbed();
+      embed.setColor(embedcolor);
+      embed.addField(`-${message.author.tag}`,`${args[0]}`);
+      message.channel.send(embed)
+
+  }
+ 
+  if (command === "meme") {
+    let embed = new Discord.RichEmbed();
+    got('https://www.reddit.com/r/dankmemes/random/.json').then(response => {
+      let content = JSON.parse(response.body);
+      let permalink = content[0].data.children[0].data.permalink;
+      let memeUrl = `https://reddit.com${permalink}`;
+      let memeImage = content[0].data.children[0].data.url;
+      let memeTitle = content[0].data.children[0].data.title;
+      let memeUpvotes = content[0].data.children[0].data.ups;
+      let memeDownvotes = content[0].data.children[0].data.downs;
+      let memeNumComments = content[0].data.children[0].data.num_comments;
+      embed.addField(`${memeTitle}`, `[View on reddit](${memeUrl})`);
+      embed.setImage(memeImage);
+      embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`);   
+      message.channel.send(embed)
+        .then(sent => console.log(`Meme command used`))
+    }).catch(console.error);
+  }
+ 
+  if (command === "kick") {
+     const YDHP = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:: You have missing permissions: **KICK_MEMBERS**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const NPerms = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Missing Permissions for the bot: **KICK_MEMBERS**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const invalidusage = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Invalid usage! \nUsage: \`\`!kick [Member] [Reason]\`\``)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const cantbekicked = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(':x: This user is a mod, I can\'t do that.')
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const cantforunknown = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error :x:")
+    .setDescription(`I can't kick someone who has a higher roles than me,`)
+    .setFooter(`Requested by | ${msg.author.tag}`);    
+    const success = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle("Successful :white_check_mark:")
+    .setDescription(`${member.user.tag} has been successfully kicked`)
+    .setFooter(`Requested by | ${msg.author.tag}`);    
+
+    
+    if (!message.member.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(YDHP)
+ 
+    if (!message.guild.me.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(NPerms)
+ 
+    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+    if (!member) return message.channel.send(invalidusage)
+ 
+    if (member.hasPermission("BAN_MEMBERS", "KICK_MEMBERS", "MANAGE_SERVER", "ADMINISTRATOR", "MANAGE_ROLES")) return message.channel.send(cantbekicked)
+ 
+ 
+    if (!member.bannable)
+      return message.channel.send(cantforunknown)
+ 
+    let reason = args.slice(1).join(" ");
+    if (!reason) return message.channel.send(invalidusage)
+ 
+    member.kick(reason)
+    message.channel.send(success)
+  }
+ 
+ 
+  if (command === "tempmute") {
+    const YDHP = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:: You have missing permissions: **MANAGE_ROLES**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const invalidusage = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Invalid usage! \nUsage: \`\`!tempmute [Member] [Time]\`\``)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const cantbemuted = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(':x: This user is a mod, I can\'t do that.')
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const success = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle("Successful :white_check_mark:")
+    .setDescription(`${tomute.user.tag} Has been successfully muted for ${mutetime}`)
+    .setFooter(`Requested by | ${msg.author.tag}`);    
+
+    if (!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send(YDHP)
+ 
+    let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+ 
+    if (!tomute) return message.channel.send(invalidusage)
+ 
+    if (tomute.hasPermission("MANAGE_ROLES", "MANAGE_SERVER", "BAN_MEMBERS", "KICK_MEMBERS", "MANAGE_MESSAGES")) return message.channel.send(cantbemuted)
+ 
+    let muterole = message.guild.roles.find(`name`, "Muted");
+    //start of create role
+    if (!muterole) {
+      try {
+        muterole = await message.guild.createRole({
+          name: "Muted",
+          color: "#000000",
+          permissions: []
+        })
+        message.guild.channels.forEach(async (channel, id) => {
+          await channel.overwritePermissions(muterole, {
+            SEND_MESSAGES: false,
+            ADD_REACTIONS: false
+          });
+        });
+      } catch (e) {
+        console.log(e.stack);
+      }
+    }
+    //end of create role
+    let mutetime = args[1];
+    if (!mutetime) return message.channel.send(invalidusage);
+ 
+    message.delete().catch(ByRealShadow => {});
+ 
+    try {} catch (e) {
+      message.channel.send(`${tomute.user.tag} has been muted for ${mutetime}`)
+    }
+ 
+    await (tomute.addRole(muterole.id));
+ 
+    message.channel.send(success)
+ 
+    setTimeout(function () {
+      tomute.removeRole(muterole.id);
+    }, ms(mutetime));
+  }
+ 
+  if (command === "unmute") {
+      
+    const YDHP = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: You have missing permissions: **MANAGE_ROLES**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const invalidusage = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Invalid usage! \nUsage: \`\`!unmute [Member]\`\``)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const nopermsad = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Missing Permissions for the bot: **MANAGE_ROLES**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const doesntexist = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(':x: The "Muted" role does not exist,')
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const success = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle("Successful :white_check_mark:")
+    .setDescription(`${mutee.user.username} was successfully unmuted!`)
+    
+    if (!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send(YDHP)
+ 
+    if (!message.guild.me.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"])) return message.channel.send(nopermsad)
+ 
+    let mutee = message.mentions.members.first() || message.guild.members.get(args[0]);
+    if (!mutee) return message.channel.send(invalidusage);
+ 
+    let muterole = message.guild.roles.find(r => r.name === "Muted")
+ 
+    if (!mutee.roles.some(role => role.name === 'Muted')) {
+      return message.channel.send(`Error: ${mutee.user.username} is not muted.`)
+    }
+ 
+    if (!muterole) return message.channel.send(doesntexist)
+ 
+    mutee.removeRole(muterole.id).then(() => {
+      message.delete()
+      message.channel.send(`${mutee.user.username} was successfully unmuted!`)
+    })
+ 
+  }
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+  if (command === "addrole") {
+     const YDHP = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: You have missing permissions: **MANAGE_ROLES**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const invalidusage = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Invalid usage! \nUsage: \`\`!addrole [member] [role]\`\``)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const nopermsad = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Missing Permissions for the bot: **MANAGE_ROLES**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const already = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: ${rMember.user.username}, Already has the ${role.name} role`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const success = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle("Successful :white_check_mark:")
+    .setDescription(`The role ${role.name} has been added to ${rMember.displayName} successfully.`)
+    
+ 
+    if (!message.member.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"])) return message.channel.send(YDHP)
+    
+    if (!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send(nopermsad)
+
+    let rMember = message.mentions.members.first() || message.guild.members.find(m => m.user.tag === args[0]) || message.guild.members.get(args[0])
+    if (!rMember) return message.channel.send(invalidusage)
+    let role = message.guild.roles.find(r => r.name == args[1]) || message.guild.roles.find(r => r.id == args[1]) || message.mentions.roles.first()
+    if (!role) return message.channel.send(invalidusage)
+ 
+    if (rMember.roles.has(role.id)) {
+      return message.channel.send(already)
+    } else {
+      await rMember.addRole(role.id).catch(e => console.log(e.message))
+      message.channel.send(success)
+    }
+  }
+ 
+
+  let servers = [];
+ 
+  if (command === "currentservers") {
+     if(message.author.id === "678645097700655122"){
+    client.guilds.forEach(g => {
+      g.fetchInvites()
+        .then(invites => {
+          servers.push(`${g.name} | ${g.id} | ${g.owner.user.tag} | ${invites.first().code}`);
+        })
+        .catch(err => {
+          servers.push(`${g.name} | ${g.id} | ${g.owner.user.tag} | can't get invite code`);
+        });
+     
+    });
+    setTimeout(() => {
+      message.author.send(`${servers.join('\n')}`, {
+        split: true,
+        code: true
+      });
+    }, 3000);
+     }
+  }
+ 
+  if (command === "unban") {
+    const YDHP = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: You have missing permissions: **BAN_MEMBERS**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const invalidusage = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Invalid usage! \nUsage: \`\`!unban [userID] [reason]\`\``)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const nopermsad = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: Missing Permissions for the bot: **MANAGE_ROLES**`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const already = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle(":x: Error! :x:")
+    .setDescription(`:x: ${rMember.user.username}, Already has the ${role.name} role`)
+    .setFooter(`Requested by | ${msg.author.tag}`);
+    const success = new Discord.RichEmbed()
+    .setColor("#77ff00")
+    .setTitle("Successful :white_check_mark:")
+    .setDescription(`The role ${role.name} has been added to ${rMember.displayName} successfully.`)
+    
+    if (!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(YDHP)
+ 
+    if (isNaN(args[0])) return message.channel.send(`Error: Missing Arguments, define memberID\nUsage: ${prefix}unban [memberID] [reason]`)
+    let bannedMember = await client.fetchUser(args[0])
+    if (!bannedMember) return message.channel.send(`Error: Missing Arguments, define memberID\nUsage: ${prefix}unban [memberID] [reason]`)
+ 
+ 
+    let reason = args.slice(1).join(" ")
+    if (!reason) return message.channel.send(`Error: Missing Arguments, define reason\nUsage: ${prefix}unban [memberID] [reason]`)
+ 
+    if (!message.guild.me.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(`Error: I have Insufficient Permissions to unban members`)
+    message.delete()
+    try {
+      message.guild.unban(bannedMember, reason)
+      message.channel.send(`${bannedMember.tag} has been successfully unbanned`)
+    } catch (e) {
+      console.log(e.message)
+    }
+  }
+});
+
+
+
 /*/*
 Lazy Dev's.
 Code Made By:
