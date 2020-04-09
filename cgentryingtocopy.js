@@ -7,29 +7,56 @@ RealShadow__#2020
 */
    // Packages \\
 const darkdevs = require("discord.js");
-const dark = darkdevs.Client();
+const dark = new darkdevs.Client();
 const DarkFS = require('fs')
    // Config \\
 const genconfig = require('./genconfig.json')
+const token = genconfig.token
 const prefix = genconfig.prefix
 const name = genconfig.name
 const devid = genconfig.devid
 const ChangeStatusTime = genconfig.ChangeStatusTime
 const CloowDown = genconfig.cloowdown     
+dark.login(token)
  // Premium Config \\
 const premiumusers = require('./premiumusers.json')
 const PremiumList = [
+  
                      premiumusers.premium,
+  
                      premiumusers.premium1,
+  
                      premiumusers.premium2,
+  
                      premiumusers.premium3,
+  
                      premiumusers.premium4,
+  
                      premiumusers.premium5,
+  
                      premiumusers.premium6,
+  
                      premiumusers.premium7,
+  
                      premiumusers.premium8,
+  
                      premiumusers.premium9,
-                     premiumusers.premium10 ]
+  
+                     premiumusers.premium10 //                     DarkBoy#6171 + RealShadow__#2020 Credit's,.
+  
+]
+
+dark.on("ready", function() {
+console.log(`-- Premium User's List --
+
+${PremiumList}                    - Ids
+(usernames)                       - coming soon
+
+
+More Thing's Coming soon
+
+`)
+});
 const premium = true;                            
   // Scoure Code \\
 const page = 1;
