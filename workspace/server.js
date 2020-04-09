@@ -101,7 +101,7 @@ DarkDevs.on("message", async message => {
     .setDescription(`Starting Generatoring....
 > Connecting: ....
 > Requesting Acces: ....`)//send message THEN edit how to make Like wait 2 sec then edit idk timeout
-   message.channel.send(fakee).then(fakee => {
+message = await message.channel.send(fakee).then(fakee => {
 var timeout = setTimeout(function() {
 fakee.setDescription(`
 **
