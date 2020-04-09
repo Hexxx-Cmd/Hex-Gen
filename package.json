@@ -7,7 +7,7 @@
   "description": "A .",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node workspace/server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
