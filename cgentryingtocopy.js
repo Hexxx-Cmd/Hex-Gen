@@ -315,134 +315,35 @@ Reason: ${reason}`)
   
 
     
-    if (!message.member.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(YDHP)
+    if (!message.member.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("You don't have permissions to use this command")
  
-    if (!message.guild.me.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(NPerms)
+    if (!message.guild.me.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("I don't have permissions to use this command")
  
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
-    if (!member) return message.channel.send(invalidusage)
+    if (!member) return message.reply("Mention The User")
  
-    if (member.hasPermission("BAN_MEMBERS", "KICK_MEMBERS", "MANAGE_SERVER", "ADMINISTRATOR", "MANAGE_ROLES")) return message.channel.send(cantbekicked)
+    if (member.hasPermission("BAN_MEMBERS", "KICK_MEMBERS", "MANAGE_SERVER", "ADMINISTRATOR", "MANAGE_ROLES")) return message.channel.send("I can't kick mods")
  
  
     if (!member.bannable)
-      return message.channel.send(cantforunknown)
+      return message.channel.send("I can't kick a higher member than me")
  
     let reason = args.slice(1).join(" ");
-    if (!reason) return message.channel.send(invalidusage)
+    if (!reason) return message.reply(":rolling_eyes: You Forget to add the Reason")
  
     member.kick(reason)
-    message.channel.send(success)
-  }
- 
- 
-
-
- 
- 
- 
- 
- 
- 
-  if (command === "addrole") {
-     const YDHP = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle(":x: Error! :x:")
-    .setDescription(`:x: You have missing permissions: **MANAGE_ROLES**`)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    const invalidusage = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle(":x: Error! :x:")
-    .setDescription(`:x: Invalid usage! \nUsage: \`\`!addrole [member] [role]\`\``)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    const nopermsad = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle(":x: Error! :x:")
-    .setDescription(`:x: Missing Permissions for the bot: **MANAGE_ROLES**`)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    const already = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle(":x: Error! :x:")
-    .setDescription(`:x: ${rMember.user.username}, Already has the ${role.name} role`)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    const success = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle("Successful :white_check_mark:")
-    .setDescription(`The role ${role.name} has been added to ${rMember.displayName} successfully.`)
-    
- 
-    if (!message.member.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"])) return message.channel.send(YDHP)
-    
-    if (!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send(nopermsad)
-
-    let rMember = message.mentions.members.first() || message.guild.members.find(m => m.user.tag === args[0]) || message.guild.members.get(args[0])
-    if (!rMember) return message.channel.send(invalidusage)
-    let role = message.guild.roles.find(r => r.name == args[1]) || message.guild.roles.find(r => r.id == args[1]) || message.mentions.roles.first()
-    if (!role) return message.channel.send(invalidusage)
- 
-    if (rMember.roles.has(role.id)) {
-      return message.channel.send(already)
-    } else {
-      await rMember.addRole(role.id).catch(e => console.log(e.message))
-      message.channel.send(success)
-    }
+    message.channel.send(`Done :+1:, I Banned ${member} from the server!
+Reason: ${reason}`)
   }
  
 
-  let servers = [];
- 
-  if (command === "currentservers") {
-     if(message.author.id === "678645097700655122"){
-    client.guilds.forEach(g => {
-      g.fetchInvites()
-        .then(invites => {
-          servers.push(`${g.name} | ${g.id} | ${g.owner.user.tag} | ${invites.first().code}`);
-        })
-        .catch(err => {
-          servers.push(`${g.name} | ${g.id} | ${g.owner.user.tag} | can't get invite code`);
-        });
-     
-    });
-    setTimeout(() => {
-      message.author.send(`${servers.join('\n')}`, {
-        split: true,
-        code: true
-      });
-    }, 3000);
-     }
-  }
- 
+
   if (command === "unban") {
-    const YDHP = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle(":x: Error! :x:")
-    .setDescription(`:x: You have missing permissions: **BAN_MEMBERS**`)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    const invalidusage = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle(":x: Error! :x:")
-    .setDescription(`:x: Invalid usage! \nUsage: \`\`!unban [userID] [reason]\`\``)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    const nopermsad = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle(":x: Error! :x:")
-    .setDescription(`:x: Missing Permissions for the bot: **MANAGE_ROLES**`)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    const already = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle(":x: Error! :x:")
-    .setDescription(`:x: ${rMember.user.username}, Already has the ${role.name} role`)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    const success = new Discord.RichEmbed()
-    .setColor("#77ff00")
-    .setTitle("Successful :white_check_mark:")
-    .setDescription(`The role ${role.name} has been added to ${rMember.displayName} successfully.`)
-    
-    if (!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(YDHP)
+    if (!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("You don't have permissions to use this command")
  
-    if (isNaN(args[0])) return message.channel.send(`Error: Missing Arguments, define memberID\nUsage: ${prefix}unban [memberID] [reason]`)
+    if (isNaN(args[0])) return message.channel.send(`**Usage:** \n ${prefix}unban [memberID] [reason]`)
     let bannedMember = await client.fetchUser(args[0])
-    if (!bannedMember) return message.channel.send(`Error: Missing Arguments, define memberID\nUsage: ${prefix}unban [memberID] [reason]`)
+    if (!bannedMember) return message.channel.send(`**Usage:** ${prefix}unban [memberID] [reason]`)
  
  
     let reason = args.slice(1).join(" ")
