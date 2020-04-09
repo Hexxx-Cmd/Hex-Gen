@@ -90,15 +90,15 @@ https://www.cgen.xyz/
  
     message.channel.sendEmbed(embed).then(msg => {
  
-        msg.react(':arrow-left:').then( r => {
-            msg.react(':arrow-right:')
+        msg.react('⬅️').then( r => {
+            msg.react('➡️')
  
            setTimeout(() => {
         msg.delete
     }, 60 * 1000)
  
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === ':arrow-left:' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === ':arrow-right:' && user.id === message.author.id;
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅️' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡️' && user.id === message.author.id;
  
  
         const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
