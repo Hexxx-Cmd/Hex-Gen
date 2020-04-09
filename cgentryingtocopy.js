@@ -8,10 +8,10 @@ RealShadow__#2020
 // Packages \\
 const darkdevs = require("discord.js");
 const dark = new darkdevs.Client();
-const DarkFS = require("fs");
+const fs = require("fs");
 const Host = require("express");
 const DarkDevsReq = require("request");
-const gen = require('./gen.js')
+const gen = require("./gen.js");
 // Config \\
 const genconfig = require("./genconfig.json");
 const token = genconfig.token;
@@ -175,9 +175,21 @@ dark.on("ready", function() {
 
 
 
-dark.on("message", re => {
-if(re.content.startsWith(prefix + "fortnite")){
-  
-  
-}
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
