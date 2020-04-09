@@ -11,7 +11,7 @@ const dark = new darkdevs.Client();
 const DarkFS = require("fs");
 const Host = require("express");
 const DarkDevsReq = require("request");
-
+const gen = require('./gen.js')
 // Config \\
 const genconfig = require("./genconfig.json");
 const token = genconfig.token;
@@ -170,11 +170,14 @@ dark.on("ready", function() {
       "\n Status: OK"
   );
   console.log("unblock us xdddd");
-});
-
-dark.on("ready", () => {
-  console.log("Bot is on");
   dark.user.setActivity("#help | cgen.xyz");
 });
 
-dark.on("message", re => {});
+
+
+dark.on("message", re => {
+if(re.content.startsWith(prefix + "fortnite")){
+  
+  
+}
+});
