@@ -97,18 +97,19 @@ const edittime = "3000";
 DarkDevs.on("message", async message => {
   if (!message.channel.type == "dm") return;
   if (message.content.includes(prefix + "nitro-classic")) {
-    let fakenitro = new dmall.richembed()
+   let fakee = new dmall.RichEmbed()
     .setDescription(`Starting Generatoring....
 > Connecting: ....
 > Requesting Acces: ....`)//send message THEN edit how to make Like wait 2 sec then edit idk timeout
-  message = await message.channel.send(fakenitro).then(fakee => {
+   message.channel.send(fakee).then(fakee => {
 var timeout = setTimeout(function() {
-fakee.edit(`
+fakee.setDescription(`
 **
 Connected To NitroGEN.ejs
 Connecting To NitroChecker.ejs
 **
 `)
+message.edit(fakee)
 }, 2000); 
     var timeout = setTimeout(function() {
 fakee.edit(` ** Thanks For Using Nitro-GEN** 
@@ -118,6 +119,7 @@ Starting.. Gen
 `)
 }, 4000); 
     var timeout = setTimeout(function() {
+
 fakee.edit(`** Please Wait **
 Generated Codes: ${fakegencodes}
 open.nitrochecker.ejs
