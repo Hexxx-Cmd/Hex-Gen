@@ -2,12 +2,12 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "Dark-Devs",
+  "name": "Hex-Gen",
   "version": "0.0.1",
   "description": "A .",
-  "main": "cgentryingtocopy.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node cgentryingtocopy.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
