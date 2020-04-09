@@ -85,15 +85,15 @@ if (message.channel.type == "dm") return;
  
     message.channel.sendEmbed(embed).then(msg => {
  
-        msg.react('◀').then( r => {
-            msg.react('▶')
+        msg.react('⬅️').then( r => {
+            msg.react('➡️')
  
            setTimeout(() => {
         msg.delete
     }, 60 * 1000)
  
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅️' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡️' && user.id === message.author.id;
  
  
         const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
