@@ -73,10 +73,75 @@ setInterval(t_c, 60000);
 
 
 client.on('message', message => {
-if (message.content.toLowerCase() ===   "#help") {
+if (message.content ===   "#help") {
 if (message.channel.type == "dm") return;
- let pages = []
- let page = 1;
+let pages = [`
+   **__Donors Commands__**
+
+#lolgame - League of Legends account
+#Disney - Disney+ Account
+#Steam - Steam Account
+
+**__Generator Commands__**
+
+**#Fortnite** - Sends You a Free Fortnite Account
+**#Spotify** - Sends You a Free Spotify Account
+**#Uplay** - Sends You a free Uplay Account
+**#Hulu** - Sends You a Hulu Account
+**#Minecraft** - Sends You a Free Minecraft Account
+**#Nordvpn** - Sends You a Free Norvpn Account
+**#crunchyroll** - Sends You a Free crunchyroll Account
+**#Steamkey** - Sends You a Free Steam Key
+**#pornhub** - Sends You a Free pornhub account
+**#origin **- Sends You a Free Origing account
+
+**#stock** - bot stock
+**#Invite** - Invites The Bot To Your Server
+
+Check out https://zzhhzz.xyz/ for more infromation about this amazing bot!
+
+`
+,`
+**__Other Commands:__**
+
+**+server** - to see your server status
+**+bans** - to see how many members got banned in your server
+**+unban all** - To unban all (may ban the bot eee if more than 50 are banned)
+**+lock** - Locks the channel in which this command is used. People will be able to see the message but not send a message
+**+unlock** - to unlock the channel
+
+ 
+`,`
+**__C-GEN Premium Bot__**
+
+1 - Prime Features
+2 - Set a Channel For The Gen bot
+3 - Working only in Your Server
+4 - Change The Name and Picture
+5 - ×2 The The Amount of Accounts
+6 - #Setname
+7 - #Setgame/watching/stream
+9 - Set Premium Users Channel ! (You can Earn money from it ! )
+**Guaranteed**
+
+=> 7.99 £ (1 Month)
+=> 14.99 £ (3 Months) Save 1 month
+=> 31.99 £ (1 Year) Save 8 months ! & earn money from Selling Premium User , earn 1000/100
+`,`
+
+**__C-GEN Prime Bot__**
+
+1 - Without ads
+2 - Amount of Accounts For Your Server
+3 - On a Private Server (Host)
+4 - Streaming (Your Server name)
+5 - Setname
+6 - Setgame/watching/stream
+
+=> 5.99 £ (1 Month)
+=> 9.99 £ (3 Months) Save 1 month
+=> 22.99 £ (1 Year) Save 8 months !`]
+let page = 1;
  
     let embed = new Discord.RichEmbed()
     .setColor('RANDOM')
@@ -121,6 +186,22 @@ if (message.channel.type == "dm") return;
 }
 });
 
+client.on('message',async message => {
+if (message.content.toLowerCase() ===   "#unban all") {
+if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("BAN_MEMBERS")) return;
+message.guild.fetchBans().then(urmom => {
+urmom.forEach(members => {
+message.guild.unban(members);
+})
+}).then(() => {
+let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)          
+  .setDescription(`${message.author}, Successfully unbanned everyone!`)   
+  .setFooter(`Requested By: ${message.author.username}`)
+  message.channel.send(embed);
+})
+}
+});
 
 /*/*
 Lazy Dev's.
