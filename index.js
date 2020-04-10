@@ -140,7 +140,6 @@ let pages = [`
 **#Hulu** - Sends You a Hulu Account
 **#Nordvpn** - Sends You a Free Norvpn Account
 **#crunchyroll** - Sends You a Free crunchyroll Account
-**#Steamkey** - Sends You a Free Steam Key
 **#pornhub** - Sends You a Free pornhub account
 **#origin **- Sends You a Free Origing account
 
@@ -517,10 +516,8 @@ dark.on("ready", function() {
 */
 let premiumshit = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
 client.on("message", message => {
-  if(message.author.id.include(devs)) {
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-  if(command = "addpremium"){ 
+  if(message.author.id == "678645097700655122") {
+  if(message.content == "#addpremium"){ 
     const member = message.mentions.members.first()
     if (!message.channel.guild) return;
     const num = message.content.split(" ").slice(2).join(" ");
@@ -528,11 +525,13 @@ client.on("message", message => {
       premium:"false"
 }
     if(!member) return message.channel.send("uhh ohh, who do you wanna add kek?");
-    premiumshit[member.id].premium = true
+    premiumshit[member.id].premium = "true"
+   message.channel.send("Success") 
     
     
-    
-    
+    fs.writeFile("./config.json", JSON.stringify(config, null, 2), function (e) {
+            if (e) throw e;
+        });
     
     
 
