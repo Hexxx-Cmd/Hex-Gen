@@ -11,9 +11,9 @@ module.exports = {
   },
   CheckPremium: id => {
     let access = false;
-    id.roles.forEach(role => {
       if(config.premiumusers.includes(id)) access = true;
-    })
+        if (access) return true;
+    else return false;
   },
   addAlt: (type, alt) => {
     if (!fs.existsSync(`./alts/${type}.txt`)) return;

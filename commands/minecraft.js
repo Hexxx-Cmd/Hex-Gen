@@ -3,7 +3,9 @@ const premiumlist = require("../premiumusers.json")
 //im gay ik
 module.exports.run = (bot, message, args, gen) => {
   //Checks if have premium
+  const nopremissiontouse = new Discord.RichEmbed();
   
+  if(!gen.CheckPremium(message.author.id)) return message.channel.send(nopremissiontouse) // end of check premium
     if (bot.cooldown.has(message.author.id)) {
             message.channel.send({embed:{title:`Please wait 15 minutes!`, color:bot.color}})
     } else {
