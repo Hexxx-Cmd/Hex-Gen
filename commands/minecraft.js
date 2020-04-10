@@ -4,11 +4,9 @@ const premiumlist = require("../premiumusers.json")
 module.exports.run = (bot, message, args, gen) => {
   //Checks if have premium
   const nopremissiontouse = new Discord.RichEmbed();
-  
+  //edit the embed
   if(!gen.CheckPremium(message.author.id)) return message.channel.send(nopremissiontouse) // end of check premium
-    if (bot.cooldown.has(message.author.id)) {
-            message.channel.send({embed:{title:`Please wait 15 minutes!`, color:bot.color}})
-    } else {
+  
     let type = "minecraft" //premium command k
     let alt = gen.getAlt(type)
     if(!alt || alt === '' || alt === ',') return message.channel.send({embed:{title:`We don't have those accounts in stock!`, color:bot.color}})
@@ -37,7 +35,7 @@ module.exports.run = (bot, message, args, gen) => {
         }, 300000);
     // Its in milliseconds so 900000 is 15 mins so 300000 is 5mins
     } //minecraft is premium command do it
-}
+
 
 module.exports.help = {
     name: 'minecraft',

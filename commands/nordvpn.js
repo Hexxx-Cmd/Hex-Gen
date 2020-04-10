@@ -1,8 +1,6 @@
 const Discord = require('discord.js')
 module.exports.run = (bot, message, args, gen) => {
-    if (bot.cooldown.has(message.author.id)) {
-            message.channel.send({embed:{title:`Please wait 15 minutes!`, color:bot.color}})
-    } else {
+
     let type = "nordvpn"
     let alt = gen.getAlt(type)
     if(!alt || alt === '' || alt === ',') return message.channel.send({embed:{description:`We don't have those accounts in stock!`, color:bot.color}})
@@ -30,7 +28,7 @@ module.exports.run = (bot, message, args, gen) => {
         }, 0);
     // Its in milliseconds so 900000 is 15 mins so 300000 is 5mins
     }
-}
+
 
 module.exports.help = {
     name: 'nordvpn',

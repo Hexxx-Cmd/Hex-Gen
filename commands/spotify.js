@@ -1,8 +1,5 @@
 const Discord = require('discord.js')
 module.exports.run = (bot, message, args, gen) => {
-    if (bot.cooldown.has(message.author.id)) {
-            message.channel.send({embed:{title:`Please wait 15 minutes!`, color:bot.color}})
-    } else {
     let type = "spotify"
     let alt = gen.getAlt(type)
     if(!alt || alt === '' || alt === ',') return message.channel.send({embed:{description:`We don't have those accounts in stock!`, color:bot.color}})
