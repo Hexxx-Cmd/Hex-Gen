@@ -516,11 +516,8 @@ dark.on("ready", function() {
 */
 let premiumshit = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
 client.on("message", message => {
-  if(message.author.id == "678645097700655122") {
-  if(message.content == "#addpremium"){ 
-    const member = message.mentions.members.first()
-    if (!message.channel.guild) return;
-    const num = message.content.split(" ").slice(2).join(" ");
+      const member = message.mentions.members.first()
+  if(message.content.startsWith("#addpremium")){ 
     if (!premiumshit[member.id]) premiumshit[member.id] = {
       premium:"false"
 }
@@ -532,8 +529,6 @@ client.on("message", message => {
     fs.writeFile("./config.json", JSON.stringify(premiumshit, null, 2), function (e) {
             if (e) throw e;
         });
-    
-    
 
-}}
+}
 });
