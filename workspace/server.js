@@ -76,17 +76,24 @@ DarkDevs.on("message", message => {
   if (message.content.includes(prefix + "help")) {
   let help = new dmall.RichEmbed()
   .setDescription(`
-Nitro Gen Commands
+*** Sir Thanks For Using Me ***
+My Command List: 
 ${prefix}invite | inviting me today (auto-restock) When i join 10 server's. 
 ${prefix}help | Shows This msg
 ${prefix}nitro-clasic |  Taking 10-100mintus To Gen a Code 100% Working
 ${prefix}nitro-boost  |  Taking 10-128mintus To Gen a Code 100% Working
 
-
+:copyright: This Bot it's really and there alot of people got nitro of it.
+Saying Fake things about it will result areport from discord or warn.
+** ( Dont Say Fake Thing's. Before Trying ) ** 
 `)
   let author = new dmall.RichEmbed()
-  .setDescription(``)
-  message.channel.send(`Check Dm!`)
+  .setDescription(`** Sir! ** 
+Please Check Your Private Message's. Beetwen me and You To Check My Commands List Help
+
+:copyright: 2020-2025.  `)                                                                         
+  message.channel.send(author)
+  message.react(':copyright:')
     message.react('✅')
   message.author.send(help)
 }
