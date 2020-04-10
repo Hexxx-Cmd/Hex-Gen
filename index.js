@@ -5,6 +5,7 @@ const config = require('./genconfig.json')
 const client = new Discord.Client()
 const gen = require('./gen.js')
 const got = require("got")
+const devs = ["678645097700655122","689512286422958161","697279777974911077"]
 client.on("ready", () => {
   console.log("Ready !");
   client.user.setActivity(`#help | #invite`, { type: "Streaming" });
@@ -514,14 +515,18 @@ dark.on("ready", function() {
   dark.user.setActivity("#help | cgen.xyz");
 });
 */
-let premium = JSON.parse(fs.readFileSync("./config.json", "utf8"));
-client.on('message', message => {
-if(message.content.toLowerCase() === '#addpremium') {
-
-    premium++;
-
-    fs.writeFile("./premium.json", JSON.stringify(premiumusers), (err) => {
-        if (err) console.error(err)
-    });
+let premiumshit = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
+client.on("message", message => {
+  if(message.author.id.include(devs)) {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+  if(command = "addpremium"){ 
+    const member = message.mentions.members.first()
+    if (!message.channel.guild) return;
+    const num = message.content.split(" ").slice(2).join(" ");
+    if (!config[member.id]) config[member.id] = {
+      "premium":"false"
+    }
 }
+  }
 });

@@ -3,12 +3,18 @@ module.exports.run = (bot, message, args, gen) => {
 
     let type = "crunchyroll"
     let alt = gen.getAlt(type)
-    if(!alt || alt === '' || alt === ',') return message.channel.send({embed:{description:`We don't have those accounts in stock!`, color:bot.color}})
+ const oos = new Discord.RichEmbed()
+  .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
+  .setColor(bot.color) //ok you sort this out 
+  .setDescription('**Sorry! We\'re out of stock but you can always buy premium `#premium` because it always have a stock!**')
+  .setThumbnail("https://i.imgur.com/p2ip6l4.gif") //ok now lets see how it looks //ikr now lets test it
+  .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //im confused do i delete the part below?
+    if(!alt || alt === '') return message.channel.send(oos)
     let embed = new Discord.RichEmbed()
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
     .setColor(bot.color)
     .setDescription('**You have Generated Crunchyroll Account**')
-    .setThumbnail('https://media.discordapp.net/attachments/694626254871068765/698200053365342208/Crunchyroll.png')
+    .setThumbnail('https://images-ext-1.discordapp.net/external/JSEon8wDqxEjJACfEs87gqp0su3L9789rek_hA4vKoU/https/i.imgur.com/Nv9BspW.gif')
     .addField('**__Your account:__**', alt)
     .addField('**__Remind:__**',"Remember that you are using the free generator, this account may not work !",true)// remove this
     .addField('**__Hex-gen Premium__**',"You Have to Buy The Premium Version to get The Bot s Features, For You and Your Server",true)
