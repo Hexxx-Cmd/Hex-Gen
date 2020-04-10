@@ -144,7 +144,7 @@ let pages = [`
 **#origin **- Sends You a Free Origing account
 
 **#stock** - bot stock
-**#Invite** - Invites The Bot To Your Server
+**#i+s** - Gives you bot invite link and support server
 
 Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 
