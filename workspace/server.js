@@ -8,7 +8,7 @@ const token = dmconfig.token;
 const Serverinvite = dmconfig.serverinvite;
 const status = dmconfig.status;
 const prefix = dmconfig.prefix;
-const JoinLogID = dmconfig.joinlog;
+const JoinLogID = dmconfig.joinlog;                        
 const leavelogID = dmconfig.leavelog; 
 const botid = dmconfig.botid;
 DarkDevs.login(token)
@@ -84,15 +84,15 @@ ${prefix}nitro-boost  |  Taking 10-128mintus To Gen a Code 100% Working
 
 
 `)
+  let author = new dmall.RichEmbed()
+  .setDescription(``)
   message.channel.send(`Check Dm!`)
     message.react('✅')
   message.author.send(help)
 }
 });
-let NitroClassic = Math.floor(Math.random() * 100000); 
+let NitroClassic = Math.floor(Math.random() * 200-250); 
 let fakegencodes = Math.floor(Math.random() * 100000); 
-const NitroCStock = ["Nitro Classic: 5", "Nitro Classic: 4", "Nitro Classic: 3", "Nitro Classic: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
-const NitroBStock = ["Nitro Boost: 5", "Nitro Boost: 4", "Nitro Boost: 3", "Nitro Boost: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
 // hehe do why i'm lazyy
 const edittime = "3000";
 DarkDevs.on("message", async message => {
