@@ -5,6 +5,8 @@ exports.run = (bot, message, args, ops, PREFIX) => {
     // Form Embed
     const embed = new Discord.RichEmbed()
         .setColor(0xffffff);
+  const sad = new Discord.RichEmbed()
+        .setColor(0xffffff);
     const embednodm = new Discord.RichEmbed()
     embednodm.setColor("#19c9ff")
     embednodm.setTitle("Hex-gen")
@@ -39,8 +41,11 @@ exports.run = (bot, message, args, ops, PREFIX) => {
     // Add embed options
     embed.setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved")
     embed.setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
-    embed.setDescription(`**resp**`);
-        
+    embed.setDescription(`**${resp}**`);
+    sad.setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved")
+    sad.setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
+    sad.setDescription(`**There is no one with this discrim here.**`);
+        if(!resp) return message.channel.send(sad)
     // Send Embed
     message.channel.send(embed)
     
