@@ -34,6 +34,6 @@ module.exports.run = (bot, message, args, gen) => {
 }
 
 module.exports.help = {
-    name: 'fortnite',
-    aliases: ['fort']
-}
+    name: 'minecraft',
+    aliases: ['mine']
+} //wtf you doing wake up

@@ -127,7 +127,7 @@ if (message.channel.type == "dm") return;
 let pages = [`
    **__Donors Commands__**
 
-**#Netfix** - Netflix account
+**Minecraft** - Sends You a Free Minecraft Account
 **#Disney** - Disney+ Account
 **#Steam** - Steam Account
 
@@ -137,7 +137,6 @@ let pages = [`
 **#Spotify** - Sends You a Free Spotify Account
 **#Uplay** - Sends You a free Uplay Account
 **#Hulu** - Sends You a Hulu Account
-**#Minecraft** - Sends You a Free Minecraft Account
 **#Nordvpn** - Sends You a Free Norvpn Account
 **#crunchyroll** - Sends You a Free crunchyroll Account
 **#Steamkey** - Sends You a Free Steam Key
