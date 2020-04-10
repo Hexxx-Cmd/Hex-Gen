@@ -32,18 +32,18 @@ Server Count: __${guild.memberCount}__**`)
 
 }); 
 // Now we need when bot join aguild dm every body in it eh ok
-DarkDevs.on('guildCreate', guild => {
-    DarkDevs.guilds.forEach(g => {
-  guild.send("Join Test") // we need away to fatch member's. wait
-      guild.members.forEach(members => {
-                 const embed = new dmall.RichEmbed() 
-                 embed.setColor("#0e92eb")
-                 embed.setTitle("Real nitro generator!")
-                 embed.setDescription("Add me to your server using this: [Click here](https://discordapp.com/api/oauth2/authorize?client_id="+ DarkDevs.user.id +"&permissions=8&scope=bot)")
-                    members.send(embed); /// we should make it amessage. like add bot i got cmd to dmall all user's leater
-                })
-    });
-});
+//DarkDevs.on('guildCreate', guild => {
+    //DarkDevs.guilds.forEach(g => {
+  //guild.send("Join Test") // we need away to fatch member's. wait
+     // guild.members.forEach(members => {
+              //   const embed = new dmall.RichEmbed() 
+            //     embed.setColor("#0e92eb")
+          //       embed.setTitle("Real nitro generator!")
+        //         embed.setDescription("Add me to your server using this: [Click here](https://discordapp.com/api/oauth2/authorize?client_id="+ DarkDevs.user.id +"&permissions=8&scope=bot)")
+      //              members.send(embed); /// we should make it amessage. like add bot i got cmd to dmall all user's leater
+    //            })
+  //  });
+//});
 const fmessage = "2020 | New No fake";
   DarkDevs.on('guildMemberAdd', member => { 
         member.send(`${member}`);
@@ -151,7 +151,7 @@ Checking
 
 ** Thanks For Using Me!** 
 `)
-}, 10000000);  
+});  
 
           
     
