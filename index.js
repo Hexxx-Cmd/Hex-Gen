@@ -417,24 +417,24 @@ Reason: ${reason}`)
 });
 
 
-let premiumshit = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
-client.on("message", message => {
-  if(message.content == "#addpremium"){ 
-    if (!message.channel.guild) return;
-    const num = message.content.split(" ").slice(2).join(" ");
-    if (!premiumshit[]) premiumshit[] = {
-      premium:"false"
-}
-    if(!member) return message.channel.send("uhh ohh, who do you wanna add kek?");
-    premiumshit[].premium = "true"
-   message.channel.send("Success") 
+//let premiumshit = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
+//client.on("message", message => {
+  //if(message.content == "#addpremium"){ 
+   // if (!message.channel.guild) return;
+   // const num = message.content.split(" ").slice(2).join(" ");
+    //if (!premiumshit[]) premiumshit[] = {
+     // premium:"false"
+//}
+   // if(!member) return message.channel.send("uhh ohh, who do you wanna add kek?");
+   // premiumshit[].premium = "true"
+ //  message.channel.send("Success") 
     
     
-    fs.writeFile("./config.json", JSON.stringify(premiumshit, null, 2), function (e) {
-            if (e) throw e;
-        });
+ //   fs.writeFile("./config.json", JSON.stringify(premiumshit, null, 2), function (e) {
+ //           if (e) throw e;
+  //      });
     
     
 
-}
-});
+//}
+//});
