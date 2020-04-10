@@ -3,14 +3,14 @@ module.exports.run = (bot, message, args, gen) => {
     if (bot.cooldown.has(message.author.id)) {
             message.channel.send({embed:{title:`Please wait 15 minutes!`, color:bot.color}})
     } else {
-    let type = "hulu"
+    let type = "crunchyroll"
     let alt = gen.getAlt(type)
     if(!alt || alt === '' || alt === ',') return message.channel.send({embed:{description:`We don't have those accounts in stock!`, color:bot.color}})
     let embed = new Discord.RichEmbed()
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
     .setColor(bot.color)
-    .setDescription('**You have Generated Hulu Account**')
-    .setThumbnail('https://media.discordapp.net/attachments/694626254871068765/698197559176331325/hulu.png')
+    .setDescription('**You have Generated Crunchyroll Account**')
+    .setThumbnail('https://media.discordapp.net/attachments/694626254871068765/698200053365342208/Crunchyroll.png')
     .addField('**__Your account:__**', alt)
     .addField('**__Remind:__**',"Remember that you are using the free generator, this account may not work !",true)// remove this
     .addField('**__Hex-gen Premium__**',"You Have to Buy The Premium Version to get The Bot s Features, For You and Your Server",true)
@@ -20,7 +20,7 @@ module.exports.run = (bot, message, args, gen) => {
       let ree = new Discord.RichEmbed()
     .setColor(bot.color)
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
-    .setDescription("**You Have Generated a Hulu Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`\nhttps://rleakers.net/")
+    .setDescription("**You Have Generated a Crunchyroll Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`\nhttps://rleakers.net/")
     .setThumbnail('https://images-ext-1.discordapp.net/external/8tXbmE1FKl-ELZM2h2iR38UKJ4eKrbkgZEq1tJWjqaE/https/media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
     .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //go to discord
     message.channel.send(ree) //lol NOU
@@ -33,6 +33,6 @@ module.exports.run = (bot, message, args, gen) => {
 }
 
 module.exports.help = {
-    name: 'hulu',
-    aliases: ['hul']
+    name: 'crunchyroll',
+    aliases: ['crunchy']
 }

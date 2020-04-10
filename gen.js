@@ -12,7 +12,7 @@ module.exports = {
   CheckPremium: id => {
     let access = false;
     id.roles.forEach(role => {
-      if (module.exports.getAllowedRoles().includes(role.id)) access = true;
+      if(config.premiumusers.includes(id)) access = true;
     })
   },
   addAlt: (type, alt) => {
