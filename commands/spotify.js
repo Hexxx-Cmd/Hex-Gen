@@ -1,5 +1,4 @@
 const Discord = require('discord.js')
-
 module.exports.run = (bot, message, args, gen) => {
     if (bot.cooldown.has(message.author.id)) {
             message.channel.send({embed:{title:`Please wait 15 minutes!`, color:bot.color}})

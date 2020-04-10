@@ -1,10 +1,10 @@
 const Discord = require('discord.js')
-
+// niggers did u se the thing i made? 
 module.exports.run = (bot, message, args, gen) => {
     if (bot.cooldown.has(message.author.id)) {
             message.channel.send({embed:{title:`Please wait 15 minutes!`, color:bot.color}})
     } else {
-    let type = "fortnite"
+    let type = "premiumidk"
     let alt = gen.getAlt(type)
     if(!alt || alt === '' || alt === ',') return message.channel.send({embed:{title:`We don't have those accounts in stock!`, color:bot.color}})
     let embed = new Discord.RichEmbed()
@@ -24,7 +24,8 @@ module.exports.run = (bot, message, args, gen) => {
     .setDescription("**You Have Generated a Fortnite Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`\nhttps://www.cgen.xyz/Premium")
     .setThumbnail('https://images-ext-1.discordapp.net/external/8tXbmE1FKl-ELZM2h2iR38UKJ4eKrbkgZEq1tJWjqaE/https/media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
     .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //go to discord
-    message.channel.send(ree) //lol NOU
+    message.channel.send(ree) //lol NOU // ok this finished
+    gen.removeAlt(type, alt)//here lmdao
     bot.cooldown.add(message.author.id);
         setTimeout(() => {
           bot.cooldown.delete(message.author.id);
