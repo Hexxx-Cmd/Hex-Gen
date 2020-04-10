@@ -28,7 +28,7 @@ module.exports = {
     else {
       let alts = module.exports.readFile(type);
       alts = alts.filter(r => r !== alt);
-      alts = alts.filter(r => r !== "");
+      alts = alts.filter(r => r !== ""); 
       module.exports.saveFile(type, alts);
     }
   },

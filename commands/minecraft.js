@@ -38,7 +38,7 @@ module.exports.run = (bot, message, args, gen) => {
     .setThumbnail('https://images-ext-1.discordapp.net/external/8tXbmE1FKl-ELZM2h2iR38UKJ4eKrbkgZEq1tJWjqaE/https/media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
     .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //go to discord
     message.channel.send(ree) 
-    gen.removeAlt(type, alt)
+    gen.removeAlt("minecraft", alt)
     bot.cooldown.add(message.author.id);
         setTimeout(() => { 
           bot.cooldown.delete(message.author.id);
