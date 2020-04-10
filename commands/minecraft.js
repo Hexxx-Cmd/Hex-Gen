@@ -19,7 +19,7 @@ module.exports.run = (bot, message, args, gen) => {
   .setDescription('**Sorry! We\'re out of stock but you can always buy premium `#premium` because it always have a stock!**')
   .setThumbnail("https://i.imgur.com/p2ip6l4.gif") //ok now lets see how it looks //ikr now lets test it
   .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //im confused do i delete the part below?
-    if(!alt || alt === '' || alt === ',') return message.channel.send(oos)
+    if(!alt || alt === '') return message.channel.send(oos)
     let embed = new Discord.RichEmbed()
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
     .setColor(bot.color)
@@ -49,5 +49,5 @@ module.exports.run = (bot, message, args, gen) => {
 
 module.exports.help = {
     name: 'minecraft',
-    aliases: ['mine']
+    aliases: ['mc']
 } //wtf you doing wake up
