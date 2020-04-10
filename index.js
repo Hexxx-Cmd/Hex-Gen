@@ -524,9 +524,17 @@ client.on("message", message => {
     const member = message.mentions.members.first()
     if (!message.channel.guild) return;
     const num = message.content.split(" ").slice(2).join(" ");
-    if (!config[member.id]) config[member.id] = {
-      "premium":"false"
-    }
+    if (!premiumshit[member.id]) premiumshit[member.id] = {
+      premium:"false"
 }
-  }
+    if(!member) return message.channel.send("uhh ohh, who do you wanna add kek?");
+    premiumshit[member.id].premium = true
+    
+    
+    
+    
+    
+    
+
+}}
 });

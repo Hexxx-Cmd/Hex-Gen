@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args, gen) => {
   .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved")
   if(!gen.CheckPremium(message.author.id)) return message.channel.send(nopremissiontouse) // end of check premium
   
-    let type = "minecraft" //premium command k
+    let type = "steam" //premium command k
     let alt = gen.getAlt(type)
     const oos = new Discord.RichEmbed()
   .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
@@ -23,7 +23,7 @@ module.exports.run = (bot, message, args, gen) => {
     let embed = new Discord.RichEmbed()
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
     .setColor(bot.color)
-    .setDescription('**You have Generated Minecraft Account**')
+    .setDescription('**You have Generated Steam Account**')
     .setThumbnail('https://images-ext-1.discordapp.net/external/JSEon8wDqxEjJACfEs87gqp0su3L9789rek_hA4vKoU/https/i.imgur.com/Nv9BspW.gif')
     .addField('**__Your account:__**', alt)
     .addField('**__Remind:__**',"Remember that you are using the free generator, this account may not work !",true)// remove this
@@ -34,7 +34,7 @@ module.exports.run = (bot, message, args, gen) => {
       let ree = new Discord.RichEmbed()
     .setColor(bot.color)
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
-    .setDescription("**You Have Generated a Minecraft Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`\nhttps://rleakers.net/")
+    .setDescription("**You Have Generated a Steam Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`\nhttps://rleakers.net/")
     .setThumbnail('https://images-ext-1.discordapp.net/external/8tXbmE1FKl-ELZM2h2iR38UKJ4eKrbkgZEq1tJWjqaE/https/media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
     .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //go to discord
     message.channel.send(ree) 
