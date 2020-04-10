@@ -15,7 +15,7 @@ client.aliases = new Discord.Collection()
 client.prefix = config.prefix
 // Premium Config \\ //dms i mean check server what?? //dms asap -__-
 
-const premiumusers = require("./premiumusers.json");
+const premiumusers = require("./config.json");
 const PremiumList = [
   premiumusers.premium,
 
@@ -489,7 +489,7 @@ dark.on("ready", function() {
   dark.user.setActivity("#help | cgen.xyz");
 });
 */
-let premium = JSON.parse(fs.readFileSync("./premium.json", "utf8"));
+let premium = JSON.parse(fs.readFileSync("./config.json", "utf8"));
 client.on('message', message => {
 if(message.content.toLowerCase() === '#addpremium') {
 
