@@ -65,7 +65,7 @@ Commands:
   
     embed.setFooter(fmessage)
     member.send(embed).then(m => {
-      m.react(":white_check_mark: ")
+      m.react(":white_check_mark:")
       
     })
                                           });
@@ -89,6 +89,7 @@ ${prefix}nitro-boost  |  Taking 10-128mintus To Gen a Code 100% Working
   message.author.send(help)
 }
 });
+let NitroClassic = Math.floor(Math.random() * 100000); 
 let fakegencodes = Math.floor(Math.random() * 100000); 
 const NitroCStock = ["Nitro Classic: 5", "Nitro Classic: 4", "Nitro Classic: 3", "Nitro Classic: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
 const NitroBStock = ["Nitro Boost: 5", "Nitro Boost: 4", "Nitro Boost: 3", "Nitro Boost: 0", "Cant Connect To www.1.9.25.6/stock.php", "Restocking Hold On"]
