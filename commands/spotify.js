@@ -27,7 +27,7 @@ module.exports.run = (bot, message, args, gen) => {
         }, 0);
     // Its in milliseconds so 900000 is 15 mins so 300000 is 5mins
     }
-}
+
 
 module.exports.help = {
     name: 'spotify',
