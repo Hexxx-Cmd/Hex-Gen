@@ -11,7 +11,7 @@ module.exports = {
   },
   CheckPremium: id => {
     let access = false;
-      if(config.premiumusers.includes(id)) access = true;
+      if(config.premiumusers.Includes(id)) access = true;
         if (access) return true;
     else return false;
   },

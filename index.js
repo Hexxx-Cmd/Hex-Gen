@@ -513,22 +513,26 @@ dark.on("ready", function() {
   console.log("unblock us xdddd");
   dark.user.setActivity("#help | cgen.xyz");
 });
-*/
-let premiumshit = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
-client.on("message", message => {
-      const member = message.mentions.members.first()
-  if(message.content.startsWith("#addpremium")){ 
-    if (!premiumshit[member.id]) premiumshit[member.id] = {
-      premium:"false"
-}
-    if(!member) return message.channel.send("uhh ohh, who do you wanna add kek?");
-    premiumshit[member.id].premium = "true"
-   message.channel.send("Success") 
-    
-    
-    fs.writeFile("./config.json", JSON.stringify(premiumshit, null, 2), function (e) {
-            if (e) throw e;
-        });
 
-}
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
