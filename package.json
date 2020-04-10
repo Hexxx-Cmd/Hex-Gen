@@ -5,7 +5,7 @@
   "description": "A simple Node app have mulit usefuel things.",
   "main": "index.js",
   "scripts": {
-    "start": "node workspace/server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",

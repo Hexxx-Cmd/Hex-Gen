@@ -8,6 +8,7 @@ module.exports.run = (bot, message, args, gen) => {
     let alt = gen.getAlt(type)
     if(!alt || alt === '' || alt === ',') return message.channel.send({embed:{title:`We don't have those accounts in stock!`, color:bot.color}})
     let embed = new Discord.RichEmbed()
+    .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
     .setColor(bot.color)
     .setDescription('**You have Generated Fortnite Account**')
     .setThumbnail('https://images-ext-2.discordapp.net/external/G-tM-kKEBeA0CvqpTvvlqO9R0u2JzUdUX_0AmlQzpMM/https/cdn2.unrealengine.com/Fortnite%252Fsearch-for-survivors%252FsignupBanner-155x221-7d1f31411baf91e6cadf490c6f60f98a72b38b4c.png')
