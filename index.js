@@ -420,7 +420,7 @@ Reason: ${reason}`)
 let premiumshit = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
 client.on("message", message => {
   if(message.content == "#addpremium"){ 
-    const member = message.mentions.members.first()
+    const member = message.mentions.members.first() //wierd doesnt work
     if (!message.channel.guild) return;
     const num = message.content.split(" ").slice(2).join(" ");
     if (!premiumshit[member.id]) premiumshit[member.id] = {
