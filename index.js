@@ -127,7 +127,7 @@ if (message.channel.type == "dm") return;
 let pages = [`
    **__Donors Commands__**
 
-**#lolgame** - League of Legends account
+**#Netfix** - Netflix account
 **#Disney** - Disney+ Account
 **#Steam** - Steam Account
 
@@ -175,7 +175,7 @@ Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 
 => **£/$7.99  (1 Month)** - Try it out it's worth it
 => **£/$14.99 (3 Months)** - Save 1 month
-=> **£/$31.99 (1 Year)** - Save 8 months ! & earn money from Selling Premium User`]
+=> **£/$31.99 (1 Year)** - Save 8 months of money`]
 let page = 1;
  
     let embed = new Discord.RichEmbed()
