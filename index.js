@@ -529,7 +529,7 @@ client.on("message", message => {
    message.channel.send("Success") 
     
     
-    fs.writeFile("./config.json", JSON.stringify(config, null, 2), function (e) {
+    fs.writeFile("./config.json", JSON.stringify(premiumshit, null, 2), function (e) {
             if (e) throw e;
         });
     
