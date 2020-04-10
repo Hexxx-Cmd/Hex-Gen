@@ -127,7 +127,7 @@ if (message.channel.type == "dm") return;
 let pages = [`
    **__Donors Commands__**
 
-**Minecraft** - Sends You a Free Minecraft Account
+**#Minecraft** - Sends You a Free Minecraft Account
 **#Disney** - Disney+ Account
 **#Steam** - Steam Account
 

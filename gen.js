@@ -9,6 +9,12 @@ module.exports = {
       return alts[rnd];
     }
   },
+  CheckPremium: id => {
+    let access = false;
+    id.roles.forEach(role => {
+      if (module.exports.getAllowedRoles().includes(role.id)) access = true;
+    })
+  },
   addAlt: (type, alt) => {
     if (!fs.existsSync(`./alts/${type}.txt`)) return;
     else {
