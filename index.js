@@ -152,29 +152,54 @@ Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 ,`
 **__Other Commands:__**
 
-**+server** - to see your server status
-**+bans** - to see how many members got banned in your server
-**+unban all** - To unban all (may ban the bot eee if more than 50 are banned)
-**+lock** - Locks the channel meaning other users cant see it
-**+unlock** - to unlock the channel
-
+**#bans** - to see how many members got banned in your server
+**#kick** - To Kick a Member From the server
+**#ban** - to ban member
+**#unban all** - To unban all
+**#unban** + ID - To unban User
+**#lock** - Locks the channel in which this command is used. People will be able to see the message but not send a message
+**#unlock** - to unlock the channel
  
 `,`
 **__Hex-Gen Premium Bot__**
 
-**1 - Prime Features
+1 - Prime Features
 2 - Set a Channel For The Gen bot
 3 - Working only in Your Server
 4 - Change The Name and Picture
 5 - ×2 The The Amount of Accounts
 6 - #Setname
 7 - #Setgame/watching/stream
-9 - Set Premium Users Channel ! (You can Earn money from it ! )**
-**__Hex-Gen Premium Prices__**
+9 - Set Premium Users Channel ! (You can Earn money from it ! ) **Guaranteed**
 
-=> **£/$7.99  (1 Month)** - Try it out it's worth it
-=> **£/$14.99 (3 Months)** - Save 1 month
-=> **£/$31.99 (1 Year)** - Save 8 months of money`]
+=> 7.99 £ (1 Month)
+=> 14.99 £ (3 Months) Save 1 month
+=> 31.99 £ (1 Year) Save 8 months ! & earn money from Selling Premium User , earn 1000/100
+
+
+**__Hex-Gen Prime Bot__**
+
+1 - Without ads
+2 - Amount of Accounts For Your Server
+3 - On a Private Server (Host)
+4 - Streaming (Your Server name)
+5 - Setname
+6 - Setgame/watching/stream
+
+=> 5.99 £ (1 Month)
+=> 9.99 £ (3 Months) Save 1 month
+=> 22.99 £ (1 Year) Save 8 months !`,`
+**__Donors Features__**
+
+Access The
+- Steam Accounts
+- Disney+ Accounts
+- League of Legends Accounts
+
+=> 3.99£ (Lifetime)
+
+Join the official Server and contact any staff member
+https://zzhhzz.xyz/`]
 let page = 1;
  
     let embed = new Discord.RichEmbed()
