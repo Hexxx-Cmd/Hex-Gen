@@ -214,7 +214,7 @@ let page = 1;
 });
 
 client.on('message',async message => {
-if (message.content.toLowerCase() ===   "#unban all") {
+if (message.content.toLowerCase() ===  prefix + "unban all") {
 if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("BAN_MEMBERS")) return;
 message.guild.fetchBans().then(urmom => {
 urmom.forEach(members => {
@@ -231,7 +231,7 @@ let embed = new Discord.RichEmbed()
 });
 
 client.on('message',async message => {
-    if (message.content.toLowerCase() === "#bans") {
+    if (message.content.toLowerCase() === prefix + "bans") {
 if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("BAN_MEMBERS")) return;
 message.guild.fetchBans()
   .then(banned => {
@@ -466,44 +466,49 @@ its easy To Make! But i am lazzzzzzzzzzzzzzzzzzzzzzzzzzzzzy wait
                                      let's done AddPremium its last  gay Command  
                                      :eyes: looking  this works
 */
+let restartingmessage = new Discord.RichEmbed()
+  .setTitle(`**Hex Gen Is Restarting.**`)
+  .setDescription(`For Keeping Bot fast!`)
+  .setFooter(`** Auto - Restart **`)
+    .setColor("GOLD")
 client.on("ready", () =>{
  var timeout = setTimeout(function(){
    client.guilds.get("695684703495127091") //Server Id
-     //.channels.get("698480487915585557") //Hex-Gen Log Channel
-    //  .send("Bot is restarting").then(urmom =>{
-  //     client.destroy();
+     .channels.get("698480487915585557") //Hex-Gen Log Channel
+      .send("Bot is restarting").then(urmom =>{
+       client.destroy();
      client.login("Njk3NzIzNjEyNTM0MTQ1MDY2.Xo7bxg.SZKXfRPX8rwn94Wo_0hH30b7nkA")
    })
    
    
- //}, 60000) 
+ }, 7200000) 
 })
 let wrongusage = new Discord.RichEmbed()
-  .setTitle(`**incorrect usage**`)
+  .setTitle(`**Incorrect usage**`)
   .setDescription(`#Usage: ${prefix}addpremium (@user)`)
   .setFooter(`Hex Gen Premium`)
     .setColor("GOLD")
 
 let successful = new Discord.RichEmbed()
-  .setTitle(`**successful**`)
+  .setTitle(`**Successful**`)
   .setDescription(`I Have Added This User To PremiumList!`)
   .setFooter(`Hex Gen Premium`)
     .setColor("GOLD")
 
 let wrongusage2 = new Discord.RichEmbed()
-  .setTitle(`**incorrect usage**`)
+  .setTitle(`**Incorrect usage**`)
   .setDescription(`#Usage: ${prefix}removepremium (@user)`)
   .setFooter(`Hex Gen Premium`)
     .setColor("GOLD")
 
 let successful2 = new Discord.RichEmbed()
-  .setTitle(`**successful**`)
+  .setTitle(`**Successful**`)
   .setDescription(`I Have Removed This User From PremiumList!`)
   .setFooter(`Hex Gen Premium`)
     .setColor("GOLD")
 
 let wrongusage3 = new Discord.RichEmbed()
-  .setTitle(`**incorrect usage**`)
+  .setTitle(`**Incorrect usage**`)
   .setDescription(`This User Isnt In Premium List`)
   .setFooter(`Hex Gen Premium`)
     .setColor("GOLD")
@@ -513,7 +518,7 @@ const premium = JSON.parse(fs.readFileSync('./premium.json' , 'utf8'));
  
 client.on("message", message => {
     let mention = message.mentions.users.first();
-if(message.content.startsWith(prefix + "addpremium")) {
+if (message.content.toLowerCase() ===  prefix + "addpremium") {
 if(!mention) return message.channel.send(wrongusage)
 if(premium["premium"] === undefined) premium["premium"] = {
     premium: []
@@ -522,7 +527,7 @@ premium["premium"].premium.push(mention.id);
 save()
 message.channel.send(successful)
 }
-if(message.content.startsWith(prefix + "removepremium")) {
+if (message.content.toLowerCase() ===  prefix + "removepremium") {
 if(!mention) return message.channel.send(wrongusage2)
 if(premium["premium"] === undefined) premium["premium"] = {
     premium: []
@@ -534,13 +539,13 @@ save()
 }
 })
 client.on("message", message => {
-    if(message.content.startsWith(prefix + "premiumlist")) {
+if (message.content.toLowerCase() ===  prefix + "premiumlist") {
      if(premium["premium"] === undefined) premium["premium"] = {
     premium: []
     };
     premium["premium"].premium.forEach(premiumusers => {
         let embed = new Discord.RichEmbed()
-        .setTitle("Premium Users:")
+        .setTitle("Premium user:")
     .setDescription(`<@${premiumusers}>`)
     .setColor("GOLD")
     message.channel.sendEmbed(embed)

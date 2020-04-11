@@ -7,7 +7,8 @@ const Discord = require('discord.js')
      setTimeout(() => {
          const stock = gen.stock
         for(const type of stock) {
-            embed.addField(type[0], type[1], true)
+            embed.addField(type[0], type[1])
+            embed.addField('Note:' , `This is a free generator not all accounts work but you know what works premium does use #premium`)
         }
         message.channel.send(embed) 
      }, 200);
