@@ -437,11 +437,10 @@ Reason: ${reason}`)
     
 
 //}
-//}); 
-
+//}); f
+const premiumgaes = {}
 client.on("message", message => {// :thinking:
   if(message.author.id.Includes(devs)){
   if(message.content.startsWith(prefix + "addpremium")){
-    
   }}
 });
