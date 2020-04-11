@@ -1,5 +1,5 @@
 const fs = require("fs");
-const config = require("./config.json");
+const genconfig = require("./genconfig.json");
 const premiumlist = require("./index.js")//WHAT     UGH REquire index.js  L M AOuy you'l       l)my
 const premiumusers = premiumlist.userslist2 //yp u getting ids from json file's and connecting index.js to fatchnah whdex so im connecting the index withit will add it to in""
 module.exports = {          // yeah wait

@@ -479,42 +479,63 @@ client.on("ready", () =>{
    
  //}, 60000) 
 })
+let wrongusage = new Discord.RichEmbed()
+  .setTitle(`**incorrect usage**`)
+  .setDescription(`#Usage: ${prefix}addpremium (@user)`)
+  .setFooter(`Hex Gen Premium`)
+
+let successful = new Discord.RichEmbed()
+  .setTitle(`**successful**`)
+  .setDescription(`I Have Added This User To PremiumList!`)
+  .setFooter(`Hex Gen Premium`)
+
+let wrongusage2 = new Discord.RichEmbed()
+  .setTitle(`**incorrect usage**`)
+  .setDescription(`#Usage: ${prefix}removepremium (@user)`)
+  .setFooter(`Hex Gen Premium`)
+
+let successful2 = new Discord.RichEmbed()
+  .setTitle(`**successful**`)
+  .setDescription(`I Have Removed This User From PremiumList!`)
+  .setFooter(`Hex Gen Premium`)
+let wrongusage2 = new Discord.RichEmbed()
+  .setTitle(`**incorrect usage**`)
+  .setDescription(`#Usage: ${prefix}removepremium (@user)`)
+  .setFooter(`Hex Gen Premium`)
 
 
-
-
-const blacklist = JSON.parse(fs.readFileSync('./blacklist.json' , 'utf8'));
+const premium = JSON.parse(fs.readFileSync('./premium.json' , 'utf8'));
  
 client.on("message", message => {
     let mention = message.mentions.users.first();
-if(message.content.startsWith(prefix + "addblacklist")) {
-if(!mention) return message.channel.send("من فضلك منشن العضو")
-if(blacklist[message.guild.id] === undefined) blacklist[message.guild.id] = {
-    blacklisted: []
+if(message.content.startsWith(prefix + "addpremium")) {
+if(!mention) return message.channel.send(wrongusage)
+if(premium[message.guild.id] === undefined) premium[message.guild.id] = {
+    premium: []
     };
-blacklist[message.guild.id].blacklisted.push(mention.id);
+premium[message.guild.id].premium.push(mention.id);
 save()
-message.channel.send("تم اضافة العضو الي البلاك ليست")
+message.channel.send(successful)
 }
-if(message.content.startsWith(prefix + "removeblacklist")) {
-if(!mention) return message.channel.send("من فضلك منشن العضو")
-if(blacklist[message.guild.id] === undefined) blacklist[message.guild.id] = {
-    blacklisted: []
+if(message.content.startsWith(prefix + "removepremium")) {
+if(!mention) return message.channel.send(wrongusage2)
+if(premium[message.guild.id] === undefined) premium[message.guild.id] = {
+    premium: []
     };
-if(!blacklist[message.guild.id].blacklisted.includes(mention.id)) return message.channel.send("هذا العضو ليس في البلاك ليست")
-blacklist[message.guild.id].blacklisted =  blacklist[message.guild.id].blacklisted.filter(x=> x !== mention.id);
-message.channel.send("تم حذف العضو من البلاك ليست")
+if(!premium[message.guild.id].premium.includes(mention.id)) return message.channel.send("هذا العضو ليس في البلاك ليست")
+premium[message.guild.id].premium =  premium[message.guild.id].premium.filter(x=> x !== mention.id);
+message.channel.send(successful2)
 save()
 }
 })
 client.on("message", message => {
-    if(message.content.startsWith(prefix + "blacklist")) {
-     if(blacklist[message.guild.id] === undefined) blacklist[message.guild.id] = {
-    blacklisted: []
+    if(message.content.startsWith(prefix + "premiumlist")) {
+     if(premium[message.guild.id] === undefined) premium[message.guild.id] = {
+    premium: []
     };
-    blacklist[message.guild.id].blacklisted.forEach(e => {
+    premium[message.guild.id].premium.forEach(e => {
         let embed = new Discord.RichEmbed()
-        .setTitle("Blacklisted Users:")
+        .setTitle("Premium Users:")
     .setDescription(`<@${e}>`)
     .setColor("BLACK")
     message.channel.sendEmbed(embed)
@@ -523,7 +544,7 @@ client.on("message", message => {
 })
  
 function save() {
-    fs.writeFileSync("./blacklist.json", JSON.stringify(blacklist, null, 4));
+    fs.writeFileSync("./premium.json", JSON.stringify(premium, null, 4));
     console.log("saved")
 }
 

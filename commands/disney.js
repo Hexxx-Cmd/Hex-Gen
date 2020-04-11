@@ -1,5 +1,4 @@
 const Discord = require('discord.js')
-const premiumlist = require("../premiumusers.json")
 //im gay ik
 module.exports.run = (bot, message, args, gen) => {
   //Checks if have premium
