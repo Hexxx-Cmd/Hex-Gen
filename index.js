@@ -483,6 +483,49 @@ client.on("ready", () =>{
 
 
 
+const blacklist = JSON.parse(fs.readFileSync('./blacklist.json' , 'utf8'));
+ 
+client.on("message", message => {
+    let mention = message.mentions.users.first();
+if(message.content.startsWith(prefix + "addblacklist")) {
+if(!mention) return message.channel.send("من فضلك منشن العضو")
+if(blacklist[message.guild.id] === undefined) blacklist[message.guild.id] = {
+    blacklisted: []
+    };
+blacklist[message.guild.id].blacklisted.push(mention.id);
+save()
+message.channel.send("تم اضافة العضو الي البلاك ليست")
+}
+if(message.content.startsWith(prefix + "removeblacklist")) {
+if(!mention) return message.channel.send("من فضلك منشن العضو")
+if(blacklist[message.guild.id] === undefined) blacklist[message.guild.id] = {
+    blacklisted: []
+    };
+if(!blacklist[message.guild.id].blacklisted.includes(mention.id)) return message.channel.send("هذا العضو ليس في البلاك ليست")
+blacklist[message.guild.id].blacklisted =  blacklist[message.guild.id].blacklisted.filter(x=> x !== mention.id);
+message.channel.send("تم حذف العضو من البلاك ليست")
+save()
+}
+})
+client.on("message", message => {
+    if(message.content.startsWith(prefix + "blacklist")) {
+     if(blacklist[message.guild.id] === undefined) blacklist[message.guild.id] = {
+    blacklisted: []
+    };
+    blacklist[message.guild.id].blacklisted.forEach(e => {
+        let embed = new Discord.RichEmbed()
+        .setTitle("Blacklisted Users:")
+    .setDescription(`<@${e}>`)
+    .setColor("BLACK")
+    message.channel.sendEmbed(embed)
+    });
+    }
+})
+ 
+function save() {
+    fs.writeFileSync("./blacklist.json", JSON.stringify(blacklist, null, 4));
+    console.log("saved")
+}
 
 
 

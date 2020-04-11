@@ -1,4 +1,4 @@
-/*const fs = require("fs")// Made By DarkBoy#6171 + RealShadow# just back into index.js and lets try if its gonna work : ?
+const fs = require("fs")// Made By DarkBoy#6171 + RealShadow# just back into index.js and lets try if its gonna work : ?
 const Discord = require('discord.js')
 const premium = JSON.parse(fs.readFileSync('./premium.json' , 'utf8'));
 module.exports.run = (client, message, args) => {
@@ -18,4 +18,3 @@ module.exports.help = {
     name: 'premiumlist',
     aliases: ['plist']
 }// Made By DarkBoy#6171 + RealShadow#2020
-*/
