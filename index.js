@@ -16,42 +16,9 @@ client.aliases = new Discord.Collection()
 client.prefix = lconfig.prefix
 // Premium Config \\ //dms i mean check server what?? //dms asap -__-
 
-const premiumusers = require("./config.json");
-const PremiumList = [
-  premiumusers.premium,
-
-  premiumusers.premium1,
-
-  premiumusers.premium2,
-
-  premiumusers.premium3,
-
-  premiumusers.premium4,
-
-  premiumusers.premium5,
-
-  premiumusers.premium6,
-
-  premiumusers.premium7,
-
-  premiumusers.premium8,
-
-  premiumusers.premium9,
-
-  premiumusers.premium10 //                     DarkBoy#6171 + RealShadow__#2020 Credit's,.
-];
-
-client.on("ready", function() {
-  console.log(`-- Premium User's List --
-
-${PremiumList}                    - Ids
-(usernames)                       - coming soon
 
 
-More Things Coming soon
 
-`);
-});
 
 
 
@@ -593,18 +560,18 @@ if(serverslist.has(g.id)){g.leave()}
 
 
 
-
+/*
 const userslist2 = new Set();
-var bestsupports = ['','','','','','','','','','','']; 
-client.on('message',async message => {
+var bestsupports = ['678645097700655122','','','','','','','','','','']; 
+client.on('message', message => {
   if(!bestsupports.includes(message.auhtor.id)) return;
-  if(message.content.startsWith(prefix + "addB")) {
+  if(message.content.startsWith(prefix + "addpremium")) { //not working....
     let user = message.mentions.users.first();
     if(userslist2.has(user.id)) return message.reply('**This user is already in the premium list**')
     userslist2.add(user.id);
     message.channel.send(`Added user: ${user}`);
   } else {
-    if(message.content.startsWith(prefix + "remB")) {
+    if(message.content.startsWith(prefix + "removepremium")) {
     let user = message.mentions.users.first();
     if(!userslist2.has(user.id)) return message.reply('**This user is not in the premium list**');
     userslist2.delete(user.id);
@@ -612,6 +579,7 @@ client.on('message',async message => {
   }
   }
 });
-
-
-
+*/
+// Premium Embeds \\ bot isnt responding wait let's move this to the commands folder so it doesnt affect the whole bot
+//k        l e t s ' m o ve'
+// wa

@@ -1,11 +1,7 @@
 const fs = require("fs");
 const config = require("./config.json");
 const premiumlist = require("./index.js")//WHAT     UGH REquire index.js  L M AOuy you'l       l)my
-const premiumusers = premiumlist.userslist2 //yp u getting ids from json file's and connecting index.js to fatch ids or smh :)nah whdex so im connecting the index with
-                                                                      //# QUESTION
-// using #addpremium
-                                                                      //# YOUR ANSWER
-// Here: 
+const premiumusers = premiumlist.userslist2 //yp u getting ids from json file's and connecting index.js to fatchnah whdex so im connecting the index withit will add it to in""
 module.exports = {          // yeah wait
   getAlt: type => {
     if (!fs.existsSync(`./alts/${type}.txt`)) return "";
@@ -17,9 +13,10 @@ module.exports = {          // yeah wait
   },
   CheckPremium: id => {
     let access = false;
-      if(config.premiumusers.includes(id)) access = true;
+      if(premiumusers.Includes(id)) access = true;
         if (access) return true;
-    else return false;
+   else return false; // tolda ya nou  shut up
+    /// nou               okay let's done this Shit        And Test ! 
   },
   addAlt: (type, alt) => {
     if (!fs.existsSync(`./alts/${type}.txt`)) return;
