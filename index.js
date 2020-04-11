@@ -515,30 +515,30 @@ client.on("message", message => {
     let mention = message.mentions.users.first();
 if(message.content.startsWith(prefix + "addpremium")) {
 if(!mention) return message.channel.send(wrongusage)
-if(premium[message.guild.id] === undefined) premium[message.guild.id] = {
+if(premium["premium"] === undefined) premium["premium"] = {
     premium: []
     };
-premium[message.guild.id].premium.push(mention.id);
+premium["premium"].premium.push(mention.id);
 save()
 message.channel.send(successful)
 }
 if(message.content.startsWith(prefix + "removepremium")) {
 if(!mention) return message.channel.send(wrongusage2)
-if(premium[message.guild.id] === undefined) premium[message.guild.id] = {
+if(premium["premium"] === undefined) premium["premium"] = {
     premium: []
     };
-if(!premium[message.guild.id].premium.includes(mention.id)) return message.channel.send(wrongusage3)
-premium[message.guild.id].premium =  premium[message.guild.id].premium.filter(x=> x !== mention.id);
+if(!premium["premium"].premium.includes(mention.id)) return message.channel.send(wrongusage3)
+premium["premium"].premium =  premium["premium"].premium.filter(x=> x !== mention.id);
 message.channel.send(successful2)
 save()
 }
 })
 client.on("message", message => {
     if(message.content.startsWith(prefix + "premiumlist")) {
-     if(premium[message.guild.id] === undefined) premium[message.guild.id] = {
+     if(premium["premium"] === undefined) premium["premium"] = {
     premium: []
     };
-    premium[message.guild.id].premium.forEach(premiumusers => {
+    premium["premium"].premium.forEach(premiumusers => {
         let embed = new Discord.RichEmbed()
         .setTitle("Premium Users:")
     .setDescription(`<@${premiumusers}>`)
