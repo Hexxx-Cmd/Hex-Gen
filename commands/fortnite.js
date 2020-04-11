@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args, gen) => {
 `)
 
   message.author.send(`
-** Support Server **
+** Support Server **            
 https://discord.gg/ZuvcNvB
 `)
     let type = "Fortnite"
