@@ -435,22 +435,7 @@ Reason: ${reason}`)
   //      });
     
     
-client.on('ready', restart => {
-var embed = new Discord.RichEmbed()
-    .setTitle('Restarting...')
-    .setDescription(`***Hex-Gen Is Restarting Now!***`)
-    .setColor('RANDOM')
-    .setFooter(restart .guild.name, restart.guild.iconURL, true)
-    var channel =restart.guild.channels.find('name', 'restart-log') 
-    if (!channel) return;
-    channel.send({embed : embed});
-
-    setTimeout(function(){
-        client.destroy();
-    }, 18000 * 60);
-});
-//}
-//}); f
+// there was error :ugh: :/ i forget how to fatchit soo ill replace it soon ill make new one :/ BUt SOON!
 const premiumgaes = {}
 client.on("message", message => {// :thinking:
   if(message.author.id.Includes(devs)){
@@ -490,58 +475,37 @@ client.on("message", message => {// :thinking:
 //test
 // wassup lol ugh check my autorestart code up The best codeiddiidididi idid
 // lmaoooO!   use split                           reee you'll see    ()
-let config = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
+let config = JSON.parse(fs.readFileSync("./config.json", "ANSI"));
 client.on("message", message => {
-  if(!message.author.id.Includes(devs))
-    if (!message.channel.guild) return;//shut up l
-     let num = message.content.split(" ").slice(2).join(" ");//  i am bored asf my man 
-    if (!config[num]) config[num] = { // sexy num
+  var nogaypermissions = new Discord.RichEmbed()
+    .setTitle('No Permissions')
+    .setDescription(`***
+Only Bot Developer's can use that command @<{${message.author.id}>. 
+!***`)
+  if(!message.author.id.Includes(devs)) 
+    return message.channel.send(nogaypermissions)// kinda dumb no its kinda dumb like £addpremium (no cuite u dont have permissions)
+    if (!message.channel.guild) return;//shut up pls
+     let num = message.content.split(" ").slice(2).join(" ");//Okay what u need help withf?irst time i asked you is j4j allowed lol in chillrewards
+  if(!num) return;
+    if (!config[num]) config[num] = { // lmao was long day
       premium: false
     } 
-    if (message.content.startsWith(prefix + "addpremium ")) {
+    //if (message.content.startsWith(prefix + "addpremium ")) {
 
+// gay embed better
+  var permium1 = new Discord.RichEmbed()
+    .setTitle('incorrect usage')
+    .setDescription(`***
+Usage: #addpremium [ID] 
+***`)
 
-        if (!message.member.hasPermission('MANAGE_GUILD')) return;
-        if (message.content.startsWith(prefix + "config banlimit")) {
-            if (!num) return message.channel.send("**Send a number! **");
-            if (isNaN(num)) return message.channel.send("**Numbers only! **");
-            config[message.guild.id].banLimit = num;
-            message.channel.send(`**Changed to: ${config[message.guild.id].banLimit} **`)
-        }
-        if (message.content.startsWith(prefix + "config kicklimit")) {
-            if (!num) return message.channel.send("**Send a number! **");
-            if (isNaN(num)) return message.channel.send("**Numbers only! **");
-            config[message.guild.id].kickLimits = num;
-            message.channel.send(`**Changed to: ${config[message.guild.id].kickLimits}**`)
-        }
-        if (message.content.startsWith(prefix + "config Droleslimit")) {
-            if (!num) return message.channel.send("**Send a number! **");
-            if (isNaN(num)) return message.channel.send("**Numbers only! **");
-            config[message.guild.id].roleDelLimit = num;
-            message.channel.send(`**Changed to: ${config[message.guild.id].roleDelLimit}**`)
-        }
-        if (message.content.startsWith(prefix + "config Croleslimit")) {
-            if (!num) return message.channel.send("**Send a number! **");
-            if (isNaN(num)) return message.channel.send("**Numbers only! **");
-            config[message.guild.id].roleCrLimits = num;
-            message.channel.send(`**Changed to: ${config[message.guild.id].roleCrLimits}**`)
-        }
-        if (message.content.startsWith(prefix + "config Dchannelslimit")) {
-            if (!num) return message.channel.send("**Send a number! **");
-            if (isNaN(num)) return message.channel.send("**Numbers only! **");
-            config[message.guild.id].chaDelLimit = num;
-            message.channel.send(`**Changed to: ${config[message.guild.id].chaDelLimit}**`)
-        }
-        if (message.content.startsWith(prefix + "config limitstime")) {
-            if (!num) return message.channel.send("**Send a number! **");
-            if (isNaN(num)) return message.channel.send("**Numbers only! **");
-            config[message.guild.id].time = num;
-            message.channel.send(`**Changed to: ${config[message.guild.id].time}**`)
-        }
+        if (message.content.startsWith(prefix + "addpremium ")) {
+            if (!num) return message.channel.send(permium1);
+            if (isNaN(num)) return message.channel.send(permium1);
+            config[num].premium = num; // that gonna make us alot of money HAHAH
+            message.channel.send(premium2)
+        
         fs.writeFile("./config.json", JSON.stringify(config, null, 2), function (e) {
-            if (e) throw e;
-        });
-        fs.writeFile("./antigreff.json", JSON.stringify(anti, null, 2), function (e) {
             if (e) throw e;
         });
     }
