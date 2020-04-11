@@ -494,7 +494,7 @@ use that its working
 its easy To Make! But i am lazzzzzzzzzzzzzzzzzzzzzzzzzzzzzy wait
                                   ugh okay 
                                      let's done AddPremium its last  gay Command  
-                                     :eyes: looking  
+                                     :eyes: looking  this works
 */
 client.on("ready", () =>{
  var timeout = setTimeout(function(){
@@ -502,10 +502,13 @@ client.on("ready", () =>{
    //ok look 
    //on one of my old codes stfu it's by me
    client.guilds
-      .get("ID OF GUILD")
-      .channels.get("680721671292059690")
-      .send("~select " + "flame");
+      .get("694626254871068762")
+      .channels.get("694626254871068765")
+      .send("Bot is restarting").then(urmom =>{
+       client.destroy();
+     client.login("Njk3NzIzNjEyNTM0MTQ1MDY2.Xo7bxg.SZKXfRPX8rwn94Wo_0hH30b7nkA")
+   })
    
    
- })  
+ }, 60000) //1min  make LETS TEST FIRST okay daddy
 })
