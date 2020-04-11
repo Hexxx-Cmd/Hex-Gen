@@ -501,14 +501,14 @@ its easy To Make! But i am lazzzzzzzzzzzzzzzzzzzzzzzzzzzzzy wait
 client.on("ready", () =>{
  var timeout = setTimeout(function(){
    client.guilds.get("695684703495127091") //Server Id
-     .channels.get("698480487915585557") //Hex-Gen Log Channel
-      .send("Bot is restarting").then(urmom =>{
-       client.destroy();
+     //.channels.get("698480487915585557") //Hex-Gen Log Channel
+    //  .send("Bot is restarting").then(urmom =>{
+  //     client.destroy();
      client.login("Njk3NzIzNjEyNTM0MTQ1MDY2.Xo7bxg.SZKXfRPX8rwn94Wo_0hH30b7nkA")
    })
    
    
- }, 60000) 
+ //}, 60000) 
 })
 
 
@@ -530,7 +530,7 @@ client.on("ready", () =>{
 
 
 const userslist = new Set();
-var bestsupports = ['','','','','','','','','','',''];// ايديات الي يقدرو يضيفو
+var bestsupports = ['697279777974911077'];// ايديات الي يقدرو يضيفو
 client.on('message',async message => {
   if(!bestsupports.includes(message.auhtor.id)) return;
   if(message.content.startsWith(prefix + "addB")) {
@@ -547,7 +547,7 @@ client.on('message',async message => {
   }
   }
 });
-client.on('message', async() => {
+client.on('message',async message => {
   if(!bestsupports.includes(message.auhtor.id)) return;
 if(message.content.startsWith(prefix + 'leaS')){
   let args = message.content.split(' ').slice(1).join(' ');
@@ -556,9 +556,9 @@ if(message.content.startsWith(prefix + 'leaS')){
   console.log(`I leave From This server ${args}`)
 }
 })
-const serverslist = new set();
+const serverslist = new Set();
 client.on('message' , message => {
-  if(!bestsupports.includes(message.auhtor.id)) return;
+//  if(!bestsupports.includes(message.auhtor.id)) return;
   if(message.content.startsWith(prefix + "addS")) {
     let args = message.content.split(' ').slice(1).join(' ');
     if(!isNaN(args)) return;
@@ -595,52 +595,23 @@ if(serverslist.has(g.id)){g.leave()}
 
 
 const userslist2 = new Set();
-var bestsupports = ['','','','','','','','','','',''];// ايديات الي يقدرو يضيفو
+var bestsupports = ['','','','','','','','','','','']; 
 client.on('message',async message => {
   if(!bestsupports.includes(message.auhtor.id)) return;
   if(message.content.startsWith(prefix + "addB")) {
     let user = message.mentions.users.first();
-    if(userslist.has(user.id)) return message.reply('**الشخص في البلاك لست من قبل**')
-    userslist.add(user.id);
+    if(userslist2.has(user.id)) return message.reply('**This user is already in the premium list**')
+    userslist2.add(user.id);
     message.channel.send(`Added user: ${user}`);
   } else {
     if(message.content.startsWith(prefix + "remB")) {
     let user = message.mentions.users.first();
-    if(!userslist.has(user.id)) return message.reply('**لا يوجد شخص بـ هذ المنشن**');
-    userslist.delete(user.id);
+    if(!userslist2.has(user.id)) return message.reply('**This user is not in the premium list**');
+    userslist2.delete(user.id);
     message.channel.send(`Removed user: ${user}`);
   }
   }
 });
-client.on('message', async() => {
-  if(!bestsupports.includes(message.auhtor.id)) return;
-if(message.content.startsWith(prefix + 'leaS')){
-  let args = message.content.split(' ').slice(1).join(' ');
-  if(!isNaN(args)) return;
-  client.guilds.get(args).leave();
-  console.log(`I leave From This server ${args}`)
-}
-})
-const serverslist = new set();
-client.on('message' , message => {
-  if(!bestsupports.includes(message.auhtor.id)) return;
-  if(message.content.startsWith(prefix + "addS")) {
-    let args = message.content.split(' ').slice(1).join(' ');
-    if(!isNaN(args)) return;
-    if(serverslist.includes(args)) return message.replay('**السيرفر موجود في قائمه البلاك ليست**')
-    serverslist.add(args)
-    message.channel.send(`Added server : ${args}`)
-  } else {
-    if(message.content.startsWith(prefix + "remS")) {
-      let args = message.content.split(' ').slice(1).join(' ');
-      if(!isNaN(args)) return;
-      if(!serverslist.has(args)) return message.replay('**هذا لاسيرفر ليس موجود بـ القائمه**')
-      serverslist.delete(args)
-      message.channel.send(`Removed server : ${args}`)
-  }
-  }
-});
-client.on('guildCreate' , g => {
-if(serverslist.has(g.id)){g.leave()}
-});
+
+
 
