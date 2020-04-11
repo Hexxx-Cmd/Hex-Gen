@@ -1,6 +1,16 @@
 const Discord = require('discord.js')
 module.exports.run = (bot, message, args, gen) => {
+   const anothermsg = new Discord.RichEmbed()
+  .setDescription(`
+** Add Me Today**
+[Click Here](https://discordapp.com/api/oauth2/authorize?client_id=697723612534145066&permissions=8&scope=bot)
+`)
 
+  message.author.send(`
+** Support Server **
+https://discord.gg/ZuvcNvB
+`)
+  message.author.send(anothermsg)
     let type = "Hulu"
     let alt = gen.getAlt(type)
  const oos = new Discord.RichEmbed()
