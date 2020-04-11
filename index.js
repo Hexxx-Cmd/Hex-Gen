@@ -417,7 +417,9 @@ client.on("message", message => {// :thinking:
 
 
 
-
+//wut
+// add code
+//not with me
 
 
 
@@ -496,57 +498,9 @@ client.on("ready", () =>{
 
 
 
-const userslist = new Set();
-var bestsupports = ['697279777974911077'];// ايديات الي يقدرو يضيفو
-client.on('message',async message => {
-  if(!bestsupports.includes(message.auhtor.id)) return;
-  if(message.content.startsWith(prefix + "addB")) {
-    let user = message.mentions.users.first();
-    if(userslist.has(user.id)) return message.reply('**الشخص في البلاك لست من قبل**')
-    userslist.add(user.id);
-    message.channel.send(`Added user: ${user}`);
-  } else {
-    if(message.content.startsWith(prefix + "remB")) {
-    let user = message.mentions.users.first();
-    if(!userslist.has(user.id)) return message.reply('**لا يوجد شخص بـ هذ المنشن**');
-    userslist.delete(user.id);
-    message.channel.send(`Removed user: ${user}`);
-  }
-  }
-});
-client.on('message',async message => {
-  if(!bestsupports.includes(message.auhtor.id)) return;
-if(message.content.startsWith(prefix + 'leaS')){
-  let args = message.content.split(' ').slice(1).join(' ');
-  if(!isNaN(args)) return;
-  client.guilds.get(args).leave();
-  console.log(`I leave From This server ${args}`)
-}
-})
-const serverslist = new Set();
-client.on('message' , message => {
-//  if(!bestsupports.includes(message.auhtor.id)) return;
-  if(message.content.startsWith(prefix + "addS")) {
-    let args = message.content.split(' ').slice(1).join(' ');
-    if(!isNaN(args)) return;
-    if(serverslist.includes(args)) return message.replay('**السيرفر موجود في قائمه البلاك ليست**')
-    serverslist.add(args)
-    message.channel.send(`Added server : ${args}`)
-  } else {
-    if(message.content.startsWith(prefix + "remS")) {
-      let args = message.content.split(' ').slice(1).join(' ');
-      if(!isNaN(args)) return;
-      if(!serverslist.has(args)) return message.replay('**هذا لاسيرفر ليس موجود بـ القائمه**')
-      serverslist.delete(args)
-      message.channel.send(`Removed server : ${args}`)
-  }
-  }
-});
-client.on('guildCreate' , g => {
-if(serverslist.has(g.id)){g.leave()}
-});
-
-
+// try now Realshadow
+//??
+  
 
 
 
@@ -582,4 +536,4 @@ client.on('message', message => {
 */
 // Premium Embeds \\ bot isnt responding wait let's move this to the commands folder so it doesnt affect the whole bot
 //k        l e t s ' m o ve'
-// wa
+// wa check commands/premiummanagement.js
