@@ -9,7 +9,7 @@ module.exports.run = (bot, message, args, gen) => {
   .setDescription('**I am a Generator bot offering thousands of users free accounts, if you want access use `#premium` you  will get a small advantage which is generating `steam` `Disney+` `Minecraft` accounts and Donor Rank in my server.**')
   .setThumbnail("https://i.imgur.com/p2ip6l4.gif") //ok now lets see how it looks
   .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved")
-  gen.CheckPremium(message.author.id)
+  if(!gen.CheckPremium(message.author.id)) return message.channel.send(nopremissiontouse)
     let type = "Minecraft" //premium command k
     let alt = gen.getAlt(type)
     const oos = new Discord.RichEmbed()
