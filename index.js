@@ -436,12 +436,11 @@ Reason: ${reason}`)
     
     
 // there was error :ugh: :/ i forget how to fatchit soo ill replace it soon ill make new one :/ BUt SOON!
-const premiumgaes = {}
+/*const premiumgaes = {}
 client.on("message", message => {// :thinking:
-  if(message.author.id.Includes(devs)){
   if(message.content.startsWith(prefix + "addpremium")){
   }}
-});
+});*/
 
 
 
@@ -475,38 +474,38 @@ client.on("message", message => {// :thinking:
 //test
 // wassup lol ugh check my autorestart code up The best codeiddiidididi idid
 // lmaoooO!   use split                           reee you'll see    ()
-let config = JSON.parse(fs.readFileSync("./config.json", "ANSI"));
-client.on("message", message => {
-  var nogaypermissions = new Discord.RichEmbed()
-    .setTitle('No Permissions')
-    .setDescription(`***
-Only Bot Developer's can use that command @<{${message.author.id}>. 
-!***`)
-  if(!message.author.id.Includes(devs)) 
-    return message.channel.send(nogaypermissions)// kinda dumb no its kinda dumb like £addpremium (no cuite u dont have permissions)
-    if (!message.channel.guild) return;//shut up pls
-     let num = message.content.split(" ").slice(2).join(" ");//Okay what u need help withf?irst time i asked you is j4j allowed lol in chillrewards
-  if(!num) return;
-    if (!config[num]) config[num] = { // lmao was long day
-      premium: false
-    } 
-    //if (message.content.startsWith(prefix + "addpremium ")) {
+// ur code is gay ur reboot code is gay
+// Reboot i made it in secs, while we was chating i mad it and i forget afew events ( Code CAn Be Fixed ) But ur code UGH
 
-// gay embed better
-  var permium1 = new Discord.RichEmbed()
-    .setTitle('incorrect usage')
-    .setDescription(`***
-Usage: #addpremium [ID] 
-***`)
+//it's ez wait i'll make it 
+// okay : WAITING )
 
-        if (message.content.startsWith(prefix + "addpremium ")) {
-            if (!num) return message.channel.send(permium1);
-            if (isNaN(num)) return message.channel.send(permium1);
-            config[num].premium = num; // that gonna make us alot of money HAHAH
-            message.channel.send(premium2)
-        
-        fs.writeFile("./config.json", JSON.stringify(config, null, 2), function (e) {
-            if (e) throw e;
-        });
-    }
-});
+const Developers = ["DeveloperID", "DeveloperID", "LastGayID"];
+
+// u trying to do reboot? i bet if u can          shut uwpith send message in custom channel in restarting gae wait
+/*
+setTimeout(function(){
+        client.destroy();
+    }, 18000 * 60);
+} if not then u gay
+ugh ur GaySHIT            
+bruh i am bored asf. :": WAITING )"
+use that its working                           
+its easy To Make! But i am lazzzzzzzzzzzzzzzzzzzzzzzzzzzzzy wait
+                                  ugh okay 
+                                     let's done AddPremium its last  gay Command  
+                                     :eyes: looking  
+*/
+client.on("ready", () =>{
+ var timeout = setTimeout(function(){
+   //i knew what's wrong you mega gaylol
+   //ok look 
+   //on one of my old codes stfu it's by me
+   client.guilds
+      .get("ID OF GUILD")
+      .channels.get("680721671292059690")
+      .send("~select " + "flame");
+   
+   
+ })  
+})
