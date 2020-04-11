@@ -417,10 +417,10 @@ Reason: ${reason}`)
 });
 
 
-//let premiumshit = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
-//client.on("message", message => {
+//let premiumshit = JSON.parse(fs.readFileSync("./config.json", "UTF-8")); 
+//client.on("message", message => { 
   //if(message.content == "#addpremium"){ 
-   // if (!message.channel.guild) return;
+   // if (!message.channel.guild) return;// okay good that wont work, + everybbody can use the cmd u didnt add custom ids IK I DELETED THAT BECAUSE I THOUGHT THIS IS THE PROBLEM
    // const num = message.content.split(" ").slice(2).join(" ");
     //if (!premiumshit[]) premiumshit[] = {
      // premium:"false"
@@ -429,7 +429,7 @@ Reason: ${reason}`)
    // premiumshit[].premium = "true"
  //  message.channel.send("Success") 
     
-    
+   //  
  //   fs.writeFile("./config.json", JSON.stringify(premiumshit, null, 2), function (e) {
  //           if (e) throw e;
   //      });
@@ -438,3 +438,10 @@ Reason: ${reason}`)
 
 //}
 //});
+
+client.on("message", message => {
+  if(message.author.id.Includes(devs)){
+  if(message.content.startsWith("#addpremium")){
+    
+  }}
+});
