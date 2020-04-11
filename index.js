@@ -147,7 +147,7 @@ let pages = [`
 **#origin **- Sends You a Free Origing account
 
 **#stock** - bot stock
-**#i+s** - Gives you bot invite link and support server
+**#invite** - Gives you bot invite link
 
 Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 
@@ -160,7 +160,7 @@ Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 **#ban** - to ban member
 **#unban all** - To unban all
 **#unban** + ID - To unban User
-**#lock** - Locks the channel in which this command is used. People will be able to see the message but not send a message
+**#lock** - To lock channel so members cant view it 
 **#unlock** - to unlock the channel
  
 `,`
@@ -182,14 +182,13 @@ Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 
 **__Hex-Gen Prime Bot__**
 
-1 - Without ads
-2 - Amount of Accounts For Your Server
-3 - On a Private Server (Host)
-4 - Streaming (Your Server name)
-5 - Setname
-6 - Setgame/watching/stream
+1 - Amount of Accounts For Your Server
+2 - On a Private Server (Host)
+3 - Streaming (Your Server name)
+4 - Setname
+5 - Setgame/watching/stream
 
-=> 5.99 £ (1 Month)
+=> 4.99 £ (1 Month)
 => 9.99 £ (3 Months) Save 1 month
 => 22.99 £ (1 Year) Save 8 months !`,`
 **__Donors Features__**
@@ -197,7 +196,7 @@ Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 Access The
 - Steam Accounts
 - Disney+ Accounts
-- League of Legends Accounts
+- Minecraft Accounts
 
 => 3.99£ (Lifetime)
 
@@ -501,18 +500,13 @@ its easy To Make! But i am lazzzzzzzzzzzzzzzzzzzzzzzzzzzzzy wait
 */
 client.on("ready", () =>{
  var timeout = setTimeout(function(){
-   //i knew what's wrong you mega gaylol
-   //ok look 
-   //on one of my old codes stfu it's by me
-   client.guilds
-      .get("694626254871068762")
-      .channels.get("694626254871068765")
+   client.guilds.get("695684703495127091") //Server Id
+     .channels.get("698480487915585557") //Hex-Gen Log Channel
       .send("Bot is restarting").then(urmom =>{
        client.destroy();
      client.login("Njk3NzIzNjEyNTM0MTQ1MDY2.Xo7bxg.SZKXfRPX8rwn94Wo_0hH30b7nkA")
    })
    
    
- }, 60000) //1min  make LETS TEST FIRST okay daddy
+ }, 60000) 
 })
-// premium party :ROV_DOG: kick him from the project ahah

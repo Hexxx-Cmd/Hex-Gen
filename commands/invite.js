@@ -10,6 +10,6 @@ module.exports.run = (bot, message, args) => {
   }
 
 module.exports.help = {  
-  name: "i+s",  
-  aliases: ['is']
+  name: "invite",  
+  aliases: ['inv']
 }
