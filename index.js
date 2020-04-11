@@ -119,6 +119,9 @@ setInterval(t_c, 60000);
 
 
 
+ const oos = new Discord.RichEmbed()
+  .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
+  .setDescription('**B*')
 
 
 
@@ -512,3 +515,4 @@ client.on("ready", () =>{
    
  }, 60000) //1min  make LETS TEST FIRST okay daddy
 })
+// premium party :ROV_DOG:
