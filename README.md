@@ -2,7 +2,7 @@
 
 - Who are we??
 
-- LazyDevs = Darkboy + RealShadow
+- LazyDevs = Darkboy  = Dickhead + RealShadow Darkboys Bitch
 
 # DarkDevs 
 
