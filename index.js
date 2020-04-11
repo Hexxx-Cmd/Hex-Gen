@@ -8,7 +8,8 @@ const got = require("got")
 const devs = ["678645097700655122","689512286422958161","697279777974911077"]
 client.on("ready", () => {
   console.log("Ready !");
-  client.user.setActivity(`#help | #invite`, { type: "Streaming" });
+  client.user.setActivity("#help | #invite",{type: "STREAMING", url:"https://twitch.tv/settings"})
+
 });
 client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
@@ -17,7 +18,6 @@ client.prefix = lconfig.prefix
 // Premium Config \\ //dms i mean check server what?? //dms asap -__-
 
 
-client.user.setActivity("test",{type: "STREAMING", url:"https://twitch.tv/settings"})
 
 
 
@@ -139,8 +139,7 @@ Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 4 - Change The Name and Picture
 5 - ×2 The The Amount of Accounts
 6 - #Setname
-7 - #Setgame/watching/stream
-9 - Set Premium Users Channel ! (You can Earn money from it ! ) **Guaranteed**
+7 - #Setgame/watching/stream**
 
 => 7.99 £ (1 Month)
 => 14.99 £ (3 Months) Save 1 month
