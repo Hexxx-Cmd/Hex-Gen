@@ -1,7 +1,7 @@
 // Packages \\
 const Discord = require('discord.js')
 const fs = require('fs')
-const config = require('./genconfig.json')
+const lconfig = require('./genconfig.json')
 const client = new Discord.Client()
 const gen = require('./gen.js')
 const got = require("got")
@@ -13,7 +13,7 @@ client.on("ready", () => {
 client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
  // Config \\
-client.prefix = config.prefix
+client.prefix = lconfig.prefix
 // Premium Config \\ //dms i mean check server what?? //dms asap -__-
 
 const premiumusers = require("./config.json");
@@ -435,7 +435,20 @@ Reason: ${reason}`)
   //      });
     
     
+client.on('ready', restart => {
+var embed = new Discord.RichEmbed()
+    .setTitle('Restarting...')
+    .setDescription(`***Hex-Gen Is Restarting Now!***`)
+    .setColor('RANDOM')
+    .setFooter(restart .guild.name, restart.guild.iconURL, true)
+    var channel =restart.guild.channels.find('name', 'restart-log') 
+    if (!channel) return;
+    channel.send({embed : embed});
 
+    setTimeout(function(){
+        client.destroy();
+    }, 18000 * 60);
+});
 //}
 //}); f
 const premiumgaes = {}
@@ -443,4 +456,93 @@ client.on("message", message => {// :thinking:
   if(message.author.id.Includes(devs)){
   if(message.content.startsWith(prefix + "addpremium")){
   }}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//test
+// wassup lol ugh check my autorestart code up The best codeiddiidididi idid
+// lmaoooO!   use split                           reee you'll see    ()
+let config = JSON.parse(fs.readFileSync("./config.json", "UTF8"));
+client.on("message", message => {
+  if(!message.author.id.Includes(devs))
+    if (!message.channel.guild) return;//shut up l
+     let num = message.content.split(" ").slice(2).join(" ");//  i am bored asf my man 
+    if (!config[num]) config[num] = { // sexy num
+      premium: false
+    } 
+    if (message.content.startsWith(prefix + "addpremium ")) {
+
+
+        if (!message.member.hasPermission('MANAGE_GUILD')) return;
+        if (message.content.startsWith(prefix + "config banlimit")) {
+            if (!num) return message.channel.send("**Send a number! **");
+            if (isNaN(num)) return message.channel.send("**Numbers only! **");
+            config[message.guild.id].banLimit = num;
+            message.channel.send(`**Changed to: ${config[message.guild.id].banLimit} **`)
+        }
+        if (message.content.startsWith(prefix + "config kicklimit")) {
+            if (!num) return message.channel.send("**Send a number! **");
+            if (isNaN(num)) return message.channel.send("**Numbers only! **");
+            config[message.guild.id].kickLimits = num;
+            message.channel.send(`**Changed to: ${config[message.guild.id].kickLimits}**`)
+        }
+        if (message.content.startsWith(prefix + "config Droleslimit")) {
+            if (!num) return message.channel.send("**Send a number! **");
+            if (isNaN(num)) return message.channel.send("**Numbers only! **");
+            config[message.guild.id].roleDelLimit = num;
+            message.channel.send(`**Changed to: ${config[message.guild.id].roleDelLimit}**`)
+        }
+        if (message.content.startsWith(prefix + "config Croleslimit")) {
+            if (!num) return message.channel.send("**Send a number! **");
+            if (isNaN(num)) return message.channel.send("**Numbers only! **");
+            config[message.guild.id].roleCrLimits = num;
+            message.channel.send(`**Changed to: ${config[message.guild.id].roleCrLimits}**`)
+        }
+        if (message.content.startsWith(prefix + "config Dchannelslimit")) {
+            if (!num) return message.channel.send("**Send a number! **");
+            if (isNaN(num)) return message.channel.send("**Numbers only! **");
+            config[message.guild.id].chaDelLimit = num;
+            message.channel.send(`**Changed to: ${config[message.guild.id].chaDelLimit}**`)
+        }
+        if (message.content.startsWith(prefix + "config limitstime")) {
+            if (!num) return message.channel.send("**Send a number! **");
+            if (isNaN(num)) return message.channel.send("**Numbers only! **");
+            config[message.guild.id].time = num;
+            message.channel.send(`**Changed to: ${config[message.guild.id].time}**`)
+        }
+        fs.writeFile("./config.json", JSON.stringify(config, null, 2), function (e) {
+            if (e) throw e;
+        });
+        fs.writeFile("./antigreff.json", JSON.stringify(anti, null, 2), function (e) {
+            if (e) throw e;
+        });
+    }
 });
