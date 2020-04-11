@@ -1,16 +1,19 @@
 const Discord = require('discord.js')
  module.exports.run = async (bot, message, args, gen) => {
      let embed = new Discord.RichEmbed()
+     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
+     .setColor(bot.color)
+     .setThumbnail('https://images-ext-1.discordapp.net/external/8tXbmE1FKl-ELZM2h2iR38UKJ4eKrbkgZEq1tJWjqaE/https/media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif') 
      .setTitle('> Hex-Gen Stock')
      .setColor(bot.color)
      gen.calculateStock()
      setTimeout(() => {
          const stock = gen.stock
         for(const type of stock) {
-            embed.addField(type[0], type[1])
-            embed.addField('Note:' , `This is a free generator not all accounts work but you know what works premium does use #premium`)
-        }
-        message.channel.send(embed) 
+            embed.addField("**" + type[0] + "**", type[1]) 
+            embed.addField("Note: \n :warning: Remember that you are using the free generator, but you know what works premium use #premium !")
+        } //that wont work because it goes on top :/ wait
+        message.channel.send(embed)  //sure habibi
      }, 200);
  }
  module.exports.help = {

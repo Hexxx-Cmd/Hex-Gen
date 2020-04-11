@@ -11,7 +11,7 @@ module.exports = {          // yeah wait
   },
   CheckPremium: id => {
     let access = false;
-      if(genconfig.premium.premium) access = true;
+      if(genconfig.premium.premium.Includes(id)) access = true;
         if (access) return true;
    else return false; // tolda ya nou  shut up
     /// nou               okay let's done this Shit        And Test ! 
