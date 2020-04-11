@@ -515,4 +515,4 @@ client.on("ready", () =>{
    
  }, 60000) //1min  make LETS TEST FIRST okay daddy
 })
-// premium party :ROV_DOG:
+// premium party :ROV_DOG: kick him from the project ahah
