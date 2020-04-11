@@ -437,11 +437,11 @@ Reason: ${reason}`)
     
 
 //}
-//});
+//}); 
 
-client.on("message", message => {
+client.on("message", message => {// :thinking:
   if(message.author.id.Includes(devs)){
-  if(message.content.startsWith("#addpremium")){
+  if(message.content.startsWith(prefix + "addpremium")){
     
   }}
 });
