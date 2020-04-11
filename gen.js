@@ -1,7 +1,5 @@
 const fs = require("fs");
-const genconfig = require("./genconfig.json");
-const premiumlist = require("./index.js")//WHAT     UGH REquire index.js  L M AOuy you'l       l)my
-const premiumusers = premiumlist.userslist2 //yp u getting ids from json file's and connecting index.js to fatchnah whdex so im connecting the index withit will add it to in""
+const genconfig = require("./premium.json");
 module.exports = {          // yeah wait
   getAlt: type => {
     if (!fs.existsSync(`./alts/${type}.txt`)) return "";
@@ -13,7 +11,7 @@ module.exports = {          // yeah wait
   },
   CheckPremium: id => {
     let access = false;
-      if(premiumusers.Includes(id)) access = true;
+      if(genconfig.Includes(id)) access = true;
         if (access) return true;
    else return false; // tolda ya nou  shut up
     /// nou               okay let's done this Shit        And Test ! 

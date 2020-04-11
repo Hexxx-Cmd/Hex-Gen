@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
  module.exports.run = async (bot, message, args, gen) => {
      let embed = new Discord.RichEmbed()
-     .setTitle('**Our Bot Stock**')
+     .setTitle('> Hex-Gen Stock')
      .setColor(bot.color)
      gen.calculateStock()
      setTimeout(() => {

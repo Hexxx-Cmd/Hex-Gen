@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args, gen) => {
   .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved")
   if(!gen.CheckPremium(message.author.id)) return message.channel.send(nopremissiontouse) // end of check premium
   
-    let type = "minecraft" //premium command k
+    let type = "Minecraft" //premium command k
     let alt = gen.getAlt(type)
     const oos = new Discord.RichEmbed()
   .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')

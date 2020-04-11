@@ -160,10 +160,9 @@ Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 => 22.99 £ (1 Year) Save 8 months !`,`
 **__Donors Features__**
 
-Access The
-- Steam Accounts
-- Disney+ Accounts
-- Minecraft Accounts
+1 - Steam Accounts
+2 - Disney+ Accounts
+3 - Minecraft Accounts
 
 => 3.99£ (Lifetime)
 
@@ -483,27 +482,33 @@ let wrongusage = new Discord.RichEmbed()
   .setTitle(`**incorrect usage**`)
   .setDescription(`#Usage: ${prefix}addpremium (@user)`)
   .setFooter(`Hex Gen Premium`)
+    .setColor("GOLD")
 
 let successful = new Discord.RichEmbed()
   .setTitle(`**successful**`)
   .setDescription(`I Have Added This User To PremiumList!`)
   .setFooter(`Hex Gen Premium`)
+    .setColor("GOLD")
 
 let wrongusage2 = new Discord.RichEmbed()
   .setTitle(`**incorrect usage**`)
   .setDescription(`#Usage: ${prefix}removepremium (@user)`)
   .setFooter(`Hex Gen Premium`)
+    .setColor("GOLD")
 
 let successful2 = new Discord.RichEmbed()
   .setTitle(`**successful**`)
   .setDescription(`I Have Removed This User From PremiumList!`)
   .setFooter(`Hex Gen Premium`)
-let wrongusage2 = new Discord.RichEmbed()
+    .setColor("GOLD")
+
+let wrongusage3 = new Discord.RichEmbed()
   .setTitle(`**incorrect usage**`)
-  .setDescription(`#Usage: ${prefix}removepremium (@user)`)
+  .setDescription(`This User Isnt In Premium List`)
   .setFooter(`Hex Gen Premium`)
+    .setColor("GOLD")
 
-
+const premiumadder = ["", "", ""]
 const premium = JSON.parse(fs.readFileSync('./premium.json' , 'utf8'));
  
 client.on("message", message => {
@@ -522,7 +527,7 @@ if(!mention) return message.channel.send(wrongusage2)
 if(premium[message.guild.id] === undefined) premium[message.guild.id] = {
     premium: []
     };
-if(!premium[message.guild.id].premium.includes(mention.id)) return message.channel.send("هذا العضو ليس في البلاك ليست")
+if(!premium[message.guild.id].premium.includes(mention.id)) return message.channel.send(wrongusage3)
 premium[message.guild.id].premium =  premium[message.guild.id].premium.filter(x=> x !== mention.id);
 message.channel.send(successful2)
 save()
@@ -533,11 +538,11 @@ client.on("message", message => {
      if(premium[message.guild.id] === undefined) premium[message.guild.id] = {
     premium: []
     };
-    premium[message.guild.id].premium.forEach(e => {
+    premium[message.guild.id].premium.forEach(premiumusers => {
         let embed = new Discord.RichEmbed()
         .setTitle("Premium Users:")
-    .setDescription(`<@${e}>`)
-    .setColor("BLACK")
+    .setDescription(`<@${premiumusers}>`)
+    .setColor("GOLD")
     message.channel.sendEmbed(embed)
     });
     }
