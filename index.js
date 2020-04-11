@@ -17,7 +17,7 @@ client.prefix = lconfig.prefix
 // Premium Config \\ //dms i mean check server what?? //dms asap -__-
 
 
-
+client.user.setActivity("test",{type: "STREAMING", url:"https://twitch.tv/settings"})
 
 
 
