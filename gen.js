@@ -1,6 +1,12 @@
 const fs = require("fs");
 const config = require("./config.json");
-module.exports = {
+const premiumlist = require("./index.js")//WHAT     UGH REquire index.js  L M AOuy you'l       l)my
+const premiumusers = premiumlist.userslist2 //yp u getting ids from json file's and connecting index.js to fatch ids or smh :)nah whdex so im connecting the index with
+                                                                      //# QUESTION
+// using #addpremium
+                                                                      //# YOUR ANSWER
+// Here: 
+module.exports = {          // yeah wait
   getAlt: type => {
     if (!fs.existsSync(`./alts/${type}.txt`)) return "";
     else {
