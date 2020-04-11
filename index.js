@@ -72,7 +72,7 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT);
 function t_c() {
   req.get(
-    `https://lazy-developer.glitch.me/`,
+    `https://-hexgen.glitch.me/`,
     (error, response, body) => {
       let DarkDevs = body;
       return DarkDevs;
