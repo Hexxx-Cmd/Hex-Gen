@@ -576,7 +576,6 @@ function save() {
 
 
 
-      const listforpremium = fs.readFileSync("./premium.txt")
       let wrongusage = new Discord.RichEmbed()
   .setTitle(`**Incorrect usage**`)
   .setDescription(`#Usage: ${prefix}addpremium (@user)`)
@@ -603,28 +602,6 @@ if(!mention) return message.channel.send(wrongusage);
 
 
 
-client.on("message", message => {
-if (message.content.toLowerCase() ===  prefix + "premiumlist") {
-     if(listforpremium === undefined) return;
-    listforpremium.forEach(premiumusers => {
-        let embed = new Discord.RichEmbed()
-        .setTitle("Premium user:")
-    .setDescription(`<@${premiumusers}>`)
-    .setColor("GOLD")
-    message.channel.sendEmbed(embed)
-    });
-    }
-})
-
-client.on("message", message => {
-if (message.content.toLowerCase() ===  prefix + "test") {
-      if (!fs.existsSync(`./premium.txt`)) return "";
-console.log(listforpremium)
-  listforpremium.forEach(urmom => {
-message.channel.send(urmom)
-  })
-}
-})
 
 
 
@@ -636,98 +613,11 @@ message.channel.send(urmom)
 
 
 
-const config = require("./premium.json");
-const checkpremium = config.id
-module.exports = {          // yeah wait
-  getAlt: type => { //                  ? ? ??? ? ? ?/ /  / /wdmmmymmmmm
-   //wtf who edited premium.json
-    if (!fs.existsSync(`./alts/${type}.txt`)) return "";
-    else {
-      let alts = module.exports.readFile(type).filter(r => r !== "");
-      let rnd = Math.floor(Math.random() * alts.length);
-      return alts[rnd];
-    }
-  },
-  CheckPremium: id => {
-    let access = false;
-      if(checkpremium.premium) access = true;
-        if (access) return true;
-   else return false; // tolda ya nou  shut up
-    /// nou               okay let's done this Shit        And Test ! 
-  },
-  addAlt: (type, alt) => {
-    if (!fs.existsSync(`./alts/${type}.txt`)) return;
-    else {
-      fs.appendFile(`./alts/${type}.txt`, `${alt}\n`, "utf8", err => {
-        if (err) console.log(err);
-      });
-    }
-  },
-  removeAlt: (type, alt) => {
-    if (!fs.existsSync(`./alts/${type}.txt`)) return;
-    else {
-      let alts = module.exports.readFile(type);
-      alts = alts.filter(r => r !== alt);
-      alts = alts.filter(r => r !== ""); 
-      module.exports.saveFile(type, alts);
-    }
-  },
-  readFile: type => {
-    if (!fs.existsSync(`./alts/${type}.txt`)) return [];
-    else {
-      let text = fs.readFileSync(`./alts/${type}.txt`, "utf8");
-      return text.split("\n").filter(r => r !== "");
-    }
-  },
-  saveFile: (type, alts) => {
-    if (!fs.existsSync(`./alts/${type}.txt`)) return;
-    else {
-      let list = ``;
-      for (const alt of alts) list += `${alt}\n`;
-      fs.writeFileSync(`./alts/${type}.txt`, list, "utf8", err => {
-        if (err) console.log(err);
-      });
-    }
-  },
-  getAllowedRoles: () => {
-    let roleIds = config.allowedRoles;
-    return roleIds;
-  },
-  getAllowedChannels: () => {
-    let channelsIds = config.allowedChannels;
-    return channelsIds;
-  },
-  getAllowedFreeChannels: () => {
-    let channelsIds = config.allowedFreeChannels;
-    return channelsIds;
-  },
-  hasAccess: member => {
-    let access = false;
-    member.roles.forEach(role => {
-      if (module.exports.getAllowedRoles().includes(role.id)) access = true;
-    });
-    if (access) return true;
-    else return false;
-  },
-  allowedChannel: channel => {
-    if (module.exports.getAllowedChannels().includes(channel.id)) return true;
-    else return false;
-  },
-  allowedFreeChannel: channel => {
-    if (module.exports.getAllowedFreeChannels().includes(channel.id))
-      return true;
-    else return false;
-  },
-  calculateStock: async () => {
-    fs.readdir("./alts", (err, files) => {
-      if (err) return console.log(err);
-      module.exports.stock = [];
-      files.forEach((file, i) => {
-        let type = file.split(".")[0];
-        let number = module.exports.readFile(type).length;
-        module.exports.stock[i] = [type, number];
-      });
-    });
-  }
-};
-// take from chillgen addalt command lol i took all
+
+
+
+
+
+
+
+
