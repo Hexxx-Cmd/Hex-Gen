@@ -517,6 +517,8 @@ const premium = JSON.parse(fs.readFileSync('./premium.json' , 'utf8'));
  
 client.on("message", message => {
     let mention = message.mentions.users.first();
+      if (message.author.id !== premiumadder)  return;
+
 if (message.content.toLowerCase() ===  prefix + "addpremium") {
 if(!mention) return message.channel.send(wrongusage)
 if(premium["premium"] === undefined) premium["premium"] = {
