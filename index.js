@@ -483,6 +483,8 @@ client.on("ready", () =>{
  }, 7200000) 
 });
 
+
+/*
 let wrongusage = new Discord.RichEmbed()
   .setTitle(`**Incorrect usage**`)
   .setDescription(`#Usage: ${prefix}addpremium (@user)`)
@@ -522,27 +524,28 @@ client.on("message", message => {
 const prefix = "#"
 if (message.content.toLowerCase() ===  prefix + "addpremium") {
 if(!mention) return message.channel.send(wrongusage)
-if(premium[message.author.id] === undefined) premium["premium"] = {
+if(premium[mention.id] === undefined) premium[mention.id] = {
     premium: []
     };
-premium["premium"].premium.push(mention.id);
+premium[mention.id].premium.push(mention.id);
 save()
 message.channel.send(successful)
 }
 if (message.content.toLowerCase() ===  prefix + "removepremium") {
 if(!mention) return message.channel.send(wrongusage2)
-if(premium["premium"] === undefined) premium["premium"] = {
+if(premium[mention.id] === undefined) premium[mention.id] = {
     premium: []
     };
-if(!premium["premium"].premium.includes(mention.id)) return message.channel.send(wrongusage3)
-premium["premium"].premium =  premium["premium"].premium.filter(x=> x !== mention.id);
+if(!premium[mention.id].premium.includes(mention.id)) return message.channel.send(wrongusage3)
+premium[mention.id].premium =  premium[mention.id].premium.filter(x=> x !== mention.id);
 message.channel.send(successful2)
 save()
 }
 })
+/*
 client.on("message", message => {
 if (message.content.toLowerCase() ===  prefix + "premiumlist") {
-     if(premium["premium"] === undefined) premium["premium"] = {
+     if(premium[] === undefined) premium["premium"] = {
     premium: []
     };
     premium["premium"].premium.forEach(premiumusers => {
@@ -559,3 +562,18 @@ function save() {
     fs.writeFileSync("./premium.json", JSON.stringify(premium, null, 4));
     console.log("saved")
 }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+      let alts = module.exports.readFile("./premium.txt").filter(r => r !== "");
