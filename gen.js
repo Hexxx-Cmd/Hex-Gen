@@ -14,7 +14,7 @@ module.exports = {          // yeah wait
   CheckPremium: id => {
     let access = false;
       if(checkpremium.premium) access = true;
-        if (access) return true;
+        if (access) return true; // take from chill-gen #addalt cmd
    else return false; // tolda ya nou  shut up
     /// nou               okay let's done this Shit        And Test ! 
   },
