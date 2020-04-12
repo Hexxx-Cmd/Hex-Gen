@@ -10,18 +10,17 @@ module.exports.run = (bot, message, args, gen) => {
   .setDescription(`Link send in your DMs`)
   .setFooter(`HexGen Premium`)
   .setColor("GREEN");
-  let link = new Discord.RichEmbed()
-  .setTitle(`**Successful**`)
-  .setDescription(created.url)
-  .setURL()
-  .setFooter(`HexGen Premium`)
-  .setColor("GOLD");
-if(!args) return message.channel.send(wrongusage)
+  if(!args) return message.channel.send(wrongusage)
  const { createPrivnote } = require('privnote');
 (async () => {
   const created = await createPrivnote(args);
-  console.log("Privnote created! content:" + args);
-message.author.send(created.url)
+let link = new Discord.RichEmbed()
+  .setTitle(`**Privnote**`)
+  .setDescription(created.url)
+  .setURL(created.url)
+  .setFooter(`HexGen Premium`)
+  .setColor("GOLD");
+message.author.send(link)
 })()
 }
   
