@@ -576,4 +576,16 @@ function save() {
 
 
 
-      let alts = module.exports.readFile("./premium.txt").filter(r => r !== "");
+      const premiumtest = fs.readFileSync("./premium.txt")
+      let wrongusage = new Discord.RichEmbed()
+  .setTitle(`**Incorrect usage**`)
+  .setDescription(`#Usage: ${prefix}addpremium (@user)`)
+  .setFooter(`Hex Gen Premium`)
+    .setColor("GOLD")
+client.on("message", message => {
+if(message.content.startsWith("#addpremium")){
+    let mention = message.mentions.users.first();
+if(!mention) return message.channel.send(wrongusage);
+  
+}
+});
