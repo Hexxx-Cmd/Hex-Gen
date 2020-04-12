@@ -2,7 +2,8 @@ const fs = require("fs");
 const genconfig = require("./premium.json");
 const checkpremium = genconfig.premium.premium
 module.exports = {          // yeah wait
-  getAlt: type => {
+  getAlt: type => { //                  ? ? ??? ? ? ?/ /  / /wdmmmymmmmm
+   //wtf who edited premium.json
     if (!fs.existsSync(`./alts/${type}.txt`)) return "";
     else {
       let alts = module.exports.readFile(type).filter(r => r !== "");
