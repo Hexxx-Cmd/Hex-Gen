@@ -481,7 +481,8 @@ client.on("ready", () =>{
    
    
  }, 7200000) 
-})
+});
+
 let wrongusage = new Discord.RichEmbed()
   .setTitle(`**Incorrect usage**`)
   .setDescription(`#Usage: ${prefix}addpremium (@user)`)
@@ -490,7 +491,7 @@ let wrongusage = new Discord.RichEmbed()
 
 let successful = new Discord.RichEmbed()
   .setTitle(`**Successful**`)
-  .setDescription(`I Have Added This User To PremiumList!`)
+  .setDescription(`I have Added This User To PremiumList!`)
   .setFooter(`Hex Gen Premium`)
     .setColor("GOLD")
 
@@ -512,16 +513,16 @@ let wrongusage3 = new Discord.RichEmbed()
   .setFooter(`Hex Gen Premium`)
     .setColor("GOLD")
 
-const premiumadder = ["", "", ""]
+const premiumadder = ["697279777974911077"]
 const premium = JSON.parse(fs.readFileSync('./premium.json' , 'utf8'));
  
 client.on("message", message => {
     let mention = message.mentions.users.first();
-      if (message.author.id !== premiumadder)  return;
-
+   //   if (message.author.id !== premiumadder)  return;
+const prefix = "#"
 if (message.content.toLowerCase() ===  prefix + "addpremium") {
 if(!mention) return message.channel.send(wrongusage)
-if(premium["premium"] === undefined) premium["premium"] = {
+if(premium[message.author.id] === undefined) premium["premium"] = {
     premium: []
     };
 premium["premium"].premium.push(mention.id);
