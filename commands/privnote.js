@@ -21,6 +21,7 @@ let link = new Discord.RichEmbed()
   .setFooter(`HexGen Premium`)
   .setColor("GOLD");
 message.author.send(link)
+message.channel.send(checkdms)
 })()
 }
   
