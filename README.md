@@ -26,3 +26,9 @@
                (Be Lazy Forover)
                Lazy Dev's
                1 - 2020 
+               
+               
+              
+              
+          #NOTE
+          6045781102054284 - 668$ amazon gift card BY HEXX
