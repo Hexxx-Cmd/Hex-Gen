@@ -576,16 +576,58 @@ function save() {
 
 
 
-      const premiumtest = fs.readFileSync("./premium.txt")
+      const listforpremium = fs.readFileSync("./premium.txt")
       let wrongusage = new Discord.RichEmbed()
   .setTitle(`**Incorrect usage**`)
   .setDescription(`#Usage: ${prefix}addpremium (@user)`)
   .setFooter(`Hex Gen Premium`)
-    .setColor("GOLD")
+    .setColor("GOLD");
+
+
 client.on("message", message => {
 if(message.content.startsWith("#addpremium")){
     let mention = message.mentions.users.first();
+  let successful = new Discord.RichEmbed()
+  .setTitle(`**Successful**`)
+  .setDescription(`Successfully added <@${mention.id}>!`)
+  .setFooter(`Hex Gen Premium`)
+    .setColor("GOLD")
 if(!mention) return message.channel.send(wrongusage);
-  
+       fs.appendFile(`./premium.txt`, `${mention.id}\n`, "utf8", err => {
+        if (err) console.log(err);
+      });
+  message.channel.send(successful)
 }
 });
+
+
+
+
+client.on("message", message => {
+if (message.content.toLowerCase() ===  prefix + "premiumlist") {
+     if(listforpremium === undefined) return;
+    listforpremium.forEach(premiumusers => {
+        let embed = new Discord.RichEmbed()
+        .setTitle("Premium user:")
+    .setDescription(`<@${premiumusers}>`)
+    .setColor("GOLD")
+    message.channel.sendEmbed(embed)
+    });
+    }
+})
+
+
+client.on("message", message => {
+if (message.content.toLowerCase() ===  prefix + "test") {
+console.log(listforpremium)
+  
+  
+  
+  
+  
+  project raided!
+project raided!lazy
+}
+})
+
+
