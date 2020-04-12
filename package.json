@@ -1,5 +1,5 @@
 {
-"name": "lazy-developer",
+  "name": "lazy-developer",
   "version": "0.0.1",
   "Authors": "DarkBoy#6171 | RealShadow#2020",
   "description": "A simple Node app have mulit usefuel things.",
@@ -15,7 +15,8 @@
     "anti-spam": "^0.2.7",
     "discord-anti-spam": "^2.4.1",
     "got": "^10.7.0",
-    "ms": "^2.1.2"
+    "ms": "^2.1.2",
+    "privnote": "^1.1.1"
   },
   "engines": {
     "node": "12.x"
