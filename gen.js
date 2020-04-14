@@ -1,9 +1,9 @@
+// Main System Dont Touch \\
 const fs = require("fs");
 const config = require("./premium.json");
 const checkpremium = config.id
-module.exports = {          // yeah wait
-  getAlt: type => { //                  ? ? ??? ? ? ?/ /  / /wdmmmymmmmm
-   //wtf who edited premium.json
+module.exports = {         
+  getAlt: type => { 
     if (!fs.existsSync(`./alts/${type}.txt`)) return "";
     else {
       let alts = module.exports.readFile(type).filter(r => r !== "");
@@ -15,10 +15,9 @@ module.exports = {          // yeah wait
     let access = false;
       if (!fs.existsSync(`./premium.txt`)) return "";
     else {
-      let urmom = module.exports.readFile(`./premium.txt`).filter(r => r !== "");
-      return urmom[id];
-    } return true; // take from chill-gen #addalt cmd
-    /// nou               okay let's done this Shit        And Test ! 
+      let urmom = module.exports.readFile(`./premium.txt`).filter(r => r !== ""); 
+      if(!urmom.Includes(id)) return false
+    }
   },
   addAlt: (type, alt) => {
     if (!fs.existsSync(`./alts/${type}.txt`)) return;
