@@ -13,9 +13,11 @@ module.exports = {          // yeah wait
   },
   CheckPremium: id => {
     let access = false;
-      if(checkpremium.premium) access = true;
-        if (access) return true; // take from chill-gen #addalt cmd
-   else return false; // tolda ya nou  shut up
+      if (!fs.existsSync(`./premium.txt`)) return "";
+    else {
+      let urmom = module.exports.readFile(`./premium.txt`).filter(r => r !== "");
+      return urmom[id];
+    } return true; // take from chill-gen #addalt cmd
     /// nou               okay let's done this Shit        And Test ! 
   },
   addAlt: (type, alt) => {

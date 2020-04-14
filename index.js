@@ -60,7 +60,7 @@ client.on('message', message => {
     if(commandfile) commandfile.run(client, message, args, gen)
 })
 
-client.login("")
+client.login("Njk2MzcxNTEyMDI1ODA4OTQ2.XpXSxg.0S4-2rM6I1AWWfZ55u34u8PDGGs")
 
 
 const req = require("request");
@@ -72,7 +72,7 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT);
 function t_c() {
   req.get(
-    `https://-hexgen.glitch.me/`,
+    `https://official-hex-gen.glitch.me/`,
     (error, response, body) => {
       let DarkDevs = body;
       return DarkDevs;
