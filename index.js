@@ -1,5 +1,12 @@
 // Packages \\
-const Discord = require('discord.js')
+//If you want ur acc just apologize 
+//If you want ur acc just apologize 
+//If you want ur acc just apologize 
+//If you want ur acc just apologize 
+//If you want ur acc just apologize 
+//If you want ur acc just apologize 
+//Write here: 
+const Discord = require('discord.js') //If you want ur acc just apologize 
 const fs = require('fs')
 const lconfig = require('./genconfig.json')
 const client = new Discord.Client()//checkdiscord
@@ -15,13 +22,6 @@ client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
  // Config \\
 client.prefix = lconfig.prefix
-// Premium Config \\ //dms i mean check server what?? //dms asap -__-
-
-
-
-
-
-
 const premium2 = true;
 client.color = 0xff0000
 client.cooldown = new Set()
