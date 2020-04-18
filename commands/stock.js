@@ -13,7 +13,6 @@ const Discord = require('discord.js')
         for(const type of stock) {
             embed.addField("**" + type[0] + "**", type[1])  //xd leave
         } //just look -_- //no xd
-       embed.addField("> __** ---> Note :**__"," :warning: **__Remember that you are using the free generator, this account may not work !__**")
         message.channel.send(embed)  
      }, 200);
  }
