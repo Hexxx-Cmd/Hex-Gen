@@ -60,7 +60,7 @@ client.on('message', message => {
     if(commandfile) commandfile.run(client, message, args, gen)
 })
 
-client.login("Njk2MzcxNTEyMDI1ODA4OTQ2.XpXSxg.0S4-2rM6I1AWWfZ55u34u8PDGGs")
+client.login("NzAyOTE1NDcxOTA0NzM1MjUy.XqLl-A.KIIdqEaDFHBmK_WzQTNbiPERdFM")
 
 
 const req = require("request");
