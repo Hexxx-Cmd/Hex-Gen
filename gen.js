@@ -17,6 +17,7 @@ module.exports = {
     else {
       let urmom = module.exports.readFile(`./premium.txt`).filter(r => r !== ""); 
       if(!urmom.Includes(id)) return false
+      else return true
     }
   },
   addAlt: (type, alt) => {
