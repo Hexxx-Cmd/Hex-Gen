@@ -1,15 +1,8 @@
 // Packages \\
-//If you want ur acc just apologize 
-//If you want ur acc just apologize 
-//If you want ur acc just apologize 
-//If you want ur acc just apologize 
-//If you want ur acc just apologize 
-//If you want ur acc just apologize 
-//Write here: 
-const Discord = require('discord.js') //If you want ur acc just apologize 
+const Discord = require('discord.js') 
 const fs = require('fs')
 const lconfig = require('./genconfig.json')
-const client = new Discord.Client()//checkdiscord
+const client = new Discord.Client()
 const gen = require('./gen.js')
 const got = require("got")
 const devs = ["678645097700655122","689512286422958161","697279777974911077"]
