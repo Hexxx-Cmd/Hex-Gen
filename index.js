@@ -53,7 +53,7 @@ client.on('message', message => {
     if(commandfile) commandfile.run(client, message, args, gen)
 })
 
-client.login("NzAyOTE1NDcxOTA0NzM1MjUy.XqLl-A.KIIdqEaDFHBmK_WzQTNbiPERdFM")
+client.login('NzA3OTY3NDQzMzMwNTMxMzcw.XrbUlQ.dIHJqZ8QIuaVoKv8wu-vwh__th4')
 
 
 const req = require("request");
