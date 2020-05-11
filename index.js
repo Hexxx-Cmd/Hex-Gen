@@ -75,7 +75,15 @@ function t_c() {
 setInterval(t_c, 60000);
 
 
+/*
+let uptime = client.uptime;
+    
+  
+  
+  
 
+  
+*/
 
 
 
