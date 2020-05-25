@@ -7,8 +7,9 @@ module.exports.run = (bot, message, args, gen) => {
 `)
 
   message.author.send(`
-** Support Server **
-https://discord.gg/ZuvcNvB
+** Support Server**
+https://discord.gg/WnryPSX
+
 `)
     let type = "Spotify"
     let alt = gen.getAlt(type)

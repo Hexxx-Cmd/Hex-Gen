@@ -1,3 +1,4 @@
+/*
 const Discord = require('discord.js')
 //im gay ik
 module.exports.run = (bot, message, args, gen) => {
@@ -60,3 +61,4 @@ module.exports.help = {
     name: 'disney',
     aliases: ['disn']
 } //wtf you doing wake up
+*/

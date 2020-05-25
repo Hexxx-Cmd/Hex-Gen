@@ -50,4 +50,4 @@ module.exports.help = {
     name: 'minecraft',
     aliases: ['mc', 'Minecraft']
 } //wtf you doing wake up
-/
+*/

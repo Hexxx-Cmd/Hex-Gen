@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args, gen) => {
 
   message.author.send(`
 ** Support Server **
-https://discord.gg/ZuvcNvB
+https://discord.gg/WnryPSX
 `)
     let type = "Uplay"
     let alt = gen.getAlt(type)

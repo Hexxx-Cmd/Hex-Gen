@@ -1,4 +1,4 @@
-const Discord = require('discord.js')
+/*const Discord = require('discord.js')
 //const premiumlist = require("../premiumusers.json")
 //im gay ik
 module.exports.run = (bot, message, args, gen) => {
@@ -64,3 +64,4 @@ module.exports.help = {
 //copy paste edit the premium commands lmao wat
 //dont worry i know what im tryna do
 //ok i'll finish the addpremium
+*/

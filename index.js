@@ -97,12 +97,6 @@ client.on('message', message => {
 if (message.content ===   "#help") {
 if (message.channel.type == "dm") return;
 let pages = [`
-   **__Donors Commands__**
-
-**#Minecraft** - Sends You a Free Minecraft Account
-**#Disney** - Disney+ Account
-**#Steam** - Steam Account
-
 **__Generator Commands__**
 
 **#Fortnite** - Sends You a Free Fortnite Account
@@ -158,13 +152,6 @@ Check out https://discord.gg/WnryPSX for more information about this amazing bot
 => 4.99 £ (1 Month)
 => 9.99 £ (3 Months) Save 1 month
 => 22.99 £ (1 Year) Save 8 months !`,`
-**__Donors Features__**
-
-1 - Steam Accounts
-2 - Disney+ Accounts
-3 - Minecraft Accounts
-
-=> 3.99£ (Lifetime)
 
 Join the official Server and contact any staff member
 https://discord.gg/WnryPSX`]
