@@ -4,7 +4,7 @@ module.exports.run = (bot, message, args) => {
      const anothermsg = new Discord.RichEmbed()
   .setDescription(`
 ** Add Me Today**
-[Click Here](https://discordapp.com/api/oauth2/authorize?client_id=697723612534145066&permissions=8&scope=bot)
+[Click Here](https://discord.com/oauth2/authorize?client_id=714598595306717294&permissions=8&scope=bot)
 `)
 
   message.author.send(`
