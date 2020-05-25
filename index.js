@@ -128,7 +128,7 @@ Check out https://discord.gg/WnryPSX for more information about this bot!
 `,`
 **__Hex-Gen Premium Bot__**
 
-1 - Prime Features
+**1 - Prime Features
 2 - Set a Channel For The Gen bot
 3 - Working only in Your Server
 4 - Change The Name and Picture
