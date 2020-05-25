@@ -111,7 +111,7 @@ let pages = [`
 **#stock** - bot stock
 **#invite** - Gives you bot invite link
 
-Check out https://discord.gg/WnryPSX for more information about this amazing bot!
+Check out https://discord.gg/WnryPSX for more information about this bot!
 
 `
 ,`
