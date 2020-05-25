@@ -1,4 +1,4 @@
-const Discord = require('discord.js')
+/*const Discord = require('discord.js')
 //const premiumlist = require("../premiumusers.json")
 //im gay ik
 module.exports.run = (bot, message, args, gen) => {
@@ -50,3 +50,4 @@ module.exports.help = {
     name: 'minecraft',
     aliases: ['mc', 'Minecraft']
 } //wtf you doing wake up
+/

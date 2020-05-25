@@ -5,7 +5,7 @@ const lconfig = require('./genconfig.json')
 const client = new Discord.Client()
 const gen = require('./gen.js')
 const got = require("got")
-const devs = ["678645097700655122","689512286422958161","697279777974911077"]
+const devs = ["710845020198010961","656200663050747918"]
 client.on("ready", () => {
   console.log("Ready !");
   client.user.setActivity("#help | #invite",{type: "STREAMING", url:"https://twitch.tv/settings"})
@@ -53,7 +53,7 @@ client.on('message', message => {
     if(commandfile) commandfile.run(client, message, args, gen)
 })
 
-client.login('NzA3OTY3NDQzMzMwNTMxMzcw.XrcY7Q.nr7k8_KYYAvxS4sT6eW_ALBqjuQ')
+client.login('NzE0NTk4NTk1MzA2NzE3Mjk0.Xsw_5Q.09t8gWaw51TB1ntsqEx8tEvsK2o')
 
 
 const req = require("request");
@@ -117,7 +117,7 @@ let pages = [`
 **#stock** - bot stock
 **#invite** - Gives you bot invite link
 
-Check out https://zzhhzz.xyz/ for more information about this amazing bot!
+Check out https://discord.gg/WnryPSX for more information about this amazing bot!
 
 `
 ,`
@@ -167,11 +167,11 @@ Check out https://zzhhzz.xyz/ for more information about this amazing bot!
 => 3.99£ (Lifetime)
 
 Join the official Server and contact any staff member
-https://zzhhzz.xyz/`]
+https://discord.gg/WnryPSX`]
 let page = 1;
  
     let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
+    .setColor('BLUE')
     .setFooter(`Requested By ${message.author.username} | Page ${page} of ${pages.length}`)
     .setDescription(pages[page-1])
  
@@ -409,36 +409,6 @@ client.on("message", message => {// :thinking:
   if(message.content.startsWith(prefix + "addpremium")){
   }}
 });*/
-
-
-
-
-
-
-
-//wut
-// add code
-//not with me
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //test

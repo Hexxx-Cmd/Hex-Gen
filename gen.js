@@ -13,9 +13,9 @@ module.exports = {
   },
   CheckPremium: id => {
     let access = false;
-      if (!fs.existsSync(`./premium.txt`)) return "";
+      if (!fs.existsSync(`./premium.json`)) return "";
     else {
-      let urmom = module.exports.readFile(`./premium.txt`).filter(r => r !== ""); 
+      let urmom = module.exports.readFile(`./premium.json`).filter(r => r !== ""); 
       if(!urmom.Includes(id)) return false
       else return true
     }

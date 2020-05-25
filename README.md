@@ -1,21 +1,10 @@
-# DarkDevs
+# Hex-Gen Developers
 
 - Who are we??
+- Developers = Hexxx#2020
+- Project's Developer's (HexDevs)
 
-- LazyDevs = Darkboy  = Dickhead + RealShadow Darkboys Bitch
-
-# DarkDevs 
-
-- We're just some dark developers
-
-- Hmm?
-
-- All Codes in this project are coded by `${devs}`
-
-
-- Project's Developer's (DarkDevs)
-
-> ` const devs = "RealShadow__#2020 + DarkBoy#6171"`
+> ` const devs = "Hexxx + Frxstii"`
 
 - 2020-2025 Copy Right
 
