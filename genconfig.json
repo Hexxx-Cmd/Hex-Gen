@@ -5,6 +5,5 @@
   "DEVID": "comingsoon",
   "ChangeStatusTime": "5000",
   "name": "Hex-Gen",
-  "projectname": "-hexgen",
-  "port": "3333"
+  "projectname": "-hexgen"
 }
