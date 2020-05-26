@@ -7,6 +7,16 @@
   "scripts": {
     "start": "node index.js"
   },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SniperAlt891256/Hex-Gen.git"
+  },
+  "author": "ExillustX",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SniperAlt891256/Hex-Gen/issues"
+  },
+  "homepage": "",
   "dependencies": {
     "express": "^4.17.1",
     "discord.js": "^11.5.1",
@@ -17,17 +27,5 @@
     "got": "^10.7.0",
     "ms": "^2.1.2",
     "privnote": "^1.1.1"
-  },
-  "engines": {
-    "node": "12.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
-  },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  }
 }
