@@ -52,7 +52,7 @@ client.on('message', message => {
     let commandfile = client.commands.get(command) || client.commands.get(client.aliases.get(command))
     if(commandfile) commandfile.run(client, message, args, gen)
 })
-
+/*
 const req = require("request");
 const express = require("express");
 const app = express();
@@ -65,7 +65,7 @@ app.listen(process.env.PORT);
 setInterval(() => {
   http.get(`http://-hexgen.glitch.me/`);
 }, 100000);
-
+*/
 
 let uptime = client.uptime;
      const oos = new Discord.RichEmbed()
