@@ -530,7 +530,7 @@ if(!mention) return message.channel.send(wrongusage);
   message.channel.send(successful)
 }
 });
-client.login(proccess.env.TOKEN);
+client.login(process.env.TOKEN);
 
 
 
