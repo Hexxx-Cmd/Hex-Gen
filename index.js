@@ -59,19 +59,16 @@ client.login('NzE0NTk4NTk1MzA2NzE3Mjk0.Xsw_5Q.09t8gWaw51TB1ntsqEx8tEvsK2o')
 const req = require("request");
 const express = require("express");
 const app = express();
-app.get("/", (req, res) => {
-  res.sendStatus(200);
+const http = require("http");
+app.get("/", (request, response) => {
+  console.log(Date.now() + "Glitch 24/7: PING Received!");
+  response.sendStatus(200);
 });
 app.listen(process.env.PORT);
-function t_c() {
-  req.get(`https://-hex-gen.glitch.me/`,
-    (error, response, body) => {
-      let DarkDevs = body;
-      return DarkDevs;
-    }
-  );
-}
-setInterval(t_c, 60000);
+setInterval(() => {
+  http.get(`http://-hexgen.glitch.me/`);
+}, 100000);
+
 
 let uptime = client.uptime;
      const oos = new Discord.RichEmbed()
