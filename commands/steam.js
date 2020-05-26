@@ -1,6 +1,4 @@
-/*const Discord = require('discord.js')
-//const premiumlist = require("../premiumusers.json")
-//im gay ik
+const Discord = require('discord.js')
 module.exports.run = (bot, message, args, gen) => {
   //Checks if have premium
      const anothermsg = new Discord.RichEmbed()
@@ -13,14 +11,6 @@ module.exports.run = (bot, message, args, gen) => {
 ** Support Server **
 https://discord.gg/ZuvcNvB
 `)
-  const nopremissiontouse = new Discord.RichEmbed()
-  .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
-  .setColor(bot.color)
-  .setDescription('**I am a Generator bot offering thousands of users free accounts, if you want access use `#premium` you  will get a small advantage which is generating `steam` `Disney+` `Minecraft` accounts and Donor Rank in my server.**')
-  .setThumbnail("https://i.imgur.com/p2ip6l4.gif") //ok now lets see how it looks
-  .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved")
-  if(!gen.CheckPremium(message.author.id)) return message.channel.send(nopremissiontouse) // end of check premium
-  
     let type = "Steam" //premium command k
     let alt = gen.getAlt(type)
     const oos = new Discord.RichEmbed()
@@ -44,7 +34,7 @@ https://discord.gg/ZuvcNvB
       let ree = new Discord.RichEmbed()
     .setColor(bot.color)
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
-    .setDescription("**You Have Generated a Steam Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`\nhttps://rleakers.net/")
+    .setDescription("**You Have Generated a Steam Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`")
     .setThumbnail('https://images-ext-1.discordapp.net/external/8tXbmE1FKl-ELZM2h2iR38UKJ4eKrbkgZEq1tJWjqaE/https/media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
     .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //go to discord
     message.channel.send(ree) 
@@ -60,8 +50,4 @@ https://discord.gg/ZuvcNvB
 module.exports.help = {
     name: 'steam',
     aliases: ['stea']
-} //wtf you doing wake up i'll finish the 
-//copy paste edit the premium commands lmao wat
-//dont worry i know what im tryna do
-//ok i'll finish the addpremium
-*/
+} 

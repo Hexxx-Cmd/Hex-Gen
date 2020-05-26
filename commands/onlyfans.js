@@ -33,7 +33,7 @@ https://discord.gg/WnryPSX
       let ree = new Discord.RichEmbed()
     .setColor(bot.color)
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
-    .setDescription("**You Have Generated a Crunchyroll Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`\nhttps://rleakers.net/")
+    .setDescription("**You Have Generated a Crunchyroll Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`")
     .setThumbnail('https://images-ext-1.discordapp.net/external/8tXbmE1FKl-ELZM2h2iR38UKJ4eKrbkgZEq1tJWjqaE/https/media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
     .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //go to discord
     message.channel.send(ree) //lol NOU
