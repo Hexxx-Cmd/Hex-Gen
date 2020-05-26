@@ -10,20 +10,21 @@ module.exports.run = (bot, message, args, gen) => {
 ** Support Server **
 https://discord.gg/WnryPSX
 `)
-    let type = "Mega"
+  message.author.send(anothermsg)
+    let type = "Rockstar"
     let alt = gen.getAlt(type)
-    const oos = new Discord.RichEmbed()
+ const oos = new Discord.RichEmbed()
   .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
   .setColor(bot.color) //ok you sort this out 
   .setDescription('**Sorry! We\'re out of stock but you can always buy premium `#premium` because it always have a stock!**')
-  .setThumbnail("https://i.imgur.com/p2ip6l4.gif") //ok now lets see how it looks //ikr now lets test it
+//  .setThumbnail("https://i.imgur.com/p2ip6l4.gif") //ok now lets see how it looks //ikr now lets test it
   .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //im confused do i delete the part below?
     if(!alt || alt === '') return message.channel.send(oos)
     let embed = new Discord.RichEmbed()
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
     .setColor(bot.color)
-    .setDescription('**You have Generated Mega Account**')
-    .setThumbnail('https://p1.hiclipart.com/preview/139/636/8/dots-mega-logo-png-clipart.jpg')
+    .setDescription('**You have Generated Rockstar Account**')
+    .setThumbnail('https://images-ext-1.discordapp.net/external/JSEon8wDqxEjJACfEs87gqp0su3L9789rek_hA4vKoU/https/i.imgur.com/Nv9BspW.gif')
     .addField('**__Your account:__**', alt)
     .addField('**__Remind:__**',"Remember that you are using the free generator, this account may not work !",true)// remove this
     .addField('**__Hex-gen Premium__**',"You Have to Buy The Premium Version to get The Bot s Features, For You and Your Server",true)
@@ -33,7 +34,7 @@ https://discord.gg/WnryPSX
       let ree = new Discord.RichEmbed()
     .setColor(bot.color)
     .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
-    .setDescription("**You Have Generated a Mega Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`")
+    .setDescription("**You Have Generated a Hulu Account Check Your DM.**\nWanna See The Hex-Gen Features ? try our Command `#premium`\nhttps://rleakers.net/")
     .setThumbnail('https://images-ext-1.discordapp.net/external/8tXbmE1FKl-ELZM2h2iR38UKJ4eKrbkgZEq1tJWjqaE/https/media.discordapp.net/attachments/697287727447539782/697805418436755456/Tick.gif')
     .setFooter("Hex-Gen © 2020-2025, Simple Generator Bot - All Rights Reserved") //go to discord
     message.channel.send(ree) //lol NOU
@@ -46,6 +47,6 @@ https://discord.gg/WnryPSX
 
 
 module.exports.help = {
-    name: 'mega',
-    aliases: ['meg']
+    name: 'rockstar',
+    aliases: []
 }
