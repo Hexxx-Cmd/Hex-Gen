@@ -53,9 +53,6 @@ client.on('message', message => {
     if(commandfile) commandfile.run(client, message, args, gen)
 })
 
-client.login('NzE0NTk4NTk1MzA2NzE3Mjk0.Xsw_5Q.09t8gWaw51TB1ntsqEx8tEvsK2o')
-
-
 const req = require("request");
 const express = require("express");
 const app = express();
@@ -533,7 +530,7 @@ if(!mention) return message.channel.send(wrongusage);
   message.channel.send(successful)
 }
 });
-
+client.login(proccess.env.TOKEN);
 
 
 
