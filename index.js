@@ -86,12 +86,12 @@ if (message.channel.type == "dm") return;
 let pages = [`
 **__Generator Commands__**
 
-**#Fortnite** - Sends You a Free Fortnite Account
-**#Spotify** - Sends You a Free Spotify Account
-**#Uplay** - Sends You a free Uplay Account
-**#Hulu** - Sends You a Hulu Account
-**#Nordvpn** - Sends You a Free Norvpn Account
-**#crunchyroll** - Sends You a Free crunchyroll Account
+**#instagram** - Sends You a Free Instagram Account
+**#vpn** - Sends You a Free Ipvanish VPN Account
+**#steam** - Sends You a free Steam Account
+**#xbox** - Sends You a Xbox Account
+**#onlyfans** - Sends You a Free OnlyFans Account
+**#nordvpn** - Sends You a Free crunchyroll Account
 **#pornhub** - Sends You a Free pornhub account
 **#origin **- Sends You a Free Origing account
 
