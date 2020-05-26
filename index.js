@@ -78,68 +78,6 @@ let uptime = client.uptime;
   .setAuthor(`Hex-Gen V3.0.8`, 'https://images-ext-1.discordapp.net/external/01_8RjAdHjEj34QLC2ZIQxyBM-WfFneoL9Feuj5iUIc/https/images-ext-1.discordapp.net/external/Tje-nMlp6hCc_mtPnMsOuzXM3OWiuHP7uAtPvduTGRU/%253Fv%253D1/https/cdn.discordapp.com/emojis/653666145353596950.gif')
   .setDescription('**B*')
 
-
-client.on('message', message => {
-if (message.content ===   "#help") {
-if (message.channel.type == "dm") return;
-  let embed = new Discord.RichEmbed()
-.setDescription(`
-**__Generator Commands__**
-
-**#instagram** - Sends You a Free Instagram Account
-**#vpn** - Sends You a Free Ipvanish VPN Account
-**#steam** - Sends You a free Steam Account
-**#xbox** - Sends You a Xbox Account
-**#onlyfans** - Sends You a Free OnlyFans Account
-**#nordvpn** - Sends You a Free NordVPN Account
-
-**__Other Commands:__**
-
-**#bans** - to see how many members got banned in your server
-**#kick** - To Kick a Member From the server
-**#ban** - to ban member
-**#unban all** - To unban all
-**#unban** + ID - To unban User
-**#lock** - To lock channel so members cant view it 
-**#unlock** - to unlock the channel
- 
-
-**#stock** - bot stock
-**#invite** - Gives you bot invite link
-
-Check out https://discord.gg/WnryPSX for more information about this bot!
-`,`
-**__Hex-Gen Premium Bot__**
-
-**1 - Prime Features
-2 - Set a Channel For The Gen bot
-3 - Working only in Your Server
-4 - Change The Name and Picture
-5 - ×2 The The Amount of Accounts
-6 - #Setname
-7 - #Setgame/watching/stream**
-
-=> 7.99 £ (1 Month)
-=> 14.99 £ (3 Months) Save 1 month
-=> 31.99 £ (1 Year) Save 8 months ! & earn money from Selling Premium User , earn 1000/100
-
-
-**__Hex-Gen Prime Bot__**
-
-1 - Amount of Accounts For Your Server
-2 - On a Private Server (Host)
-3 - Streaming (Your Server name)
-4 - Setname
-5 - Setgame/watching/stream
-
-=> 4.99 £ (1 Month)
-=> 9.99 £ (3 Months) Save 1 month
-=> 22.99 £ (1 Year) Save 8 months !`,`
-
-Join the official Server and contact any staff member
-https://discord.gg/WnryPSX`)
-}
-});
 client.on('message', message => {
 if (message.content ===   "#help") {
 if (message.channel.type == "dm") return;
