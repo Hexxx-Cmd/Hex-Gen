@@ -64,8 +64,7 @@ app.get("/", (req, res) => {
 });
 app.listen(process.env.PORT);
 function t_c() {
-  req.get(
-    `https://official-hex-gen.glitch.me/`,
+  req.get(`https://-hex-gen.glitch.me/`,
     (error, response, body) => {
       let DarkDevs = body;
       return DarkDevs;
