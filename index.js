@@ -11,6 +11,7 @@ client.on("ready", () => {
   client.user.setActivity("#help | #invite",{type: "STREAMING", url:"https://twitch.tv/settings"})
 
 });
+let port = process.env.PORT || 3333;
 client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
  // Config \\
