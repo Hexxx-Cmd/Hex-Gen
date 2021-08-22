@@ -1,7 +1,7 @@
 # Hex-Gen Developers
 
 - Who are we??
-- Developers = Hexxx#2020
+- Developers = Hexxx#2020 Darkboy#1111
 - Project's Developer's (HexDevs)
 
 > ` const devs = "Hexxx + Dark"`
